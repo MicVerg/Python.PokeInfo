@@ -21,8 +21,11 @@ int main(void)
     // TODO: Prompt for end size
 
     int years;
-    
+    do
+    {
 
+    }
+    while (years )
     // TODO: Calculate number of years until we reach threshold
 
     // TODO: Print number of years
