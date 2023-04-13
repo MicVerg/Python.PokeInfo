@@ -4,7 +4,7 @@
 int main(void)
 {
     // TODO: Prompt for start size
-    int startsize;
+    int startsize = get_int("What's the start size? ");
 if (startsize < 9)
 {
 
