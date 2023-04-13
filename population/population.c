@@ -21,10 +21,10 @@ int main(void)
     // TODO: Prompt for end size
 
 
-
+    int llamas;
     do
     {
-    int llamas;
+
     int years;
         llamas = llamas + (startsize / 3) - (startsize / 4);
         years ++;
