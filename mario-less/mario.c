@@ -17,6 +17,7 @@ int main(void)
         for (int dots = 0; dots < height; dots++)
         {
             printf(".");
+            
         }
 
         for (int i = 0; i <= row; i++)
@@ -24,6 +25,5 @@ int main(void)
             printf("#");
         }
         printf("\n");
-        height--;
     }
 }
