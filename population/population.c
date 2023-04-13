@@ -11,16 +11,15 @@ int main(void)
     }
     while (startsize < 9);
 
-
+    // TODO: Prompt for end size
     int endsize;
     do
     {
         endsize = get_int("What's the end population size? ");
     }
     while (endsize < startsize);
-    // TODO: Prompt for end size
 
-
+    // TODO: Calculate number of years until we reach threshold
     int llamas = 0;
     int years = 0;
     do
@@ -31,7 +30,7 @@ int main(void)
     while (llamas < endsize);
 
     printf("Years: %i\n", years);
-    // TODO: Calculate number of years until we reach threshold
+
 
     // TODO: Print number of years
 }
