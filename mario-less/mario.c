@@ -13,4 +13,12 @@ int main(void)
     //printf("This is the height: %i\n", height);
 
     //based on height integer, loop that many times, adding #
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < height; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
 }
