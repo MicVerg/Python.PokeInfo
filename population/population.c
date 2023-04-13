@@ -4,7 +4,11 @@
 int main(void)
 {
     // TODO: Prompt for start size
+    int startsize;
+if
+{
 
+}
     // TODO: Prompt for end size
 
     // TODO: Calculate number of years until we reach threshold
