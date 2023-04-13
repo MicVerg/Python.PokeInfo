@@ -21,11 +21,13 @@ int main(void)
     // TODO: Prompt for end size
 
     int llamas;
+    int years;
     do
     {
         llamas = llamas + (startsize / 3) - (startsize / 4);
+        years
     }
-    
+
     // TODO: Calculate number of years until we reach threshold
 
     // TODO: Print number of years
