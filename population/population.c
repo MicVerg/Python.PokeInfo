@@ -25,7 +25,7 @@ int main(void)
     do
     {
         llamas = startsize + (startsize / 3) - (startsize / 4);
-        years++;
+        years ++;
     }
     while (llamas < endsize);
 
