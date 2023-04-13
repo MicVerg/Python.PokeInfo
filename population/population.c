@@ -4,12 +4,20 @@
 int main(void)
 {
     // TODO: Prompt for start size
-    int startsize = get_int("What's the start population size? ");
-    int endsize = get_int("What's the end population size? ");
-if (startsize < 9)
-{
+    int startsize;
+    do
+    {
+    startsize = get_int("What's the start population size? ");
+    }
+    while (startsize < 9);
 
-}
+
+    int endsize;
+    do
+    {
+    endsize = get_int("What's the end population size? ");
+    }
+    while (endsize >= startsize);
     // TODO: Prompt for end size
 
     // TODO: Calculate number of years until we reach threshold
