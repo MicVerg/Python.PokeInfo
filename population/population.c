@@ -29,6 +29,7 @@ int main(void)
     {
         llamas = startsize + (startsize / 3) - (startsize / 4);
     }
-    printf("Years: %i\n", years);
+
     // TODO: Print number of years
+    printf("Years: %i\n", years);
 }
