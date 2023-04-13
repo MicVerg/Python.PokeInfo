@@ -15,7 +15,7 @@ int main(void)
     //based on height integer, loop that many times, adding #
     for (int i = 0; i < height; i++)
     {
-        for (int k = 0; k < height; k++)
+        for (int k = 0; k < height; k--)
         {
             printf(".");
         }
