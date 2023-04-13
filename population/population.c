@@ -25,9 +25,9 @@ int main(void)
     do
     {
         llamas = llamas + (startsize / 3) - (startsize / 4);
-        years
+        years ++;
     }
-
+    while (llamas < endsize);
     // TODO: Calculate number of years until we reach threshold
 
     // TODO: Print number of years
