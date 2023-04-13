@@ -13,9 +13,9 @@ int main(void)
     //printf("This is the height: %i\n", height);
 
     //based on height integer, loop that many times, adding #
-    for (int i = 0; i < height; i++)
+    for (int row = 0; row < height; row++)
     {
-        for (int j = 0; j <= i; j++)
+        for (int j = 0; j <= row; j++)
         {
             printf("#");
         }
