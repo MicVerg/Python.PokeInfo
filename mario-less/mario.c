@@ -15,6 +15,11 @@ int main(void)
     //based on height integer, loop that many times, adding #
     for (int row = 0; row < height; row++)
     {
+        for (int dots = 0; dots <= row; dots--)
+        {
+            printf(".");
+        }
+
         for (int i = 0; i <= row; i++)
         {
             printf("#");
