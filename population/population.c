@@ -26,9 +26,9 @@ int main(void)
     do
     {
         llamas = startsize + (startsize / 3) - (startsize / 4);
-        years ++;
+        years++;
     }
-    while (llamas >= endsize);
+    while (llamas < endsize);
 
     printf("Years: %i\n", years);
     // TODO: Calculate number of years until we reach threshold
