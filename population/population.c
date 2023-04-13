@@ -5,7 +5,7 @@ int main(void)
 {
     // TODO: Prompt for start size
     int startsize;
-if
+if (startsize < 9)
 {
 
 }
