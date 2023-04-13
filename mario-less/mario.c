@@ -10,7 +10,6 @@ int main(void)
         height = get_int("What height do you want the stairs to be? ");
     }
     while (height < 1 || height > 8);
-    //printf("This is the height: %i\n", height);
 
     //based on height integer, loop that many times, adding #
     for (int row = 0; row < height; row++)
