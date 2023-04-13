@@ -4,7 +4,8 @@
 int main(void)
 {
     // TODO: Prompt for start size
-    int startsize = get_int("What's the start size? ");
+    int startsize = get_int("What's the start population size? ");
+    int endsize = get_int("What's the end population size? ");
 if (startsize < 9)
 {
 
