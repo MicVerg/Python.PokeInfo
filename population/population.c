@@ -20,10 +20,12 @@ int main(void)
     while (endsize < startsize);
     // TODO: Prompt for end size
 
-    int llamas;
-    int years;
+
+
     do
     {
+    int llamas;
+    int years;
         llamas = llamas + (startsize / 3) - (startsize / 4);
         years ++;
     }
