@@ -16,7 +16,7 @@ int main(void)
     {
         for (int dots = 0; dots < (height-row); dots++)
         {
-            printf(".");
+            printf(" ");
 
         }
 
