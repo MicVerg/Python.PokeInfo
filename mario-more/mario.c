@@ -18,12 +18,13 @@ int main(void)
         {
             printf(" ");
         }
-
+        //left hashes
         for (int i = 0; i <= row; i++)
         {
             printf("#");
         }
         printf("  ");
+        //right hashes
         for (int i = 0; i <= row; i++)
         {
             printf("#");
