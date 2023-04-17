@@ -4,7 +4,12 @@
 int main(void)
 {
     //prompt
-    ccnr = get_long("Credit card nr? ");
+    long ccnr;
+    do
+    {
+        ccnr = get_long("Credit card nr? ");
+    }
+    while (ccnr < 1);
     //checksum
     lastdigit = ccnr % 10;
 
