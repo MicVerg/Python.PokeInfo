@@ -27,6 +27,8 @@ int main(void)
     long lastdigit = ccnr % 10;
 
     long secondtolastdigit = (ccnr / 10) % 10;
+    long thirdtolastdigit = (ccnr / 100) % 10;
+    long fourthtolastdigit = (ccnr / 1000) % 10;
 
 
     //american express 15 digits, starts with 34 or 37
