@@ -12,23 +12,30 @@ int main(void)
     while (ccnr < 1);
 
     //amount of digits
-    int amount = 0;
+/*     int amount = 0;
     while (ccnr != 0) {
         ccnr /= 10;
         amount++;
     }
-    printf("digits: %i\n", amount);
+    printf("digits: %i\n", amount); */
 
 
     //checksum
-    int divider = 10;
+    int digit;
+    int total = 0;
+    while (ccnr != 0)
+    {
+        ccnr = ccnr / 10;
+        digit = (ccnr % 10) * 2;
+    }
+/*     int divider = 10;
     int sumtotal = 0;
     while ((amount/2) != 0) {
         int secondtolast = (ccnr / divider) % 10;
         int multiplysecondtolast = secondtolast * 2;
         sumtotal = sumtotal + multiplysecondtolast;
         divider = divider * 100;
-        amount--;
+        amount--; */
     }
     printf("sumcheck is: %i\n", sumtotal);
 
