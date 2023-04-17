@@ -21,9 +21,9 @@ int main(void)
 
 
     //checksum
-    for (i = 0; amount = 0; amount--)
+    for (int digits = 0; amount = 0; amount--)
     {
-        
+
     }
     long lastdigit = ccnr % 10;
 
