@@ -21,8 +21,10 @@ int main(void)
 
 
     //checksum
-    while (amount != 0) {
+    while ((amount/2) != 0) {
+        int divider = 10
         
+        amount--;
     }
     long lastdigit = ccnr % 10;
 
