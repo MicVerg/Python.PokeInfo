@@ -46,7 +46,7 @@ int main(void)
         divider = divider * 100;
         amount--; */
 
-    printf("sumcheck is: %i\n", total);
+    printf("sum is: %i\n", total);
 
     long lastdigit = ccnr % 10;
 
