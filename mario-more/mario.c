@@ -25,10 +25,6 @@ int main(void)
         }
         printf("--");
         printf("\n");
+        
     }
-    for (int row = 0; row < height; row++)
-    {
-        printf("#");
-    }
-
 }
