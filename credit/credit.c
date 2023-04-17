@@ -32,6 +32,10 @@ int main(void)
         {
             total = total + (digit / 10) + (digit % 10);
         }
+        else
+        {
+            total = total + digit;
+        }
     }
 /*     int divider = 10;
     int sumtotal = 0;
@@ -41,8 +45,8 @@ int main(void)
         sumtotal = sumtotal + multiplysecondtolast;
         divider = divider * 100;
         amount--; */
-    }
-    printf("sumcheck is: %i\n", sumtotal);
+
+    printf("sumcheck is: %i\n", total);
 
     long lastdigit = ccnr % 10;
 
