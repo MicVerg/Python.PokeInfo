@@ -21,14 +21,16 @@ int main(void)
 
 
     //checksum
-    int divider = 10
+    int divider = 10;
     while ((amount/2) != 0) {
-        sumsecondtolast = (ccnr / 10) % divider;
-        multiplysecondtolast = sumsecondtolast * 2
-        sumtotal = 
-        divider = divider * 100
+        int sumsecondtolast = (ccnr / 10) % divider;
+        int multiplysecondtolast = sumsecondtolast * 2;
+        int sumtotal = sumtotal + multiplysecondtolast;
+        divider = divider * 100;
         amount--;
     }
+    printf("sumcheck is: %i\n", sumtotal);
+    
     long lastdigit = ccnr % 10;
 
     long secondtolastdigit = (ccnr / 10) % 10;
