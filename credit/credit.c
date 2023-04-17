@@ -21,11 +21,15 @@ int main(void)
 
 
     //checksum
+    for (i = 0; amount = 0; amount--)
+    {
+        
+    }
     long lastdigit = ccnr % 10;
 
     long secondtolastdigit = (ccnr / 10) % 10;
 
-    
+
     //american express 15 digits, starts with 34 or 37
 
     //mastercard 16 digits, starts with 51 52 53 54 55
