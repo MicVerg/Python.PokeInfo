@@ -27,6 +27,11 @@ int main(void)
     {
         ccnr = ccnr / 10;
         digit = (ccnr % 10) * 2;
+
+        if (digit > 9)
+        {
+            total = total + (digit / 10) + (digit % 10);
+        }
     }
 /*     int divider = 10;
     int sumtotal = 0;
