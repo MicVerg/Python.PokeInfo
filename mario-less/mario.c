@@ -11,7 +11,7 @@ int main(void)
     }
     while (height < 1 || height > 8);
 
-    //based on height integer, loop that many times, adding #
+    //based on height integer, loop that many times, adding #2
     for (int row = 0; row < height; row++)
     {
         for (int dots = 1; dots < (height - row); dots++)
