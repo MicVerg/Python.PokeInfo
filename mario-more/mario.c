@@ -10,4 +10,19 @@ int main(void)
         height = get_int("What height do you want the stairs to be? ");
     }
     while (height < 1 || height > 8);
+
+    //loop
+    for (int row = 0; row < height; row++)
+    {
+        for (int dots = 1; dots < (height - row); dots++)
+        {
+            printf(" ");
+        }
+
+        for (int i = 0; i <= row; i++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
 }
