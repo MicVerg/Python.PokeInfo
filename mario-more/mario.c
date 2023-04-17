@@ -16,15 +16,18 @@ int main(void)
     {
         for (int dots = 1; dots < (height - row); dots++)
         {
-            printf("-");
+            printf(" ");
         }
 
         for (int i = 0; i <= row; i++)
         {
             printf("#");
         }
-        printf("--");
+        printf("  ");
+        for (int i = 0; i <= row; i++)
+        {
+            printf("#");
+        }
         printf("\n");
-        
     }
 }
