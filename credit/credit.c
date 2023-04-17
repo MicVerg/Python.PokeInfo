@@ -9,5 +9,7 @@ int main(void)
 
     //visa 13 or 16 digits, starts with 4
 
-    //checksum 
+    //checksum
+
+    //modulo 10
 }
