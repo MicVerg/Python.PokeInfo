@@ -24,8 +24,8 @@ int main(void)
     int divider = 10;
     int sumtotal = 0;
     while ((amount/2) != 0) {
-        int sumsecondtolast = (ccnr / 10) % divider;
-        int multiplysecondtolast = sumsecondtolast * 2;
+        int secondtolast = (ccnr / divider) % 10;
+        int multiplysecondtolast = secondtolast * 2;
         sumtotal = sumtotal + multiplysecondtolast;
         divider = divider * 100;
         amount--;
