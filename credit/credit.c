@@ -22,10 +22,11 @@ int main(void)
 
     //checksum
     int divider = 10;
+    int sumtotal = 0;
     while ((amount/2) != 0) {
         int sumsecondtolast = (ccnr / 10) % divider;
         int multiplysecondtolast = sumsecondtolast * 2;
-        int sumtotal = sumtotal + multiplysecondtolast;
+        sumtotal = sumtotal + multiplysecondtolast;
         divider = divider * 100;
         amount--;
     }
