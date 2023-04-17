@@ -29,8 +29,8 @@ int main(void)
         divider = divider * 100;
         amount--;
     }
-    printf("sumcheck is: %i\n", sumtotal);
-    
+    //printf("sumcheck is: %i\n", sumtotal);
+
     long lastdigit = ccnr % 10;
 
     long secondtolastdigit = (ccnr / 10) % 10;
