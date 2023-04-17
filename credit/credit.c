@@ -16,11 +16,16 @@ int main(void)
     while (ccnr != 0) {
         ccnr /= 10;
         amount++;
+        return amount;
+        printf("digits: %i\n", amount);
     }
-    //checksum
-    lastdigit = ccnr % 10;
 
-    secondtolastdigit = (ccnr / 10) % 10;
+
+
+    //checksum
+    long lastdigit = ccnr % 10;
+
+    long secondtolastdigit = (ccnr / 10) % 10;
     //american express 15 digits, starts with 34 or 37
 
     //mastercard 16 digits, starts with 51 52 53 54 55
