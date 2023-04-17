@@ -17,10 +17,9 @@ int main(void)
     while (ccnr != 0) {
         ccnr /= 10;
         amount++;
-        return amount;
-        printf("digits: %i\n", amount);
     }
-
+    return amount;
+    printf("digits: %i\n", amount);
 
 
     //checksum
