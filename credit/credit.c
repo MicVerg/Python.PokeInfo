@@ -10,7 +10,6 @@ int main(void)
         ccnr = get_long("Credit card nr? ");
     }
     while (ccnr < 1);
-    return ccnr;
 
     //amount of digits
     int amount = 0;
@@ -18,7 +17,6 @@ int main(void)
         ccnr /= 10;
         amount++;
     }
-    return amount;
     printf("digits: %i\n", amount);
 
 
