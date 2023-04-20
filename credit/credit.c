@@ -21,8 +21,6 @@ int main(void)
     printf("amount of digits: %i\n", amount);
 
     //loop checksum
-
-
     for (int digits = 0; digits < amount; digits++)
     {
         int multiply = 0;
