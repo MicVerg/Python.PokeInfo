@@ -12,12 +12,12 @@ int main(void)
     while (ccnr < 1);
 
     //amount of digits
-/*     int amount = 0;
+    int amount = 0;
     while (ccnr != 0) {
         ccnr /= 10;
         amount++;
     }
-    printf("digits: %i\n", amount); */
+    printf("digits: %i\n", amount);
 
 
     //checksum
