@@ -33,6 +33,10 @@ int main(void)
         divider = pow(10, exponent);
         onedigit = (ccnr2 / divider) % 10;
         multiply = onedigit * 2;
+        if (multiply > 9)
+        {
+            
+        }
         sum1 += multiply;
 
         //increment by 2 to get 10 - 1000 - ..
