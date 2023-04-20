@@ -34,7 +34,7 @@ int main(void)
 
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
-    printf("divider is: %l\n", divider);
+    printf("divider is: %lld\n", divider);
     printf("sum is: %i\n", sum1);
     }
 
