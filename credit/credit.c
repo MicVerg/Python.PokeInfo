@@ -27,14 +27,14 @@ int main(void)
         int multiply = 0;
         int sum1 = 0;
 
-        int divider = pow(10, exponent);
+        long long divider = pow(10, exponent);
         int onedigit = (ccnr / divider) % 10;
         multiply = onedigit * 2;
         sum1 += multiply;
 
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
-    printf("divider is: %i\n", divider);
+    printf("divider is: %l\n", divider);
     printf("sum is: %i\n", sum1);
     }
 
