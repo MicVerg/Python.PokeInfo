@@ -40,6 +40,7 @@ int main(void)
             split = multiply / 10;
             sum1 = sum1 + multiply + split;
             exponent += 2;
+            printf("split is: %i\n", split);
         }
         else
         {
