@@ -19,6 +19,8 @@ int main(void)
     }
     printf("amount of digits: %i\n", amount);
 
+    //loop
+    for (int )
 
     //checksum
 /*     int digit;
