@@ -27,6 +27,7 @@ int main(void)
     int multiply = 1;
     int sum1 = 0;
     int onedigit = 1;
+    int split = 0;
     long long divider = 1;
     for (int digits = 0; digits < amount; digits++)
     {
@@ -36,7 +37,12 @@ int main(void)
         if (multiply > 9)
         {
             multiply = multiply % 10;
+            split = multiply / 10;
+            sum1 = sum1 + multiply + split;
+            exponent += 2;
         }
+        else
+        {
         sum1 += multiply;
 
         //increment by 2 to get 10 - 1000 - ..
@@ -48,6 +54,7 @@ int main(void)
     printf("exponent is: %i\n", exponent);
     printf("ccnr is: %ld\n", ccnr2);
     printf("sum is: %i\n", sum1);
+    }
     }
 
 
