@@ -20,9 +20,9 @@ int main(void)
     printf("amount of digits: %i\n", amount);
 
     //loop
-    for (int sum = 0; sum < amount; sum++)
+    for (int digits = 0; digits < amount; digits++)
     {
-        int sum = 
+        int digits =
     }
 
     //checksum
