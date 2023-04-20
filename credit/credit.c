@@ -40,6 +40,7 @@ int main(void)
     printf("onedigit is: %i\n", onedigit);
     printf("multiply is: %i\n", multiply);
     printf("exponent is: %i\n", exponent);
+    printf("ccnr is: %ld\n", ccnr);
     printf("sum is: %i\n", sum1);
     }
 
