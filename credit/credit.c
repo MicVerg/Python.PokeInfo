@@ -20,7 +20,10 @@ int main(void)
     printf("amount of digits: %i\n", amount);
 
     //loop
-    for (int )
+    for (int secondtolast = 0; secondtolast < amount; secondtolast++)
+    {
+        
+    }
 
     //checksum
 /*     int digit;
