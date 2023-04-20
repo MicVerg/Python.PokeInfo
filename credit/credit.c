@@ -6,9 +6,11 @@ int main(void)
 {
     //prompt
     long ccnr;
+    long ccnr2;
     do
     {
         ccnr = get_long("Credit card nr? ");
+        ccnr2 = ccnr;
     }
     while (ccnr < 1);
 
@@ -29,7 +31,7 @@ int main(void)
     for (int digits = 0; digits < amount; digits++)
     {
         divider = pow(10, exponent);
-        onedigit = (ccnr / divider) % 10;
+        onedigit = (ccnr2 / divider) % 10;
         multiply = onedigit * 2;
         sum1 += multiply;
 
@@ -40,7 +42,7 @@ int main(void)
     printf("onedigit is: %i\n", onedigit);
     printf("multiply is: %i\n", multiply);
     printf("exponent is: %i\n", exponent);
-    printf("ccnr is: %ld\n", ccnr);
+    printf("ccnr is: %ld\n", ccnr2);
     printf("sum is: %i\n", sum1);
     }
 
