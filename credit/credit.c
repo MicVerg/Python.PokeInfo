@@ -24,16 +24,18 @@ int main(void)
     int exponent = 1;
     int multiply = 0;
     int sum1 = 0;
+    int onedigit = 0;
     for (int digits = 0; digits < amount; digits++)
     {
         long long divider = pow(10, exponent);
-        int onedigit = (ccnr / divider) % 10;
+        onedigit = (ccnr / divider) % 10;
         multiply = onedigit * 2;
         sum1 += multiply;
 
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
     printf("divider is: %lld\n", divider);
+    printf("multiply is: %i\n", onedigit);
     printf("multiply is: %i\n", multiply);
     printf("sum is: %i\n", sum1);
     }
