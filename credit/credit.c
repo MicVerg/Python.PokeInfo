@@ -22,7 +22,8 @@ int main(void)
     //loop checksum
     for (int digits = 0; digits < amount; digits++)
     {
-        int digits =
+        int power = 10;
+        int sum = (ccnr / 10)
     }
 
     //checksum
