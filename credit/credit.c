@@ -24,8 +24,12 @@ int main(void)
     for (int digits = 0; digits < amount; digits++)
     {
         int exponent = 1;
-        int sum = (ccnr / pow(10, exponent)
+        int divider = pow(10, exponent);
+        int sum = (ccnr / divider) % 10;
+        //increment by 2 to get 10 - 1000 - ..
+        exponent += 2;
     }
+    printf("sum is: %i\n", sum);
 
     //checksum
 /*     int digit;
