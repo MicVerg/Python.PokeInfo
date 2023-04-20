@@ -33,7 +33,7 @@ int main(void)
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
     }
-    printf("sum is: %i\n", sum);
+    printf("sum is: %i\n", sum1);
 
     //checksum
 /*     int digit;
@@ -61,13 +61,13 @@ int main(void)
         divider = divider * 100;
         amount--; */
 
-    printf("sum is: %i\n", total);
+    //printf("sum is: %i\n", total);
 
-    long lastdigit = ccnr % 10;
+/*     long lastdigit = ccnr % 10;
 
     long secondtolastdigit = (ccnr / 10) % 10;
     long thirdtolastdigit = (ccnr / 100) % 10;
-    long fourthtolastdigit = (ccnr / 1000) % 10;
+    long fourthtolastdigit = (ccnr / 1000) % 10; */
 
 
     //american express 15 digits, starts with 34 or 37
