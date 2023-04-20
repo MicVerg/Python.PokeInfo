@@ -21,10 +21,12 @@ int main(void)
     printf("amount of digits: %i\n", amount);
 
     //loop checksum
-    int sum1 = 0;
-    int multiply = 0;
+
+
     for (int digits = 0; digits < amount; digits++)
     {
+        int multiply = 0;
+        int sum1 = 0;
         int exponent = 1;
         int divider = pow(10, exponent);
         int onedigit = (ccnr / divider) % 10;
@@ -34,9 +36,10 @@ int main(void)
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
     printf("divider is: %i\n", divider);
+    printf("sum is: %i\n", sum1);
     }
 
-    printf("sum is: %i\n", sum1);
+
 
     //checksum
 /*     int digit;
