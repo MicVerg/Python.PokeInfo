@@ -35,7 +35,7 @@ int main(void)
         multiply = onedigit * 2;
         if (multiply > 9)
         {
-            
+            multiply = multiply % 10;
         }
         sum1 += multiply;
 
