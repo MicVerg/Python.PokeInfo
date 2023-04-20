@@ -17,11 +17,11 @@ int main(void)
         ccnr /= 10;
         amount++;
     }
-    printf("digits: %i\n", amount);
+    printf("amount of digits: %i\n", amount);
 
 
     //checksum
-    int digit;
+/*     int digit;
     int total = 0;
     while (ccnr != 0)
     {
@@ -36,7 +36,7 @@ int main(void)
         {
             total = total + digit;
         }
-    }
+    } */
 /*     int divider = 10;
     int sumtotal = 0;
     while ((amount/2) != 0) {
