@@ -22,7 +22,7 @@ int main(void)
     //loop
     for (int sum = 0; sum < amount; sum++)
     {
-
+        int sum = 
     }
 
     //checksum
