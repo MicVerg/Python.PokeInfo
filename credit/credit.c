@@ -25,9 +25,10 @@ int main(void)
     int multiply = 0;
     int sum1 = 0;
     int onedigit = 0;
+    long long divider = 0;
     for (int digits = 0; digits < amount; digits++)
     {
-        long long divider = pow(10, exponent);
+        divider = pow(10, exponent);
         onedigit = (ccnr / divider) % 10;
         multiply = onedigit * 2;
         sum1 += multiply;
