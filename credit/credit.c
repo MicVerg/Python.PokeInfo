@@ -24,7 +24,7 @@ int main(void)
     for (int digits = 0; digits < amount; digits++)
     {
         int exponent = 1;
-        int sum = (ccnr / 10)
+        int sum = (ccnr / pow(10, exponent)
     }
 
     //checksum
