@@ -19,7 +19,7 @@ int main(void)
     }
     printf("amount of digits: %i\n", amount);
 
-    //loop
+    //loop checksum
     for (int digits = 0; digits < amount; digits++)
     {
         int digits =
