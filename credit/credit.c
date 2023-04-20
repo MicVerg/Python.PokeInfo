@@ -22,11 +22,10 @@ int main(void)
 
     //loop checksum
     int exponent = 1;
+    int multiply = 0;
+    int sum1 = 0;
     for (int digits = 0; digits < amount; digits++)
     {
-        int multiply = 0;
-        int sum1 = 0;
-
         long long divider = pow(10, exponent);
         int onedigit = (ccnr / divider) % 10;
         multiply = onedigit * 2;
