@@ -32,7 +32,9 @@ int main(void)
 
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
+        printf("sum is: %i\n", multiply);
     }
+
     printf("sum is: %i\n", sum1);
 
     //checksum
