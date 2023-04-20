@@ -21,11 +21,12 @@ int main(void)
     printf("amount of digits: %i\n", amount);
 
     //loop checksum
+    int exponent = 1;
     for (int digits = 0; digits < amount; digits++)
     {
         int multiply = 0;
         int sum1 = 0;
-        int exponent = 1;
+
         int divider = pow(10, exponent);
         int onedigit = (ccnr / divider) % 10;
         multiply = onedigit * 2;
