@@ -24,7 +24,7 @@ int main(void)
     int exponent = 1;
     int multiply = 0;
     int sum1 = 0;
-    int onedigit = 0;
+    int onedigit = 1;
     long long divider = 0;
     for (int digits = 0; digits < amount; digits++)
     {
