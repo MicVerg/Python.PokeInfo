@@ -26,6 +26,8 @@ int main(void)
         int exponent = 1;
         int divider = pow(10, exponent);
         int sum = (ccnr / divider) % 10;
+        
+
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
     }
