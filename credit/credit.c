@@ -24,9 +24,11 @@ int main(void)
     for (int digits = 0; digits < amount; digits++)
     {
         int exponent = 1;
+        int sum1 = 0;
         int divider = pow(10, exponent);
         int onedigit = (ccnr / divider) % 10;
-        
+        int multiply = onedigit * 2
+        sum1 += multiply
 
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
