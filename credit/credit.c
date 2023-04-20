@@ -38,6 +38,7 @@ int main(void)
     printf("divider is: %lld\n", divider);
     printf("onedigit is: %i\n", onedigit);
     printf("multiply is: %i\n", multiply);
+    printf("exponent is: %i\n", exponent);
     printf("sum is: %i\n", sum1);
     }
 
