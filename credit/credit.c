@@ -44,11 +44,6 @@ int main(void)
                 exponent += 2;
                 printf("split is: %d\n", split);
             }
-/*             multiply = multiply % 10;
-            split = multiply / 10;
-            sum1 = sum1 + multiply + ceil(split);
-            exponent += 2;
-            printf("split is: %f\n", ceil(split)); */
         }
         else
         {
