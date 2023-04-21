@@ -42,7 +42,7 @@ int main(void)
                 multiply /= 10;
                 sum1 = sum1 + multiply + split;
                 exponent += 2;
-                printf("split is: %f\n", ceil(split));
+                printf("split is: %d\n", split);
             }
 /*             multiply = multiply % 10;
             split = multiply / 10;
