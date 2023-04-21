@@ -29,7 +29,6 @@ int main(void)
     int onedigit = 1;
     //double split = 0;
     long long divider = 1;
-    int split = 0;
     for (int digits = 0; digits < amount; digits++)
     {
         divider = pow(10, exponent);
@@ -39,14 +38,12 @@ int main(void)
         {
             while(multiply > 0)
             {
-                split = multiply % 10;
+                int split = multiply % 10;
                 multiply /= 10;
-                split += split;
-
+                sum1 = sum1 + multiply + split;
                 exponent += 2;
                 printf("split is: %d\n", split);
             }
-            sum1 = sum1 + multiply + split;
 /*             multiply = multiply % 10;
             split = multiply / 10;
             sum1 = sum1 + multiply + ceil(split);
