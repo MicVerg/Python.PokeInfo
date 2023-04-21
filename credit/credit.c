@@ -24,7 +24,7 @@ int main(void)
 
     //loop checksum
     int exponent = 1;
-    int multiply = 1;
+    int multiply = 0;
     int sum1 = 0;
     int onedigit = 1;
     //double split = 0;
