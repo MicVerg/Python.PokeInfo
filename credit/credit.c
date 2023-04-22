@@ -65,17 +65,18 @@ int main(void)
     int multiply2 = 0;
     int sum2 = 0;
     int onedigit2 = 1;
-    long long divider = 1;
+    long long divider2 = 1;
 
     onedigit = ccnr2 % 10;
-    sum2 += onedigit
+    sum2 += onedigit2;
     for (int digits = 0; digits < amount; digits++)
     {
-        divider = pow(10, exponent);
-        onedigit = (ccnr2 / divider) % 10;
+        divider2 = pow(10, exponent2);
+        onedigit2 = (ccnr2 / divider2) % 10;
+        sum2 += onedigit2;
+        exponent2 += 2;
     }
-        sum2 += multiply;
-        exponent += 2;
+    printf("sum2 is: %i\n", sum2);
 
 
 /*     long lastdigit = ccnr % 10;
