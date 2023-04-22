@@ -66,13 +66,15 @@ int main(void)
     int sum2 = 0;
     int onedigit2 = 1;
     long long divider = 1;
+
+    onedigit = ccnr2 % 10;
+    sum2 += onedigit
     for (int digits = 0; digits < amount; digits++)
     {
         divider = pow(10, exponent);
         onedigit = (ccnr2 / divider) % 10;
-        //multiply = onedigit * 2;
     }
-        sum1 += multiply;
+        sum2 += multiply;
         exponent += 2;
 
 
