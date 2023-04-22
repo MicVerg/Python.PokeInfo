@@ -60,7 +60,8 @@ int main(void)
     printf("\n");
     }
     }
-
+    //loop for sum2
+    
 
 
     //checksum
