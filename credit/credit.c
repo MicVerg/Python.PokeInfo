@@ -28,7 +28,6 @@ int main(void)
     int multiply = 0;
     int sum1 = 0;
     int onedigit = 1;
-    //double split = 0;
     long long divider = 1;
     for (int digits = 0; digits < amount; digits++)
     {
@@ -61,7 +60,16 @@ int main(void)
     }
     }
     //loop for sum2
-    
+    int exponent2 = 1;
+    int multiply2 = 0;
+    int sum2 = 0;
+    int onedigit2 = 1;
+    long long divider = 1;
+    for (int digits = 0; digits < amount; digits++)
+    {
+        divider = pow(10, exponent);
+        onedigit = (ccnr2 / divider) % 10;
+        multiply = onedigit * 2;
 
 
     //checksum
