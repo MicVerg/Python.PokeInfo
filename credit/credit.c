@@ -94,7 +94,7 @@ int main(void)
         long long divider4 = 1;
         divider4 = pow(10, 13);
         seconddigit = (ccnr2 / divider4) % 10;
-        if ((firstdigit == 3) && seconddigit == (4 || 7))
+        if ((firstdigit == 3) && seconddigit == (4 | 7))
         {
             printf("AMEX\n");
         }
