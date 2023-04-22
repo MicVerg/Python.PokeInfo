@@ -84,9 +84,17 @@ int main(void)
     {
         printf("INVALID\n");
     }
-    else if
+    else if (amount = 15)
     {
-        
+        printf("AMEX\n");
+    }
+    else if (amount = 13)
+    {
+        printf("VISA\n");
+    }
+    else if (amount = 16)
+    {
+        printf("AMEX\n");
     }
 
 
