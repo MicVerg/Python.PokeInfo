@@ -64,11 +64,12 @@ int main(void)
     int exponent2 = 1;
     int multiply2 = 0;
     int sum2 = 0;
-    int onedigit2 = 1;
+    int onedigit2 = 0;
     long long divider2 = 1;
 
     onedigit2 = ccnr2 % 10;
     sum2 += onedigit2;
+    printf("sum2 is: %i\n", sum2);
     for (int digits2 = 0; digits2 < amount; digits2++)
     {
         divider2 = pow(10, exponent2);
