@@ -94,7 +94,8 @@ int main(void)
     }
     else if (amount == 16)
     {
-        long long firstdigit = (ccnr2 / (pow(10, 15))) % 10;
+        int firstdigit = 0;
+        firstdigit = (ccnr2 / (pow(10, 15))) % 10;
         if (firstdigit == 5)
         {
             printf("MASTERCARD\n");
