@@ -59,6 +59,7 @@ int main(void)
     printf("\n");
     }
     }
+
     //loop for sum2
     int exponent2 = 1;
     int multiply2 = 0;
@@ -70,7 +71,9 @@ int main(void)
         divider = pow(10, exponent);
         onedigit = (ccnr2 / divider) % 10;
         multiply = onedigit * 2;
-
+    }
+        sum1 += multiply;
+        exponent += 2;
 
     //checksum
 /*     int digit;
