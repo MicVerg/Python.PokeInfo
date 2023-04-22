@@ -94,7 +94,15 @@ int main(void)
     }
     else if (amount = 16)
     {
-        printf("AMEX\n");
+        int firstdigit = (ccnr2 / (pow(10, 15)) % 10;)
+        if (firstdigit = 5)
+        {
+            printf("MASTERCARD\n");
+        }
+        if (firstdigit = 4)
+        {
+            printf("VISA\n");
+        }
     }
 
 
