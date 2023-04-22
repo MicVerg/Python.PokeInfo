@@ -20,8 +20,8 @@ int main(void)
         ccnr /= 10;
         amount++;
     }
-    printf("amount of digits: %i\n", amount);
-    printf("ccnr is: %ld\n", ccnr2);
+    //printf("amount of digits: %i\n", amount);
+    printf("Number is: %ld\n", ccnr2);
 
     //loop checksum
     int exponent = 1;
@@ -42,7 +42,7 @@ int main(void)
                 multiply /= 10;
                 sum1 = sum1 + split;
                 exponent += 2;
-                printf("split is: %d\n", split);
+                //printf("split is: %d\n", split);
             }
         }
         else
@@ -51,12 +51,12 @@ int main(void)
 
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
-    printf("divider is: %lld\n", divider);
+    /* printf("divider is: %lld\n", divider);
     printf("onedigit is: %i\n", onedigit);
     printf("multiply is: %i\n", multiply);
     printf("exponent is: %i\n", exponent);
     printf("sum is: %i\n", sum1);
-    printf("\n");
+    printf("\n"); */
     }
     }
 
@@ -69,14 +69,14 @@ int main(void)
 
     onedigit2 = ccnr2 % 10;
     sum2 += onedigit2;
-    printf("sum2 is: %i\n", sum2);
+    //printf("sum2 is: %i\n", sum2);
     for (int digits2 = 0; digits2 < amount; digits2++)
     {
         divider2 = pow(10, exponent2);
         onedigit2 = (ccnr2 / divider2) % 10;
         sum2 += onedigit2;
         exponent2 += 2;
-        printf("sum2 is: %i\n", sum2);
+        //printf("sum2 is: %i\n", sum2);
     }
 
     int sum3 = sum1 + sum2;
@@ -94,8 +94,10 @@ int main(void)
     }
     else if (amount == 16)
     {
+        long long divider3 = 1;
+        divider3 = pow(10, 15);
         int firstdigit = 0;
-        firstdigit = (ccnr2 / (pow(10, 15))) % 10;
+        firstdigit = (ccnr2 / divider3) % 10;
         if (firstdigit == 5)
         {
             printf("MASTERCARD\n");
