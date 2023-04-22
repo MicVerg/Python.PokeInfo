@@ -41,7 +41,7 @@ int main(void)
             {
                 int split = multiply % 10;
                 multiply /= 10;
-                sum1 = sum1 + multiply + split;
+                sum1 = sum1 + split;
                 exponent += 2;
                 printf("split is: %d\n", split);
             }
