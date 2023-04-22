@@ -86,7 +86,6 @@ int main(void)
     }
     else if (amount == 15)
     {
-        {
         long long divider3 = 1;
         divider3 = pow(10, 14);
         int firstdigit = 0;
@@ -102,7 +101,6 @@ int main(void)
         else
         {
             printf("INVALID\n");
-        }
         }
     }
     else if (amount == 13)
