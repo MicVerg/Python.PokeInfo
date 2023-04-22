@@ -21,7 +21,8 @@ int main(void)
         amount++;
     }
     printf("amount of digits: %i\n", amount);
-
+    printf("ccnr is: %ld\n", ccnr2);
+    
     //loop checksum
     int exponent = 1;
     int multiply = 0;
@@ -55,7 +56,6 @@ int main(void)
     printf("onedigit is: %i\n", onedigit);
     printf("multiply is: %i\n", multiply);
     printf("exponent is: %i\n", exponent);
-    printf("ccnr is: %ld\n", ccnr2);
     printf("sum is: %i\n", sum1);
     }
     }
