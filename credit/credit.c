@@ -86,6 +86,23 @@ int main(void)
     }
     else if (amount == 15)
     {
+        if
+        {
+        long long divider3 = 1;
+        divider3 = pow(10, 14);
+        int firstdigit = 0;
+        firstdigit = (ccnr2 / divider3) % 10;
+        int seconddigit = 0;
+        seconddigit = (ccnr2 / divider3) % 10;
+        if (firstdigit == 3)
+        {
+            printf("MASTERCARD\n");
+        }
+        if (firstdigit == 4)
+        {
+            printf("VISA\n");
+        }
+        }
         printf("AMEX\n");
     }
     else if (amount == 13)
