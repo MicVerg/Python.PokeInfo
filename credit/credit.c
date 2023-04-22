@@ -86,7 +86,6 @@ int main(void)
     }
     else if (amount == 15)
     {
-        if
         {
         long long divider3 = 1;
         divider3 = pow(10, 14);
