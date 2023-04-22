@@ -22,7 +22,7 @@ int main(void)
     }
     printf("amount of digits: %i\n", amount);
     printf("ccnr is: %ld\n", ccnr2);
-    
+
     //loop checksum
     int exponent = 1;
     int multiply = 0;
@@ -57,6 +57,7 @@ int main(void)
     printf("multiply is: %i\n", multiply);
     printf("exponent is: %i\n", exponent);
     printf("sum is: %i\n", sum1);
+    printf("\n");
     }
     }
 
