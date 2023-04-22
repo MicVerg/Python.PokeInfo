@@ -75,33 +75,6 @@ int main(void)
         sum1 += multiply;
         exponent += 2;
 
-    //checksum
-/*     int digit;
-    int total = 0;
-    while (ccnr != 0)
-    {
-        ccnr = ccnr / 10;
-        digit = (ccnr % 10) * 2;
-
-        if (digit > 9)
-        {
-            total = total + (digit / 10) + (digit % 10);
-        }
-        else
-        {
-            total = total + digit;
-        }
-    } */
-/*     int divider = 10;
-    int sumtotal = 0;
-    while ((amount/2) != 0) {
-        int secondtolast = (ccnr / divider) % 10;
-        int multiplysecondtolast = secondtolast * 2;
-        sumtotal = sumtotal + multiplysecondtolast;
-        divider = divider * 100;
-        amount--; */
-
-    //printf("sum is: %i\n", total);
 
 /*     long lastdigit = ccnr % 10;
 
