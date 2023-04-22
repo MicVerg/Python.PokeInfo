@@ -61,7 +61,7 @@ int main(void)
     }
 
     //loop for sum2
-    int exponent2 = 1;
+    int exponent2 = 2;
     int multiply2 = 0;
     int sum2 = 0;
     int onedigit2 = 0;
@@ -79,6 +79,11 @@ int main(void)
         printf("sum2 is: %i\n", sum2);
     }
 
+    int sum3 = sum1 + sum2;
+    if ((sum3 % 10) != 0)
+    {
+        printf("INVALID\n");
+    }
 
 
 /*     long lastdigit = ccnr % 10;
