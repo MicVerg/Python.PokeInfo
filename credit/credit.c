@@ -84,22 +84,22 @@ int main(void)
     {
         printf("INVALID\n");
     }
-    else if (amount = 15)
+    else if (amount == 15)
     {
         printf("AMEX\n");
     }
-    else if (amount = 13)
+    else if (amount == 13)
     {
         printf("VISA\n");
     }
-    else if (amount = 16)
+    else if (amount == 16)
     {
-        int firstdigit = (ccnr2 / (pow(10, 15)) % 10;)
-        if (firstdigit = 5)
+        long long firstdigit = (ccnr2 / (pow(10, 15)) % 10;)
+        if (firstdigit == 5)
         {
             printf("MASTERCARD\n");
         }
-        if (firstdigit = 4)
+        if (firstdigit == 4)
         {
             printf("VISA\n");
         }
