@@ -93,17 +93,18 @@ int main(void)
         int firstdigit = 0;
         firstdigit = (ccnr2 / divider3) % 10;
         int seconddigit = 0;
-        seconddigit = (ccnr2 / divider3) % 10;
-        if (firstdigit == 3)
+        long long divider4 = 1;
+        divider4 = pow(10, 13);
+        seconddigit = (ccnr2 / divider4) % 10;
+        if (firstdigit == 3 && seconddigit == 4 || 7)
         {
-            printf("MASTERCARD\n");
+            printf("AMEX\n");
         }
-        if (firstdigit == 4)
+        else
         {
-            printf("VISA\n");
+            printf("INVALID\n");
         }
         }
-        printf("AMEX\n");
     }
     else if (amount == 13)
     {
