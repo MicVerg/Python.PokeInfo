@@ -70,7 +70,7 @@ int main(void)
     {
         divider = pow(10, exponent);
         onedigit = (ccnr2 / divider) % 10;
-        multiply = onedigit * 2;
+        //multiply = onedigit * 2;
     }
         sum1 += multiply;
         exponent += 2;
