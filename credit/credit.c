@@ -84,6 +84,10 @@ int main(void)
     {
         printf("INVALID\n");
     }
+    else
+    {
+        
+    }
 
 
 /*     long lastdigit = ccnr % 10;
