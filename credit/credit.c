@@ -80,6 +80,7 @@ int main(void)
     }
 
     int sum3 = sum1 + sum2;
+    printf("sum3 is: %i\n", sum3);
     if ((sum3 % 10) != 0)
     {
         printf("INVALID\n");
