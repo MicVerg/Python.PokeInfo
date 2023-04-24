@@ -28,6 +28,7 @@ int compute_score(string word)
     //a = 97
     //A = 65
     for (int letters = 0; letters <= n; letters++)
+    int n = 0;
     do
     {
         word1[n]
