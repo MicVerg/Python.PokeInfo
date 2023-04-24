@@ -51,12 +51,4 @@ int compute_score(string word)
         }
     }
     return score;
-
-    /* int n = 0;
-    do
-    {
-        word1[n];
-        n++;
-    }
-    while word1[n] != \0 */
 }
