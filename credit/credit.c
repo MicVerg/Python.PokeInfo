@@ -16,7 +16,8 @@ int main(void)
 
     //amount of digits
     int amount = 0;
-    while (ccnr != 0) {
+    while (ccnr != 0)
+    {
         ccnr /= 10;
         amount++;
     }
@@ -36,18 +37,26 @@ int main(void)
         multiply = onedigit * 2;
         if (multiply > 9)
         {
-            while(multiply > 0)
+            for (digits = 0; multiply > 0; digits++)
             {
                 int split = multiply % 10;
                 multiply /= 10;
                 sum1 = sum1 + split;
                 exponent += 2;
-                //printf("split is: %d\n", split);
+                //digits++;
+                printf("loopmultiply is: %d\n", multiply);
+                printf("loopsplit is: %d\n", split);
+                printf("loopsum is: %i\n", sum1);
             }
         }
         else
         {
+        printf("onedigit is: %i\n", onedigit);
+        printf("multiply is: %i\n", multiply);
+        printf("sum is: %i\n", sum1);
         sum1 += multiply;
+        printf("sum is: %i\n", sum1);
+        //printf("loopsplit is: %d\n", split);
 
         //increment by 2 to get 10 - 1000 - ..
         exponent += 2;
@@ -80,6 +89,8 @@ int main(void)
     }
 
     int sum3 = sum1 + sum2;
+    printf("sum1 is: %i\n", sum1);
+    printf("sum2 is: %i\n", sum2);
     printf("sum3 is: %i\n", sum3);
     if ((sum3 % 10) != 0)
     {
