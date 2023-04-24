@@ -28,12 +28,12 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     //a = 97
     //A = 65
-    //for (int letters = 0; letters <= n; letters++)
-    int n = 0;
+    for (int i = 0, len = strlen(word); i < len; i++)
+    /* int n = 0;
     do
     {
         word1[n];
         n++;
     }
-    while word1[n] != \0
+    while word1[n] != \0 */
 }
