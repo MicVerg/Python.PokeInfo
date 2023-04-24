@@ -30,7 +30,10 @@ int compute_score(string word)
     //A = 65
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        
+        if (isupper(word[i]))
+        {
+            score += 
+        }
     }
     /* int n = 0;
     do
