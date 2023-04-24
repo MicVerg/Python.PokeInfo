@@ -29,6 +29,9 @@ int compute_score(string word)
     //a = 97
     //A = 65
     for (int i = 0, len = strlen(word); i < len; i++)
+    {
+        
+    }
     /* int n = 0;
     do
     {
