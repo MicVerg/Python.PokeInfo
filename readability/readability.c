@@ -11,7 +11,6 @@ int main(void)
 //write function to count uppercase and lowercase letters
 //int count_letters(string text)
 
-
 //write function to count words
 
 //write function to count sentences (sentences end with . ! ?)
