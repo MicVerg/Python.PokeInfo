@@ -31,7 +31,8 @@ int compute_score(string word)
     int n = 0;
     do
     {
-        word1[n]
+        word1[n];
+        n++;
     }
     while word1[n] != \0
 }
