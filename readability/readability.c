@@ -5,5 +5,8 @@ int main(void)
 {
 //prompt for text
 
-//count uppercase and lowercase letters
+
 }
+
+//write function to count uppercase and lowercase letters
+//int count_letters(string text)
