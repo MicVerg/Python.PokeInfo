@@ -5,5 +5,5 @@ int main(void)
 {
 //prompt for text
 
-
+//count uppercase and lowercase letters
 }
