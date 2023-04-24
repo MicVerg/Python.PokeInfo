@@ -25,9 +25,12 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    //a = 97
+    //A = 65
     for (int letters = 0; letters <= n; letters++)
     do
     {
         word1[n]
     }
+    while word1[n] != \0
 }
