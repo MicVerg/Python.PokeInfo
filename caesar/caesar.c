@@ -38,6 +38,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < length; i++)
     {
         rotate(plaintext[i], intkey);
+        printf("ciphertext: %c\n", result);
     }
     //key is argv[1]
     //prompt user for plaintext
