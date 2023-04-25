@@ -61,14 +61,14 @@ char rotate(char c, int n)
 {
     int subtracted;
     char placeholder;
-    if isupper(char c)
+    if (isupper(char c))
     {
         substracted = int()(c) - 65;
-        
+
     }
-    else if
+    else if (islower(char c))
     {
-        islower(char c)
+        substracted = int()(c) - 97;
     }
 return result;
 }
