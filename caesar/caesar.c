@@ -30,7 +30,7 @@ int main(int argc, string argv[])
         }
     }
 
-    //key = atoi(argv[1]);
+    int intkey = atoi(argv[1]);
 
 
 
@@ -57,5 +57,5 @@ bool only_digits(string key)
 
 char rotate(char c, int n)
 {
-
+return 0;
 }
