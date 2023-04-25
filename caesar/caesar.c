@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        bool onlydigits = only_digits(argv[1]);
+        bool onlydigits = only_digits(key);
         if (onlydigits == true)
         {
             return 0;
