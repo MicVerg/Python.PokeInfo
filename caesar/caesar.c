@@ -59,6 +59,7 @@ bool only_digits(string key)
 
 char rotate(char c, int n)
 {
+    n = intkey;
     int subtracted = 0;
     int addkey = 0;
     char result;
