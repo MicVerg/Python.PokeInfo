@@ -13,7 +13,11 @@ int main(void)
 }
 
 //write function to count uppercase and lowercase letters
-//int count_letters(string text)
+int count_letters(string text)
+{
+    int letters = 0;
+}
+
 
 //write function to count words
 
