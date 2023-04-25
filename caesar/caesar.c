@@ -78,5 +78,5 @@ char rotate(char c, int n)
             result = addkey+'0';
         }
     }
-
+    return result;
 }
