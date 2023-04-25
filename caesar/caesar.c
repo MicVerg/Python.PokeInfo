@@ -7,6 +7,7 @@ bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
+    string key = argv[1];
     //get input from cl
     //should be one argument in cl
     if (argc < 2 || argc > 2)
