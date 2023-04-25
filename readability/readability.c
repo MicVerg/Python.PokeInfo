@@ -27,7 +27,7 @@ int main(void)
     //use floats to calc these
     float L = (lettertotal / wordtotal) * 100;
     float S = (sentencetotal / wordtotal) * 100;
-    int grade = ;
+    double grade = round (0.0588);
 
 }
 
