@@ -4,6 +4,7 @@
 int main(int argc, string argv[])
 {
     //get input from cl
+    //should be one argument in cl
 
     //check if input is actually numeral, not alphabetical, not negative, nor empty nor multiple arguments
     //remind user with usage: ./caesar key
