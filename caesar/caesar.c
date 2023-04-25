@@ -16,6 +16,7 @@ int main(int argc, string argv[])
     }
     else
     {
+        bool onlydigits = only_digits(argv[1]);
         return 0;
     }
 
