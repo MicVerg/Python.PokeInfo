@@ -63,17 +63,20 @@ char rotate(char c, int n)
     int subtracted = 0;
     int addkey = 0;
     char result;
-    if (isupper(c))
+    if (isalpha(c))
     {
-        subtracted = c - 65;
-        addkey = (subtracted + n) % 26;
-        result = addkey;
-    }
-    else if (islower(c))
-    {
-        subtracted = c - 97;
-        addkey = (subtracted + n) % 26;
-        result = addkey;
+        if (isupper(c))
+        {
+            subtracted = c - 65;
+            addkey = (subtracted + n) % 26;
+            result = addkey;
+        }
+        else if (islower(c))
+        {
+            subtracted = c - 97;
+            addkey = (subtracted + n) % 26;
+            result = addkey;
+        }
     }
     return result;
 }
