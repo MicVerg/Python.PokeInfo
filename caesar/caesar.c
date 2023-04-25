@@ -22,6 +22,16 @@ int main(int argc, string argv[])
         bool onlydigits = only_digits(key);
         if (onlydigits == true)
         {
+        //rotate
+        int intkey = atoi(argv[1]);
+        string plaintext = get_string("plaintext: ");
+
+        int length = strlen(plaintext);
+        for (int i = 0; i < length; i++)
+        {
+            char deciphered = rotate(plaintext[i], intkey);
+            printf("ciphertext: %c\n", deciphered);
+        }
             return 0;
         }
         else if (onlydigits == false)
@@ -30,16 +40,7 @@ int main(int argc, string argv[])
             return 1;
         }
     }
-    //rotate
-    int intkey = atoi(argv[1]);
-    string plaintext = get_string("plaintext: ");
 
-    int length = strlen(plaintext);
-    for (int i = 0; i < length; i++)
-    {
-        char deciphered = rotate(plaintext[i], intkey);
-        printf("ciphertext: %c\n", deciphered);
-    }
     //key is argv[1]
     //prompt user for plaintext
 
