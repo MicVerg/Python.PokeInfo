@@ -27,7 +27,7 @@ int main(void)
     //use floats to calc these
     float L = (lettertotal / wordtotal) * 100;
     float S = (sentencetotal / wordtotal) * 100;
-    double grade = round(0.0588 * L - 0.296 * S - 15.8);
+    double grade = (0.0588 * L - 0.296 * S - 15.8);
     printf("L: %f\n", L);
     printf("S: %f\n", S);
     printf("grade: %f\n", grade);
