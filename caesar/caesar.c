@@ -60,15 +60,18 @@ bool only_digits(string key)
 char rotate(char c, int n)
 {
     int subtracted;
+    int addkey;
     char placeholder;
     if (isupper(char c))
     {
         substracted = int()(c) - 65;
+        addkey = substracted + intkey;
 
     }
     else if (islower(char c))
     {
         substracted = int()(c) - 97;
+        addkey = substracted + intkey;
     }
 return result;
 }
