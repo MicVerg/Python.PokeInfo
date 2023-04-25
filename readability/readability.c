@@ -14,7 +14,7 @@ int main(void)
 
     int lettertotal = count_letters(text);
     int wordtotal = count_words(text);
-    int sentencetotal = count_words(text);
+    int sentencetotal = count_sentences(text);
 
     printf("letters: %i\n", lettertotal);
     printf("words: %i\n", wordtotal);
