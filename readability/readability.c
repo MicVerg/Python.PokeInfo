@@ -43,7 +43,7 @@ int main(void)
     }
     else
     {
-        printf("Grade: %i\n", intgrade);
+        printf("Grade %i\n", intgrade);
     }
 }
 
