@@ -33,11 +33,11 @@ int count_letters(string text)
     //int badchars = 0;
     for (int i = 0; i < strlen; i++)
     {
-        if (isupper(word[i]))
+        if (isupper(text[i]))
         {
             letters++;
         }
-        else if (islower(word[i]))
+        else if (islower(text[i]))
         {
             letters++;
         }
