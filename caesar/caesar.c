@@ -34,6 +34,11 @@ int main(int argc, string argv[])
     int intkey = atoi(argv[1]);
     string plaintext = get_string("plaintext: ");
 
+    int length = strlen(plaintext);
+    for (int i = 0; i < length; i++)
+    {
+
+    }
 
 
 
