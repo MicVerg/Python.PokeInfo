@@ -29,7 +29,6 @@ int count_letters(string text)
 {
     int letters = 0;
     int len = strlen(text);
-    //int badchars = 0;
     for (int i = 0; i < len; i++)
     {
         if (isalpha(text[i]))
@@ -45,7 +44,17 @@ int count_letters(string text)
 int count_words(string text)
 {
     int words = 0;
-    return 0;
+    int spaces = 0;
+    int len = strlen(text);
+    for (int i = 0; i < len; i++)
+    {
+        if (isspace(text[i]))
+        {
+            spaces++;
+        }
+    }
+    words = spaces + 1;
+    return words;
 }
 
 //write function to count sentences (sentences end with . ! ?)
