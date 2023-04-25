@@ -17,10 +17,6 @@ int main(void)
     float wordtotal = count_words(text);
     float sentencetotal = count_sentences(text);
 
-    /* printf("letters: %i\n", lettertotal);
-    printf("words: %i\n", wordtotal);
-    printf("sentences: %i\n", sentencetotal); */
-
     //use formula to calculate grade
     //index = 0.0588 * L - 0.296 * S - 15.8
     //L average number of letters per 100 words - S average number of sentences per 100 words
@@ -30,9 +26,8 @@ int main(void)
     double grade = round(0.0588 * L - 0.296 * S - 15.8);
     int intgrade;
     intgrade = grade;
-/*     printf("L: %f\n", L);
-    printf("S: %f\n", S);
-    printf("grade: %f\n", grade); */
+
+    //print grades
     if (grade < 1)
     {
         printf("Before Grade 1\n");
