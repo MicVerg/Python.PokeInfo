@@ -15,7 +15,7 @@ int main(void)
     int lettertotal = count_letters(text);
 
     printf("letters: %i\n", lettertotal);
-    //printf("words: %i\n", words);
+    printf("words: %i\n", words);
     //printf("sentences: %i\n", sentences);
 
     //use formula to calculate grade
