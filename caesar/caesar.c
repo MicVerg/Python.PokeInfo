@@ -5,7 +5,7 @@ int main(int argc, string argv[])
 {
     //get input from cl
 
-    //check if input is actually numeral, not alphabetical nor empty nor multiple arguments
+    //check if input is actually numeral, not alphabetical, not negative, nor empty nor multiple arguments
     //remind user with usage: ./caesar key
 
     //move letters by input key, ONLY alphabetical chars tho
