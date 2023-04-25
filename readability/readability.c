@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int count_letters(string text)
-
+a
 int main(void)
 {
     //prompt for text
