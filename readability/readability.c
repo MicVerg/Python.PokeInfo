@@ -10,6 +10,8 @@ int main(void)
     //prompt for text
     string text = get_string("Text: ");
 
+    int lettertotal = count_letters(text);
+    
     printf("letters: %i\n", letters);
     printf("words: %i\n", words);
     printf("sentences: %i\n", sentences);
