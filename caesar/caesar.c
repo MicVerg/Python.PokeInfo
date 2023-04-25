@@ -9,6 +9,7 @@ bool only_digits(string key);
 int main(int argc, string argv[])
 {
     string key = argv[1];
+    int keyint = atoi(string key);
     //get input from cl
     //should be one argument in cl
     if (argc < 2 || argc > 2)
@@ -20,7 +21,7 @@ int main(int argc, string argv[])
     {
         bool onlydigits = only_digits(key);
         if (onlydigits == true)
-        int keyint = atoi(string key);
+
         string plaintext = get_string("plaintext: ");
         printf("keyint %i\n", keyint);
 
