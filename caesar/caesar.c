@@ -37,8 +37,8 @@ int main(int argc, string argv[])
     int length = strlen(plaintext);
     for (int i = 0; i < length; i++)
     {
-        rotate(plaintext[i], intkey);
-        printf("ciphertext: %c\n", result);
+        char deciphered = rotate(plaintext[i], intkey);
+        printf("ciphertext: %c\n", deciphered);
     }
     //key is argv[1]
     //prompt user for plaintext
