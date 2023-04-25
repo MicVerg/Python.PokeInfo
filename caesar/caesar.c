@@ -20,8 +20,10 @@ int main(int argc, string argv[])
     {
         bool onlydigits = only_digits(key);
         if (onlydigits == true)
-        int keyint = atoi(key);
-        
+        int keyint = atoi(string key);
+        string plaintext = get_string("plaintext: ");
+        printf("keyint %i\n", keyint);
+
         {
             return 0;
         }
