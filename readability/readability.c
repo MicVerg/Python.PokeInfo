@@ -14,10 +14,11 @@ int main(void)
 
     int lettertotal = count_letters(text);
     int wordtotal = count_words(text);
+    int sentencetotal = count_words(text);
 
     printf("letters: %i\n", lettertotal);
     printf("words: %i\n", wordtotal);
-    //printf("sentences: %i\n", sentences);
+    printf("sentences: %i\n", sentencetotal);
 
     //use formula to calculate grade
     //index = 0.0588 * L - 0.296 * S - 15.8
@@ -62,5 +63,13 @@ int count_words(string text)
 int count_sentences(string text)
 {
     int sentences = 0;
-    return 0;
+    int len = strlen(text);
+    for (int i = 0; i < len; i++)
+    {
+        if (text[i] == "." || text[i] == "!" || text[i] == "?")
+        {
+            sentences++;
+        }
+    }
+    return sentences;
 }
