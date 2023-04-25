@@ -13,9 +13,10 @@ int main(void)
     string text = get_string("Text: ");
 
     int lettertotal = count_letters(text);
+    int wordtotal = count_words(text);
 
     printf("letters: %i\n", lettertotal);
-    printf("words: %i\n", words);
+    printf("words: %i\n", wordtotal);
     //printf("sentences: %i\n", sentences);
 
     //use formula to calculate grade
