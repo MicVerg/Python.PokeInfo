@@ -20,6 +20,7 @@ int main(int argc, string argv[])
     {
         bool onlydigits = only_digits(key);
         if (onlydigits == true)
+        
         {
             return 0;
         }
@@ -53,5 +54,5 @@ bool only_digits(string key)
 
 char rotate(char c, int n)
 {
-    
+
 }
