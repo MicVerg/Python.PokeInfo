@@ -65,13 +65,13 @@ char rotate(char c, int n)
     char result;
     if (isalpha(c))
     {
-        if (isupper(c))
+        if (c >= 65 && c <= 90)
         {
             subtracted = c - 65;
             addkey = (subtracted + n) % 26;
             result = char()addkey;
         }
-        else if (islower(c))
+        else if (c >= 97 && c <= 122)
         {
             subtracted = c - 97;
             addkey = (subtracted + n) % 26;
