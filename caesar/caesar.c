@@ -58,7 +58,7 @@ bool only_digits(string key)
     return false;
 }
 
-char rotate(char c, int intkey)
+char rotate(char c, int n)
 {
     int subtracted = 0;
     int addkey = 0;
@@ -68,13 +68,13 @@ char rotate(char c, int intkey)
         if (isupper(c))
         {
             subtracted = c - 65;
-            addkey = (subtracted + intkey) % 26;
+            addkey = (subtracted + n) % 26;
             result = char()addkey;
         }
         else if (islower(c))
         {
             subtracted = c - 97;
-            addkey = (subtracted + intkey) % 26;
+            addkey = (subtracted + n) % 26;
             result = char()addkey;
         }
     }
