@@ -17,9 +17,9 @@ int main(void)
     int wordtotal = count_words(text);
     int sentencetotal = count_sentences(text);
 
-    printf("letters: %i\n", lettertotal);
+    /* printf("letters: %i\n", lettertotal);
     printf("words: %i\n", wordtotal);
-    printf("sentences: %i\n", sentencetotal);
+    printf("sentences: %i\n", sentencetotal); */
 
     //use formula to calculate grade
     //index = 0.0588 * L - 0.296 * S - 15.8
@@ -27,8 +27,10 @@ int main(void)
     //use floats to calc these
     float L = (lettertotal / wordtotal) * 100;
     float S = (sentencetotal / wordtotal) * 100;
-    double grade = round (0.0588);
-
+    double grade = round(0.0588 * L - 0.296 * S - 15.8);
+    printf("L: %f\n", L);
+    printf("S: %f\n", S);
+    printf("grade: %f\n", grade);
 }
 
 //write function to count uppercase and lowercase letters
