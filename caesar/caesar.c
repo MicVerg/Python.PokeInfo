@@ -26,4 +26,11 @@ int main(int argc, string argv[])
 
 }
 //function that checks if arguments are digits
-bool only_digits(string s);
+bool only_digits(string s)
+{
+    int len = strlen(s);
+    for (int i = 0; i < len; i++)
+    {
+        
+    }
+}
