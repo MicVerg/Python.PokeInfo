@@ -23,10 +23,10 @@ int count_letters(string text)
 //count the spaces (spaces + 1 = total words)
 int count_words(string text)
 {
-
+    int words = 0;
 }
 //write function to count sentences (sentences end with . ! ?)
 int count_sentences(string text)
 {
-
+    int sentences = 0;
 }
