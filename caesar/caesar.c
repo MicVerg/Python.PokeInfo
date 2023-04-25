@@ -62,7 +62,7 @@ char rotate(char c, int n)
 {
     int subtracted = 0;
     int addkey = 0;
-    char result;
+    char result = 0;
     if (isalpha(c))
     {
         if (c >= 65 && c <= 90)
@@ -76,10 +76,6 @@ char rotate(char c, int n)
             subtracted = c - 97;
             addkey = (subtracted + n) % 26;
             result = addkey+'0';
-        }
-        else
-        {
-            return 1;
         }
     }
     return result;
