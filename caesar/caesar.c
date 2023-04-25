@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -23,5 +24,6 @@ int main(int argc, string argv[])
     //move letters by input key, ONLY alphabetical chars tho
     //so change every character to character + key
 
-
 }
+//function that checks if arguments are digits
+bool only_digits(string s);
