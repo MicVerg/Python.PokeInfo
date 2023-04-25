@@ -69,13 +69,13 @@ char rotate(char c, int n)
         {
             subtracted = c - 65;
             addkey = (subtracted + n) % 26;
-            result = int()addkey;
+            result = char()addkey;
         }
         else if (islower(c))
         {
             subtracted = c - 97;
             addkey = (subtracted + n) % 26;
-            result = int()addkey;
+            result = char()addkey;
         }
     }
     return result;
