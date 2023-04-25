@@ -59,19 +59,19 @@ bool only_digits(string key)
 
 char rotate(char c, int n)
 {
-    int subtracted;
-    int addkey;
+    int subtracted = 0;
+    int addkey = 0;
     char result;
-    if (isupper(char c))
+    if (isupper(c))
     {
-        substracted = int()(c) - 65;
-        addkey = (substracted + intkey) % 26;
+        subtracted = int()(c) - 65;
+        addkey = (subtracted + intkey) % 26;
         result = char()(addkey);
     }
-    else if (islower(char c))
+    else if (islower(c))
     {
-        substracted = int()(c) - 97;
-        addkey = (substracted + intkey) % 26;
+        subtracted = int()(c) - 97;
+        addkey = (subtracted + intkey) % 26;
         result = char()(addkey);
     }
     return result;
