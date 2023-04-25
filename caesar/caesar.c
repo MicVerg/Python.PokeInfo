@@ -20,6 +20,7 @@ int main(int argc, string argv[])
     {
         bool onlydigits = only_digits(key);
         if (onlydigits == true)
+        int keyint = atoi(key);
         
         {
             return 0;
