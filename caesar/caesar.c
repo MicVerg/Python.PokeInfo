@@ -77,6 +77,10 @@ char rotate(char c, int n)
             addkey = (subtracted + n) % 26;
             result = addkey+'0';
         }
+        else
+        {
+            return 1;
+        }
     }
     return result;
 }
