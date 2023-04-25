@@ -45,10 +45,12 @@ int count_letters(string text)
 int count_words(string text)
 {
     int words = 0;
+    return 0;
 }
 
 //write function to count sentences (sentences end with . ! ?)
 int count_sentences(string text)
 {
     int sentences = 0;
+    return 0;
 }
