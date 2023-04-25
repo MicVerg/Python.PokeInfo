@@ -60,9 +60,10 @@ bool only_digits(string key)
 char rotate(char c, int n)
 {
     int subtracted;
+    char placeholder;
     if isupper(char c)
     {
-        
+        placeholder = int()(c)
     }
     else if
     {
