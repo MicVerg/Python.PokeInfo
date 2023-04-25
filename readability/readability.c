@@ -41,8 +41,6 @@ int count_letters(string text)
         {
             letters++;
         }
-        //letters ++;
-        //if ((word[i]) = " " || "!" || "." || "?")
     }
     return letters;
 }
