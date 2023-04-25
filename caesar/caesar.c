@@ -59,6 +59,13 @@ bool only_digits(string key)
 
 char rotate(char c, int n)
 {
-    
+    if isupper(char c)
+    {
+        
+    }
+    else if
+    {
+        islower(char c)
+    }
 return result;
 }
