@@ -46,10 +46,10 @@ bool only_digits(string key)
     int len = strlen(key);
     for (int i = 0; i < len; i++)
     {
-        if (isdigit(key[i]))
+        if (isdigit(key[i]) != 0)
         {
             return true;
         }
-
     }
+    return false;
 }
