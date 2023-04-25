@@ -21,5 +21,12 @@ int count_letters(string text)
 
 //write function to count words
 //count the spaces (spaces + 1 = total words)
+int count_words(string text)
+{
 
+}
 //write function to count sentences (sentences end with . ! ?)
+int count_sentences(string text)
+{
+
+}
