@@ -3,6 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
+bool only_digits(string s);
+
 int main(int argc, string argv[])
 {
     //get input from cl
