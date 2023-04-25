@@ -65,13 +65,13 @@ char rotate(char c, int n)
     if (isupper(char c))
     {
         substracted = int()(c) - 65;
-        addkey = substracted + intkey;
+        addkey = (substracted + intkey) % 26;
 
     }
     else if (islower(char c))
     {
         substracted = int()(c) - 97;
-        addkey = substracted + intkey;
+        addkey = (substracted + intkey) % 26;
     }
-return result;
+    return result;
 }
