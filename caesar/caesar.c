@@ -66,7 +66,6 @@ char rotate(char c, int n)
     {
         substracted = int()(c) - 65;
         addkey = (substracted + intkey) % 26;
-
     }
     else if (islower(char c))
     {
