@@ -38,6 +38,7 @@ bool only_digits(string s)
         }
         else
         {
+            break;
             return false;
         }
     }
