@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-bool only_digits(string s);
+bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
@@ -39,12 +39,12 @@ int main(int argc, string argv[])
 
 }
 //function that checks if arguments are digits
-bool only_digits(string s)
+bool only_digits(string key)
 {
-    int len = strlen(s);
+    int len = strlen(key);
     for (int i = 0; i < len; i++)
     {
-        if (isdigit(s[i]))
+        if (isdigit(key[i]))
         {
             return true;
         }
