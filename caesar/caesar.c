@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(int argc, string argv[])
 {
@@ -31,6 +32,6 @@ bool only_digits(string s)
     int len = strlen(s);
     for (int i = 0; i < len; i++)
     {
-        
+        if (isdigit(s[i]))
     }
 }
