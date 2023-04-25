@@ -25,8 +25,9 @@ int main(void)
     //index = 0.0588 * L - 0.296 * S - 15.8
     //L average number of letters per 100 words - S average number of sentences per 100 words
     //use floats to calc these
-    float L = 0;
+    float L = (lettertotal / wordtotal) * 100;
     float S = 0;
+    int grade = 0;
 
 }
 
