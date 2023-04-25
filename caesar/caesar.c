@@ -30,6 +30,8 @@ int main(int argc, string argv[])
         }
     }
 
+    
+
     //key is argv[1]
     //prompt user for plaintext
 
@@ -53,5 +55,5 @@ bool only_digits(string key)
 
 char rotate(char c, int n)
 {
-    
+
 }
