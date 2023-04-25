@@ -63,7 +63,7 @@ char rotate(char c, int n)
     char placeholder;
     if isupper(char c)
     {
-        placeholder = int()(c)
+        substracted = int()(c) - 
     }
     else if
     {
