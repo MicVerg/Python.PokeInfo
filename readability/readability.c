@@ -31,7 +31,18 @@ int main(void)
 /*     printf("L: %f\n", L);
     printf("S: %f\n", S);
     printf("grade: %f\n", grade); */
-    if (grade )
+    if (grade >=1 & <16)
+    {
+        printf("Grade: %f\n", grade);
+    }
+    if (grade < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else if (grade >= 16)
+    {
+        printf("Grade 16+\n");
+    }
 }
 
 //write function to count uppercase and lowercase letters
