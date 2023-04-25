@@ -30,7 +30,9 @@ int main(int argc, string argv[])
         }
     }
 
-    
+    //key = atoi(argv[1]);
+
+
 
     //key is argv[1]
     //prompt user for plaintext
