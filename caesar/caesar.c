@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 bool only_digits(string key);
+char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -65,13 +66,13 @@ char rotate(char c, int n)
     if (isupper(c))
     {
         subtracted = c - 65;
-        addkey = (subtracted + intkey) % 26;
+        addkey = (subtracted + n) % 26;
         result = char()(addkey);
     }
     else if (islower(c))
     {
         subtracted = c - 97;
-        addkey = (subtracted + intkey) % 26;
+        addkey = (subtracted + n) % 26;
         result = char()(addkey);
     }
     return result;
