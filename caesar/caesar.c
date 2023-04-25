@@ -17,8 +17,15 @@ int main(int argc, string argv[])
     else
     {
         bool onlydigits = only_digits(argv[1]);
-        if (onlydigits = true)
-        return 0;
+        if (onlydigits == true)
+        {
+            return 0;
+        }
+        else if (onlydigits == false)
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
     }
 
     //check if input is actually numeral, not alphabetical, not negative, nor empty nor multiple arguments
