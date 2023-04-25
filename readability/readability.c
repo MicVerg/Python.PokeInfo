@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -25,7 +26,7 @@ int main(void)
     //L average number of letters per 100 words - S average number of sentences per 100 words
     //use floats to calc these
 
-    
+
 }
 
 //write function to count uppercase and lowercase letters
