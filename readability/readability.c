@@ -24,8 +24,10 @@ int count_letters(string text)
 {
     int letters = 0;
     int strlen = strlen(text);
+    int badchars = 0;
     for (int i = 0; i < strlen; i++)
     {
+        letters ++;
         
     }
 }
