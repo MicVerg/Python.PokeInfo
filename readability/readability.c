@@ -29,15 +29,11 @@ int main(void)
 int count_letters(string text)
 {
     int letters = 0;
-    int strlen = strlen(text);
+    int len = strlen(text);
     //int badchars = 0;
-    for (int i = 0; i < strlen; i++)
+    for (int i = 0; i < len; i++)
     {
-        if (isupper(text[i]))
-        {
-            letters++;
-        }
-        else if (islower(text[i]))
+        if (isalpha(text[i]))
         {
             letters++;
         }
