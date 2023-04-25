@@ -5,7 +5,7 @@ int main(int argc, string argv[])
 {
     //get input from cl
     //should be one argument in cl
-    if (argc < )
+    if (argc < 1 )
     printf("Usage: ./caesar key\n");
 
     //check if input is actually numeral, not alphabetical, not negative, nor empty nor multiple arguments
