@@ -20,7 +20,12 @@ int main(int argc, string argv[])
     else
     {
         bool onlydigits = only_digits(key);
-        if (onlydigits == true)
+        if (onlydigits == false)
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
+        else if (onlydigits == true)
         {
             //rotate
             int intkey = atoi(argv[1]);
@@ -43,11 +48,6 @@ int main(int argc, string argv[])
             }
             printf("\n");
             return 0;
-        }
-        else if (onlydigits == false)
-        {
-            printf("Usage: ./caesar key\n");
-            return 1;
         }
     }
 }
