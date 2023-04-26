@@ -22,20 +22,20 @@ int main(int argc, string argv[])
         bool onlydigits = only_digits(key);
         if (onlydigits == true)
         {
-        //rotate
-        int intkey = atoi(argv[1]);
-        string plaintext = get_string("plaintext: ");
-        int length = strlen(plaintext);
-        printf("ciphertext: ");
-        
-        for (int i = 0; i < length; i++)
-        {
-            char deciphered = rotate(plaintext[i], intkey);
-            char ciphertext;
-            printf("%c", deciphered);
-        }
-        printf("\n");
-            return 0;
+            //rotate
+            int intkey = atoi(argv[1]);
+            string plaintext = get_string("plaintext: ");
+            int length = strlen(plaintext);
+            printf("ciphertext: ");
+
+            for (int i = 0; i < length; i++)
+            {
+                char deciphered = rotate(plaintext[i], intkey);
+                char ciphertext;
+                printf("%c", deciphered);
+            }
+                printf("\n");
+                return 0;
         }
         else if (onlydigits == false)
         {
