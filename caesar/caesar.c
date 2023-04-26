@@ -31,8 +31,11 @@ int main(int argc, string argv[])
         {
             char deciphered = rotate(plaintext[i], intkey);
             char ciphertext;
-            printf("ciphertext: %c", deciphered);
+            printf("ciphertext: ");
+            printf("%c", deciphered);
+
         }
+        printf("\n");
             return 0;
         }
         else if (onlydigits == false)
