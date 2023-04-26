@@ -31,7 +31,6 @@ int main(int argc, string argv[])
             for (int i = 0; i < length; i++)
             {
                 char deciphered = rotate(plaintext[i], intkey);
-                char ciphertext;
                 printf("%c", deciphered);
             }
                 printf("\n");
