@@ -30,7 +30,7 @@ int main(int argc, string argv[])
         for (int i = 0; i < length; i++)
         {
             char deciphered = rotate(plaintext[i], intkey);
-            char ciphertext[(length)+1];
+            char ciphertext[(strlen(plaintext))+1];
             ciphertext = ciphertext + deciphered;
         }
             printf("ciphertext: %s\n", ciphertext);
