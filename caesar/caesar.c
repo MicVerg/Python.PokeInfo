@@ -41,8 +41,8 @@ int main(int argc, string argv[])
                     printf("%c", plaintext[i]);
                 }
             }
-                printf("\n");
-                return 0;
+            printf("\n");
+            return 0;
         }
         else if (onlydigits == false)
         {
