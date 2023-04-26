@@ -44,7 +44,7 @@ int main(int argc, string argv[])
             printf("\n");
             return 0;
         }
-        else //(onlydigits == false)
+        else if (onlydigits == false)
         {
             printf("Usage: ./caesar key\n");
             return 1;
