@@ -58,15 +58,12 @@ bool only_digits(string key)
     int len = strlen(key);
     for (int i = 0; i < len; i++)
     {
-        if (isdigit(key[i]) != 0)
-        {
-            return true;
-        }
-        else
+        if (!isdigit(key[i]))
         {
             return false;
         }
     }
+    return true;
 }
 
 char rotate(char c, int n)
