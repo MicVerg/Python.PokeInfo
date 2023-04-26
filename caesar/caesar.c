@@ -25,15 +25,14 @@ int main(int argc, string argv[])
         //rotate
         int intkey = atoi(argv[1]);
         string plaintext = get_string("plaintext: ");
-
         int length = strlen(plaintext);
+        printf("ciphertext: ");
+        
         for (int i = 0; i < length; i++)
         {
             char deciphered = rotate(plaintext[i], intkey);
             char ciphertext;
-            printf("ciphertext: ");
             printf("%c", deciphered);
-
         }
         printf("\n");
             return 0;
