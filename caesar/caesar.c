@@ -30,8 +30,16 @@ int main(int argc, string argv[])
 
             for (int i = 0; i < length; i++)
             {
-                char deciphered = rotate(plaintext[i], intkey);
-                printf("%c", deciphered);
+                char deciphered;
+                if (isalpha(plaintext[i]))
+                {
+                    deciphered = rotate(plaintext[i], intkey);
+                    printf("%c", deciphered);
+                }
+                else
+                {
+                    printf("%c", plaintext[i]);
+                }
             }
                 printf("\n");
                 return 0;
@@ -42,14 +50,8 @@ int main(int argc, string argv[])
             return 1;
         }
     }
-
-    //key is argv[1]
-    //prompt user for plaintext
-
-    //move letters by input key, ONLY alphabetical chars tho
-    //so change every character to character + key
-
 }
+
 //function that checks if arguments are digits
 bool only_digits(string key)
 {
