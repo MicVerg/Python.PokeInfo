@@ -32,7 +32,7 @@ int main(int argc, string argv[])
             char deciphered = rotate(plaintext[i], intkey);
             string ciphertext = " ";
             ciphertext = strncat(ciphertext, &deciphered, i);
-            printf("ciphertext: %s\n", ciphertext);
+            printf("ciphertext: %c\n", ciphertext);
         }
             return 0;
         }
