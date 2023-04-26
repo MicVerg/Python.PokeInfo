@@ -30,10 +30,10 @@ int main(int argc, string argv[])
         for (int i = 0; i < length; i++)
         {
             char deciphered = rotate(plaintext[i], intkey);
-            char ciphertext[(strlen(plaintext))+1];
-            ciphertext = ciphertext + deciphered;
-        }
+            string ciphertext = " ";
+            ciphertext = strncat(ciphertext, &deciphered, i);
             printf("ciphertext: %s\n", ciphertext);
+        }
             return 0;
         }
         else if (onlydigits == false)
