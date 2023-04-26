@@ -60,8 +60,9 @@ bool only_digits(string key)
     {
         if (isdigit(key[i]) != 0)
         {
-            return true;
+
         }
+        return true;
     }
     return false;
 }
