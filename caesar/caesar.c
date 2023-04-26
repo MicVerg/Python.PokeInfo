@@ -63,7 +63,7 @@ bool only_digits(string key)
             return true;
         }
     }
-    return false;
+    //return false;
 }
 
 char rotate(char c, int n)
