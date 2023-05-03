@@ -81,6 +81,8 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    int k = 0;
+    //check for highest vote total
+
+    //print name(s) of highest vote total
     return;
 }
