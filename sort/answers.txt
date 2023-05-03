@@ -6,6 +6,7 @@ sort2 uses: TODO
 
 How do you know?: TODO
 
-sort3 uses: TODO
+sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: running sort3 on sorted50000 took very long, indicating no log functionality, and also that it searches linear
+using sort3 on any of the 50000 takes just as long so that means selection sort
