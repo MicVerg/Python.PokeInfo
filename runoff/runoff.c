@@ -153,7 +153,10 @@ void tabulate(void)
             }
             else if (candidates[j].eliminated == true)
             {
-                candidates[]
+                for (int k = 1; k < candidate_count; k++)
+                {
+                    
+                }
             }
         }
     }
