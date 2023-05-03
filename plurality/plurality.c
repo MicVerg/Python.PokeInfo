@@ -85,6 +85,14 @@ void print_winner(void)
     int highest_votes = candidates[0].votes;
     for (int k = 0; k < candidate_count; k++)
     {
+        if (candidates[k].votes > highest_vote)
+        {
+            highest_vote = candidates[k].votes;
+        }
+    }
+
+    for (int l = 0; l < candidate_count; l++)
+    {
         
     }
     //print name(s) of highest vote total
