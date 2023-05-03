@@ -68,10 +68,13 @@ bool vote(string name)
 {
     if (name == candidates[i].name)
     {
-        candidates[i].votes += 1
+        candidates[i].votes += 1;
+        return true;
     }
-    // TODO
-    return false;
+    else
+    {
+        return false;
+    }
 }
 
 // Print the winner (or winners) of the election
