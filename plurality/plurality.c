@@ -68,7 +68,7 @@ bool vote(string name)
 {
     if (name == candidates[i].name)
     {
-        
+        candidates[i].votes += 1
     }
     // TODO
     return false;
