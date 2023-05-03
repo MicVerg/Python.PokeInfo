@@ -144,7 +144,7 @@ void tabulate(void)
 {
     for (int j = 0; j < voter_count; j++)
     {
-        if (candidates[])
+        for (int i = 0; i < )
     }
     return;
 }
