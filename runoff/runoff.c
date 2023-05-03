@@ -151,6 +151,10 @@ void tabulate(void)
                 candidates[j].votes += 1;
                 break;
             }
+            else if (candidates[j].eliminated == true)
+            {
+                candidates[]
+            }
         }
     }
     return;
