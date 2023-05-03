@@ -150,7 +150,7 @@ void tabulate(void)
         }
         do
         {
-            
+            preferences[j][]
         }
         while (candidates[i].eliminated = true);
     }
