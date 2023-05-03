@@ -82,7 +82,8 @@ bool vote(string name)
 void print_winner(void)
 {
     //check for highest vote total
-
+    int highest_votes = candidates[0].votes;
+    
     //print name(s) of highest vote total
     return;
 }
