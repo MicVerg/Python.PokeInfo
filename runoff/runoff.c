@@ -172,13 +172,14 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
+    //find first non-eliminated candidate and assign index j to it
     int j = 0;
     do
     {
         j++;
     }
     while (candidates[j].eliminated == true);
-
+    //compare and add new value to min if a lower value is found
     int min = candidates[j].votes;
     for (int i = 0; i < candidate_count; i++)
     {
