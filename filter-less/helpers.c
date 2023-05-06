@@ -68,6 +68,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     //swap horizontally, not vertically
     //2 cases: even and uneven amount of columns
+    if (width % 2 == 0)
     return;
 }
 
