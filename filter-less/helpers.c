@@ -70,6 +70,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     //swap horizontally, not vertically
+
+    //make temp x variable
     RGBTRIPLE x;
         for (int i = 0; i < height; i++)
         {
