@@ -99,6 +99,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             x[i][j] = image[i][j];
         }
     }
+    //sorry this is really hard and I really want to start python and sql, maybe I finish this later :|
     
     return;
 }
