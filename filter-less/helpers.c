@@ -75,9 +75,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 //swap extremes
                 x = image[i][j];
                 image[i][j] = image[i][width - 1 - j];
-                x = image[i][width - 1 - j];
+                image[i][width - 1 - j] = x;
             }
-
         }
     return;
 }
