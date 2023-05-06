@@ -71,6 +71,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     if (width % 2 == 0)
     {
         //do something when even
+        for (int i = 0; i < width; i++)
+        {
+            
+        }
     }
     else if
     {
