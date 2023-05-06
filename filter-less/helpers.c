@@ -67,12 +67,13 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     //swap horizontally, not vertically
+    RGBTRIPLE x;
         for (int i = 0; i < height; i++)
         {
             for (int j = 0; j < (width / 2); j++)
             {
                 //swap extremes
-                RGBTRIPLE x = image[i][j];
+                x = image[i][j];
                 image[i][j] = image[i][width - 1 - j];
                 x = image[i][width - 1 - j];
             }
