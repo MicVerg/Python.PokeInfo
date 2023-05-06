@@ -73,9 +73,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
     //make temp x variable
     RGBTRIPLE x;
+    int halfWidth = width / 2;
         for (int i = 0; i < height; i++)
         {
-            for (int j = 0; j < (width / 2); j++)
+            for (int j = 0; j < halfWidth; j++)
             {
                 //swap
                 x = image[i][j];
