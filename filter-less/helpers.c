@@ -3,6 +3,15 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; i++)
+        {
+            //calculate each pixel value (average)
+            
+            //set each pixel value to that calculated average
+        }
+    }
     return;
 }
 
