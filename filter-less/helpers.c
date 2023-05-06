@@ -9,8 +9,11 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            float floatRed = image[i][j].rgbtRed;
+            float floatBlue = image[i][j].rgbtBlue;
+            float floatGreen = image[i][j].rgbtGreen;
             //calculate average of the 3 pixels
-            average = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0;
+            average = (floatRed + floatGreen + floatBlue) / 3.0;
             average = round(average);
 
             //set each pixel value to that calculated average
