@@ -74,16 +74,16 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     //make temp x variable
     RGBTRIPLE x;
     int halfWidth = width / 2;
-        for (int i = 0; i < height; i++)
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < halfWidth; j++)
         {
-            for (int j = 0; j < halfWidth; j++)
-            {
-                //swap
-                x = image[i][j];
-                image[i][j] = image[i][width - 1 - j];
-                image[i][width - 1 - j] = x;
-            }
+            //swap
+            x = image[i][j];
+            image[i][j] = image[i][width - 1 - j];
+            image[i][width - 1 - j] = x;
         }
+    }
     return;
 }
 
@@ -100,6 +100,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     //sorry this is really hard and I really want to start python and sql, maybe I finish this later :|
-    
+
     return;
 }
