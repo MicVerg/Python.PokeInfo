@@ -25,9 +25,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    float sepiaRed = 0;
-    float sepiaGreen = 0;
-    float sepiaBlue = 0;
+    int sepiaRed;
+    int sepiaGreen;
+    int sepiaBlue;
 
 
     for (int i = 0; i < height; i++)
@@ -38,9 +38,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             float originalBlue = image[i][j].rgbtBlue;
             float originalGreen = image[i][j].rgbtGreen;
             //calculate sepia values with formula (and round that value to nearest int)
-            sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue;
-            sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue;
-            sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue;
+            sepiaRed = round(.393 * originalRed + .769 * originalGreen + .189 * originalBlue);
+            sepiaGreen = round(.349 * originalRed + .686 * originalGreen + .168 * originalBlue);
+            sepiaBlue = round(.272 * originalRed + .534 * originalGreen + .131 * originalBlue);
 
             /* sepiaRed = round(sepiaRed);
             sepiaGreen = round(sepiaGreen);
@@ -60,9 +60,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 sepiaBlue = 255;
             }
             //set pixel values to sepia values
-            image[i][j].rgbtRed = round(sepiaRed);
-            image[i][j].rgbtGreen = round(sepiaGreen);
-            image[i][j].rgbtBlue = round(sepiaBlue);
+            image[i][j].rgbtRed = sepiaRed;
+            image[i][j].rgbtGreen = sepiaGreen;
+            image[i][j].rgbtBlue = sepiaBlue;
         }
     }
     return;
