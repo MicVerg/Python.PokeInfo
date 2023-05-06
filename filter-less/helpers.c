@@ -67,10 +67,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     //swap horizontally, not vertically
-    //2 cases: even and uneven amount of columns
-    if (width % 2 == 0)
-    {
-        //do something when even
         for (int i = 0; i < height; i++)
         {
             for (int j = 0; j < (width / 2); j++)
@@ -79,11 +75,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             }
 
         }
-    }
-    else if
-    {
-        //do something when uneven
-    }
     return;
 }
 
