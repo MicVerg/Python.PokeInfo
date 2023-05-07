@@ -4,6 +4,7 @@
 
 #include "wav.h"
 
+const int HEADER_SIZE = 44;
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
 
