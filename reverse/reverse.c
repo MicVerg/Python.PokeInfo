@@ -32,6 +32,10 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
+    if (check_format(header) != 0)
+    {
+        return 1;
+    }
 
     // Open output file for writing
     FILE *output = fopen(argv[2], "w");
