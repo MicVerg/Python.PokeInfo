@@ -46,9 +46,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
     // Write header to file
     // TODO #6
+    fwrite(&header, HEADER_SIZE, 1, input);
 
     // Use get_block_size to calculate size of block
     // TODO #7
