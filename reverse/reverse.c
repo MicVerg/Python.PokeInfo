@@ -57,9 +57,9 @@ int check_format(WAVHEADER header)
     // TODO #4
     if (header.format[0] == 'W' && header.format[1] == 'A' && header.format[2] == 'V' && header.format[3] == 'E')
     {
-        return true;
+        return 0;
     }
-return false;
+    return 1;
 }
 
 int get_block_size(WAVHEADER header)
