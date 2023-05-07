@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
     int blockTotal = get_block_size(header);
     // Write reversed audio to file
     // TODO #8
+    // gief python and SQL pls ༼ つ ◕_◕ ༽つ
 
     //close files
     fclose(input);
