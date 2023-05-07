@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    if (&check_format == 0)
+    if (check_format(header) == 0)
     {
         printf("Invalid file\n");
         return 1;
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
     // Use get_block_size to calculate size of block
     // TODO #7
-    
+
     // Write reversed audio to file
     // TODO #8
 
