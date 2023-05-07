@@ -45,7 +45,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
     // Write header to file
     // TODO #6
 
