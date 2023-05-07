@@ -28,11 +28,11 @@ int main(int argc, char *argv[])
 
     // Read header
     WAVHEADER header[HEADER_SIZE];
-    fread(header, HEADER_SIZE, 1, input);
+    fread(&header, HEADER_SIZE, 1, input);
 
     // Use check_format to ensure WAV format
     // TODO #4
-    if (check_format(&header) != 0)
+    if (check_format(header) != 0)
     {
         return 1;
     }
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 
     // Write header to file
     // TODO #6
-    fwrite(header, HEADER_SIZE, 1, output);
+    fwrite(&header, HEADER_SIZE, 1, output);
 
     // Use get_block_size to calculate size of block
     // TODO #7
