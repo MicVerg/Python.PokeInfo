@@ -72,7 +72,8 @@ int get_block_size(WAVHEADER header)
     //return the block size of the wav file in bytes
 
     //calculate block by =
-    // number of channels * bytes per sample
-    
+    // number of channels * bytes per sample (bitsPerSample / 8)
+    WORD bytesPerSample = header.bitsPerSample / 8;
+    header.numChannels
     return 0;
 }
