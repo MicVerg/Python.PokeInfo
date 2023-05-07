@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    if (strcmp(header.format, "WAVE", 4) == 0)
+    if (strcmp(header.format, "WAVE") == 0)
     {
         return true;
     }
