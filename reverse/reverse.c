@@ -48,6 +48,10 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
+    for (i = 0; i < 4; i++)
+    {
+        
+    }
     return 0;
 }
 
