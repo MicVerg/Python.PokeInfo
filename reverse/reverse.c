@@ -70,5 +70,9 @@ int get_block_size(WAVHEADER header)
 {
     // TODO #7
     //return the block size of the wav file in bytes
+
+    //calculate block by =
+    // number of channels * bytes per sample
+    
     return 0;
 }
