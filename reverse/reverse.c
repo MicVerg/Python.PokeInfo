@@ -73,8 +73,8 @@ int get_block_size(WAVHEADER header)
 
     //calculate block by =
     // number of channels * bytes per sample (bitsPerSample / 8)
-    WORD bytesPerSample = header.bitsPerSample[0] + header.bitsPerSample[1] / 8;
+    WORD bytesPerSample = header.bitsPerSample / 8;
     WORD blockTotal = 0;
-    (header.numChannels[0] + header.numChannels[1]) * bytesPerSample = blockTotal;
+    header.numChannels * bytesPerSample = blockTotal;
     return blockTotal;
 }
