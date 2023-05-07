@@ -6,6 +6,7 @@
 #include "wav.h"
 
 const int HEADER_SIZE = 44;
+WAVHEADER header[HEADER_SIZE];
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
 
@@ -27,7 +28,6 @@ int main(int argc, char *argv[])
     }
 
     // Read header
-    WAVHEADER header[HEADER_SIZE];
     fread(&header, HEADER_SIZE, 1, input);
 
     // Use check_format to ensure WAV format
