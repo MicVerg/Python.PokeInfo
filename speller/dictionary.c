@@ -26,9 +26,12 @@ bool check(const char *word)
     //should be case insensitive
 
     //hash the word with hash function
+
     //access the linked list at that index in the hash table
+
     //go through linked list, looking for the word with strcasecmp
-    
+    //check youtube for visual!!
+    //start with word 
     return false;
 }
 
