@@ -40,7 +40,13 @@ bool load(const char *dictionary)
 
     //open dictionary file - use fopen - check if return == NULL
 
-    //read strings from dictionary file - 
+    //read strings from dictionary file
+    //fscanf(file, "%s", word) ------- FILE = pointer u get from fopen
+    //run fscanf on each word of the dictionary
+    //until fscanf returns EOF (loop fscanf until EOF)
+
+    //Create a new node for each word
+    //use malloc -- check if return == NULL -- 
     return false;
 }
 
