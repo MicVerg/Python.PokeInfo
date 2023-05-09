@@ -31,7 +31,8 @@ bool check(const char *word)
 
     //go through linked list, looking for the word with strcasecmp
     //check youtube for visual!!
-    //start with word 
+    //start with checking word against first item of linked list
+    //keep going through list until you get NULL
     return false;
 }
 
