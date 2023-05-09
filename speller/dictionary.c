@@ -23,6 +23,12 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    //should be case insensitive
+
+    //hash the word with hash function
+    //access the linked list at that index in the hash table
+    //go through linked list, looking for the word with strcasecmp
+    
     return false;
 }
 
@@ -32,7 +38,7 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
 
-    
+
 }
 
 // Loads dictionary into memory, returning true if successful, else false
