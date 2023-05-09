@@ -38,9 +38,9 @@ bool load(const char *dictionary)
 {
     // TODO
 
-    //open dictionary file
+    //open dictionary file - use fopen - check if return == NULL
 
-    // 
+    //read strings from dictionary file - 
     return false;
 }
 
