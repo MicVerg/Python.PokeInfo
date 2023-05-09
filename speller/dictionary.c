@@ -46,7 +46,14 @@ bool load(const char *dictionary)
     //until fscanf returns EOF (loop fscanf until EOF)
 
     //Create a new node for each word
-    //use malloc -- check if return == NULL -- 
+    //use malloc -- check if return == NULL -- strcpy word into node
+
+    //use a hash function that
+    //takes a string and returns an index
+
+    //insert the node into hash table
+    //hash tables are a an array of linked lists!!
+    
     return false;
 }
 
