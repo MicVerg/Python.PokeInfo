@@ -29,7 +29,7 @@ bool check(const char *word)
 {
     // TODO
     //should be case insensitive
-
+    
     //hash the word with hash function
 
     //access the linked list at that index in the hash table
