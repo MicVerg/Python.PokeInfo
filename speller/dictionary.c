@@ -87,7 +87,7 @@ bool load(const char *dictionary)
     //hash tables are a an array of linked lists!!
     //look at youtube for visual
     a->next = table[hashResult];
-    a = table[hashResult];
+    table[hashResult] = a;
     //counter for size
     counter++;
     }
