@@ -53,8 +53,8 @@ bool load(const char *dictionary)
     // TODO
 
     //open dictionary file - use fopen - check if return == NULL
-    FILE *input = fopen(dictionary, "r");
-    if (input == NULL)
+    FILE *inputDict = fopen(dictionary, "r");
+    if (inputDict == NULL)
         {
             printf("Could not open file.\n");
             return 1;
@@ -64,9 +64,9 @@ bool load(const char *dictionary)
     //fscanf(file, "%s", word) ------- FILE = pointer u get from fopen
     //run fscanf on each word of the dictionary
     //until fscanf returns EOF (loop fscanf until EOF)
-    while (fscanf(*input, "%s", word != EOF))
+    while (fscanf(*inputDict, "%s", word) != EOF)
     {
-
+        
     }
     //Create a new node for each word
     //use malloc -- check if return == NULL -- strcpy word into node
