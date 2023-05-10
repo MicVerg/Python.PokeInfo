@@ -51,7 +51,7 @@ bool load(const char *dictionary)
     // TODO
 
     //open dictionary file - use fopen - check if return == NULL
-
+    
     //read strings from dictionary file
     //fscanf(file, "%s", word) ------- FILE = pointer u get from fopen
     //run fscanf on each word of the dictionary
