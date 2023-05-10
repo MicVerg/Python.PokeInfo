@@ -120,6 +120,18 @@ bool unload(void)
     // TODO
     //youtube for visual
     //iterate with cursor again
-    
+    for (int i = 0; i < N; i++)
+    {
+        if (table[i] != NULL)
+        {
+            node *cursor = table[i], *temp;
+            while (cursor != NULL)
+            {
+                temp = cursor;
+                cursor = cursor->next;
+                free(temp);
+            }
+        }
+    }
     return false;
 }
