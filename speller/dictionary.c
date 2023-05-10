@@ -41,7 +41,7 @@ bool check(const char *word)
     //check youtube for visual!!
     //start with checking word against first item of linked list
     //keep going through list until you get NULL
-    while(cursor != NULL)
+    while (cursor != NULL)
     {
         if (strcasecmp(cursor->word, word) == 0)
         {
@@ -71,10 +71,10 @@ bool load(const char *dictionary)
     //open dictionary file - use fopen - check if return == NULL
     FILE *inputDict = fopen(dictionary, "r");
     if (inputDict == NULL)
-        {
-            printf("Could not open file.\n");
-            return 1;
-        }
+    {
+        printf("Could not open file.\n");
+        return 1;
+    }
 
     //read strings from dictionary file
     //fscanf(file, "%s", word) ------- FILE = pointer u get from fopen
