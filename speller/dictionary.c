@@ -79,14 +79,16 @@ bool load(const char *dictionary)
     //takes a string and returns an index
     int hashResult = hash(a->word);
 
+    //insert the node into hash table
+    //hash tables are a an array of linked lists!!
+    //look at youtube for visual
+    
     }
 
 
 
 
-    //insert the node into hash table
-    //hash tables are a an array of linked lists!!
-    //look at youtube for visual
+
     return false;
 }
 
