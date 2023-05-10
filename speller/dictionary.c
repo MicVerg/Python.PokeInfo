@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 #include "dictionary.h"
 #include <stdlib.h>
 
@@ -51,8 +52,6 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
-
     //open dictionary file - use fopen - check if return == NULL
     FILE *inputDict = fopen(dictionary, "r");
     if (inputDict == NULL)
@@ -76,7 +75,6 @@ bool load(const char *dictionary)
             return 1;
         }
     strcpy(a->word, buffer);
-
     }
 
 
