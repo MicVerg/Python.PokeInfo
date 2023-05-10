@@ -5,6 +5,8 @@
 
 #include "dictionary.h"
 
+#include "speller.c"
+
 // Represents a node in a hash table
 typedef struct node
 {
