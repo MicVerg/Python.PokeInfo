@@ -64,7 +64,10 @@ bool load(const char *dictionary)
     //fscanf(file, "%s", word) ------- FILE = pointer u get from fopen
     //run fscanf on each word of the dictionary
     //until fscanf returns EOF (loop fscanf until EOF)
-
+    do
+    {
+        
+    }
     //Create a new node for each word
     //use malloc -- check if return == NULL -- strcpy word into node
 
