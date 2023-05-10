@@ -63,6 +63,9 @@ unsigned int hash(const char *word)
 //https://stackoverflow.com/questions/31930046/what-is-a-hash-table-and-how-do-you-make-it-in-c
 //https://stackoverflow.com/questions/64087044/do-you-have-any-simple-hash-function-that-takes-first-three-letter
 //i will continue on the rest of the assignment first before improving this function
+
+//i dont know if im allowed to skip improving the hash function or not
+//but i would very much like to do so, i quite struggled with C, but im very thankfull for the things ive learned!
 }
 
 // Loads dictionary into memory, returning true if successful, else false
