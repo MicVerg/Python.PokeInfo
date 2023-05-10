@@ -61,6 +61,16 @@ bool load(const char *dictionary)
             }
     }
 
+    if (argc == 3)
+    {
+        FILE *input = fopen(argv[2], "r");
+        if (input == NULL)
+            {
+                printf("Could not open file.\n");
+                return 1;
+            }
+    }
+
 
     //read strings from dictionary file
     //fscanf(file, "%s", word) ------- FILE = pointer u get from fopen
