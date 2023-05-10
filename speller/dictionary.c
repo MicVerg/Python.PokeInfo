@@ -82,8 +82,8 @@ bool load(const char *dictionary)
     //insert the node into hash table
     //hash tables are a an array of linked lists!!
     //look at youtube for visual
-    a->next = table[HashResult];
-    
+    a->next = table[hashResult];
+    a = table[hashResult];
     }
 
 
