@@ -29,15 +29,26 @@ bool check(const char *word)
 {
     // TODO
     //should be case insensitive
-
     //hash the word with hash function
+    int hashResult = hash(word);
 
     //access the linked list at that index in the hash table
+    //by using cursor, according to Brian
+    node *cursor = table[hashResult];
 
     //go through linked list, looking for the word with strcasecmp
     //check youtube for visual!!
     //start with checking word against first item of linked list
     //keep going through list until you get NULL
+    while(cursor != NULL)
+    {
+        if (strcasecmp(cursor->word, word) == 0)
+        {
+            return true;
+        }
+        //else go for next node
+        cursor = cursor->next;
+    }
     return false;
 }
 
@@ -88,7 +99,7 @@ bool load(const char *dictionary)
     //look at youtube for visual
     a->next = table[hashResult];
     table[hashResult] = a;
-    
+
     //counter for size
     counter++;
     }
