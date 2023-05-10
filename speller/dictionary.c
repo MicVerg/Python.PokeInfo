@@ -84,12 +84,8 @@ bool load(const char *dictionary)
     //look at youtube for visual
     a->next = table[hashResult];
     a = table[hashResult];
+    return true;
     }
-
-
-
-
-
     return false;
 }
 
