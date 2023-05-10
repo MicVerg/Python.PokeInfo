@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "dictionary.h"
+#include <stdlib.h>
 
 #include "speller.c"
 
