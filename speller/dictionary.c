@@ -75,8 +75,8 @@ bool load(const char *dictionary)
         {
             return 1;
         }
-    strcpy(a.word, buffer);
-    
+    strcpy(a->word, buffer);
+
     }
 
 
