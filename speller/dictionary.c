@@ -64,7 +64,7 @@ bool load(const char *dictionary)
     //fscanf(file, "%s", word) ------- FILE = pointer u get from fopen
     //run fscanf on each word of the dictionary
     //until fscanf returns EOF (loop fscanf until EOF)
-    while (fscanf(*inputDict, "%s", *word) != EOF)
+    while (fscanf(*inputDict, "%s", node->word) != EOF)
     {
         node *a = malloc(sizeof(node));
     }
