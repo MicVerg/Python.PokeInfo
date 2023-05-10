@@ -75,11 +75,13 @@ bool load(const char *dictionary)
             return 1;
         }
     strcpy(a->word, buffer);
+    //use a hash function that
+    //takes a string and returns an index
+    
     }
 
 
-    //use a hash function that
-    //takes a string and returns an index
+
 
     //insert the node into hash table
     //hash tables are a an array of linked lists!!
