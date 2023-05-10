@@ -87,9 +87,10 @@ bool load(const char *dictionary)
     //look at youtube for visual
     a->next = table[hashResult];
     a = table[hashResult];
-    return true;
+    //counter for size
+    counter++;
     }
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
