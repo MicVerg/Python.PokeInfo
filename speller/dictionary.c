@@ -53,25 +53,13 @@ bool load(const char *dictionary)
     // TODO
 
     //open dictionary file - use fopen - check if return == NULL
-    if (argc == 2)
-    {
-        FILE *input = fopen(argv[1], "r");
-        if (input == NULL)
-            {
-                printf("Could not open file.\n");
-                return 1;
-            }
-    }
 
-    if (argc == 3)
-    {
-        FILE *input = fopen(argv[2], "r");
+        FILE *input = fopen(dictionary, "r");
         if (input == NULL)
             {
                 printf("Could not open file.\n");
                 return 1;
             }
-    }
 
 
     //read strings from dictionary file
