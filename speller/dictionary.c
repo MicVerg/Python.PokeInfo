@@ -77,8 +77,8 @@ bool load(const char *dictionary)
     strcpy(a->word, buffer);
     //use a hash function that
     //takes a string and returns an index
-    hashResult = hash(a->word);
-    
+    int hashResult = hash(a->word);
+
     }
 
 
