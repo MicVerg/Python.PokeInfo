@@ -46,7 +46,10 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     return tolower(word[0]) - 'a';
 
-
+//sources:
+//https://stackoverflow.com/questions/31930046/what-is-a-hash-table-and-how-do-you-make-it-in-c
+//https://stackoverflow.com/questions/64087044/do-you-have-any-simple-hash-function-that-takes-first-three-letter
+//i will continue on the rest of the assignment first before improving this function
 }
 
 // Loads dictionary into memory, returning true if successful, else false
