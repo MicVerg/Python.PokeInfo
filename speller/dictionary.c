@@ -83,25 +83,25 @@ bool load(const char *dictionary)
     char buffer[LENGTH + 1];
     while (fscanf(inputDict, "%s", buffer) != EOF)
     {
-    //Create a new node for each word
-    //use malloc -- check if return == NULL -- strcpy word into node
+        //Create a new node for each word
+        //use malloc -- check if return == NULL -- strcpy word into node
         node *a = malloc(sizeof(node));
         if (a == NULL)
         {
             return 1;
         }
-    strcpy(a->word, buffer);
-    //use a hash function that takes a string and returns an index
-    int hashResult = hash(buffer);
+        strcpy(a->word, buffer);
+        //use a hash function that takes a string and returns an index
+        int hashResult = hash(buffer);
 
-    //insert the node into hash table
-    //hash tables are a an array of linked lists!!
-    //look at youtube for visual
-    a->next = table[hashResult];
-    table[hashResult] = a;
+        //insert the node into hash table
+        //hash tables are a an array of linked lists!!
+        //look at youtube for visual
+        a->next = table[hashResult];
+        table[hashResult] = a;
 
-    //counter for size
-    counter++;
+        //counter for size
+        counter++;
     }
     return true;
 }
