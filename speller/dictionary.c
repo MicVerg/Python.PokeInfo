@@ -77,11 +77,12 @@ bool load(const char *dictionary)
     strcpy(a->word, buffer);
     //use a hash function that
     //takes a string and returns an index
-    int hashResult = hash(a->word);
+    int hashResult = hash(buffer);
 
     //insert the node into hash table
     //hash tables are a an array of linked lists!!
     //look at youtube for visual
+    a->next = table[HashResult];
     
     }
 
