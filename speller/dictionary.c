@@ -67,10 +67,11 @@ bool load(const char *dictionary)
     char buffer[LENGTH + 1];
     while (fscanf(*inputDict, "%s", buffer) != EOF)
     {
-        node *a = malloc(sizeof(node));
-    }
     //Create a new node for each word
     //use malloc -- check if return == NULL -- strcpy word into node
+        node *a = malloc(sizeof(node));
+    }
+
 
     //use a hash function that
     //takes a string and returns an index
