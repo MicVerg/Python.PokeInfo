@@ -65,7 +65,7 @@ bool load(const char *dictionary)
     //run fscanf on each word of the dictionary
     //until fscanf returns EOF (loop fscanf until EOF)
     char buffer[LENGTH + 1];
-    while (fscanf(*inputDict, "%s", buffer) != EOF)
+    while (fscanf(inputDict, "%s", buffer) != EOF)
     {
     //Create a new node for each word
     //use malloc -- check if return == NULL -- strcpy word into node
