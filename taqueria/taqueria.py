@@ -20,7 +20,9 @@ while True:
         if item in menu:
             #cost = {menu[item]}
             total += menu[item]
-            print(f"Total: ${total}")
+            print(f"Total: $", end="")
+            roundedTotal = "{:.2f}".format(total)
+            print(roundedTotal)
 
     except EOFError:
         print()
