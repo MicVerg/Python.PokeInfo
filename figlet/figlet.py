@@ -18,5 +18,5 @@ elif len(argv) == 2:
         print("This is an error message")
         sys.exit(1)
     else:
-        figlet.setFont(argv[])
+        figlet.setFont(argv[2])
 
