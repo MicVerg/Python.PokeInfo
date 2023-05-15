@@ -14,6 +14,7 @@ if len(sys.argv) == 1:
     randomFont = random.choice(fontList)
     figlet.setFont(font=randomFont)
     print(figlet.renderText(input))
+    
 elif len(sys.argv) == 3:
     input = get_string("Input: ")
     ##output the text with specific font from command line
