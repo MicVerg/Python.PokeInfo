@@ -16,7 +16,7 @@ if len(sys.argv) == 1:
 elif len(sys.argv) == 3:
     ##output the text with specific font from command line
     if sys.argv[1] != "-f" and sys.argv[1] != "--font":
-        print("Usage: python filemane.py -f [fontname]")
+        print("Usage: python figlet.py -f <font>")
         sys.exit(1)
     else:
         fontName = sys.argv[2]
