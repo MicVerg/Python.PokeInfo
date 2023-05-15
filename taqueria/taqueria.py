@@ -12,3 +12,5 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
+total = 0
+
