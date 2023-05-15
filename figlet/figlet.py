@@ -10,7 +10,7 @@ input = get_string("Input: ")
 #print(figlet.getFonts())
 if len(sys.argv) == 1:
     #output the text in random font from figlet.getFonts list
-    randomFont = random.choice(figlet.getFonts())
+    randomFont = random.choice(fontList)
     figlet.setFont(font=randomFont)
     print(figlet.renderText(input))
 elif len(sys.argv) == 3:
