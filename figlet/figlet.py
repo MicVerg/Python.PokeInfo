@@ -16,7 +16,6 @@ if len(sys.argv) == 1:
     print(figlet.renderText(input))
 
 elif len(sys.argv) == 3:
-    input = get_string("Input: ")
     ##output the text with specific font from command line
     if sys.argv[1] != "-f" and sys.argv[1] != "--font":
         print("Usage: python figlet.py -f <font>")
@@ -25,6 +24,7 @@ elif len(sys.argv) == 3:
         print("Usage: python figlet.py -f <font>")
         sys.exit(1)
     else:
+        input = get_string("Input: ")
         fontName = sys.argv[2]
         figlet.setFont(font=fontName)
         print(figlet.renderText(input))
