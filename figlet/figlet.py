@@ -1,6 +1,6 @@
 from pyfiglet import Figlet
 from cs50 import get_string
-from sys import argv
+import sys
 import random
 
 figlet = Figlet()
@@ -15,4 +15,4 @@ if len(argv) == 1:
     print(figlet.renderText(input))
 elif len(argv) == 3:
     ##output the text with specific font from command line
-    
+
