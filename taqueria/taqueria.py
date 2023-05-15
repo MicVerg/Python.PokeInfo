@@ -18,8 +18,8 @@ while True:
     try:
         item = input("Item: ").title()
         if item in menu:
-            cost = {menu[item]}
-            total += cost
+            #cost = {menu[item]}
+            total += menu[item]
             print(f"Total: ${total}")
 
     except EOFError:
