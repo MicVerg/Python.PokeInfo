@@ -1,5 +1,8 @@
 greeting = input("Greeting: ")
 
-if lowercase(greeting).startswith("hello") = true:
+if tolower(greeting).startswith("hello") == true:
     print("0$")
-elif 
+elif tolower(greeting).startswith("h", 0):
+    print("20$")
+else:
+    print("100$")
