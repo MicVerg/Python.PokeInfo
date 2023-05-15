@@ -1,7 +1,7 @@
 from cs50 import get_string
 
 
-greeting = get_string("Greeting: ")
+greeting = input("Greeting: ")
 
 if greeting[0:5].lower() == "hello":
     print("0$")
