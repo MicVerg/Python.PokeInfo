@@ -3,4 +3,5 @@ from cs50 import get_string
 
 figlet = Figlet()
 
-figlet.getFonts()
+print(figlet.getFonts())
+
