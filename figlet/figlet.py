@@ -21,6 +21,7 @@ elif len(sys.argv) == 3:
     if sys.argv[1] != "-f" and sys.argv[1] != "--font":
         print("Usage: python figlet.py -f <font>")
         sys.exit(1)
+    elif sys.argv[2] 
     else:
         fontName = sys.argv[2]
         figlet.setFont(font=fontName)
