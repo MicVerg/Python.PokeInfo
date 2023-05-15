@@ -7,16 +7,17 @@ figlet = Figlet()
 
 input = get_string("Input: ")
 #print(figlet.getFonts())
-if len(argv) == 0:
+if len(sys.argv) == 0:
     #output the text in random font from figlet.getFonts list
     randomFont = random.choice(figlet.getFonts())
     figlet.setFont(font=randomFont)
     print(figlet.renderText(input))
-elif len(argv) == 2:
+elif len(sys.argv) == 2:
     ##output the text with specific font from command line
-    if argv[1] != "-f" or "--font":
+    if sys.argv[1] != "-f" or "--font":
         print("This is an error message")
         sys.exit(1)
     else:
-        figlet.setFont(argv[2])
+        figlet.setFont(sys.argv[2])
+        print(figlet.renderText(input))
 
