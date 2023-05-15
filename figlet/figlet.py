@@ -5,6 +5,7 @@ import random
 
 figlet = Figlet()
 
+fontList = figlet.getFonts()
 input = get_string("Input: ")
 #print(figlet.getFonts())
 if len(sys.argv) == 1:
@@ -18,6 +19,6 @@ elif len(sys.argv) == 3:
         print("Usage: python filemane.py -f [fontname]")
         sys.exit(1)
     else:
-        figlet.setFont(sys.argv[2])
+        figlet.setFont(font=sys.argv[2])
         print(figlet.renderText(input))
 
