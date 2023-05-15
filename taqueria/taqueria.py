@@ -17,6 +17,11 @@ total = 0
 while True:
     try:
         item = input("Item: ").title()
+        if item in menu:
+            total += {menu[item]}
+            print(f"Total: ${total}")
+            
     except EOFError:
         print()
         sys.exit(0)
+
