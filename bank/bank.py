@@ -1,7 +1,7 @@
 from cs50 import get_string
 
 
-greeting = get_string("Greeting: ").lower
+greeting = get_string("Greeting: ").lower()
 
 if greeting.startswith("hello") == true:
     print("0$")
