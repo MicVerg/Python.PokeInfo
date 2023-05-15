@@ -16,4 +16,7 @@ total = 0
 
 while True:
     try:
-        item = input("Item: ")
+        item = input("Item: ").title()
+    except EOFError:
+        print()
+        sys.exit(0)
