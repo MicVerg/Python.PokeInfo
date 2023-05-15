@@ -15,5 +15,6 @@ if len(argv) == 0:
 elif len(argv) == 2:
     ##output the text with specific font from command line
     if argv[1] != "-f" or "--font"
+    print("This is an error message")
     sys.exit(1)
     
