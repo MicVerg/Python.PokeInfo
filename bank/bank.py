@@ -1,2 +1,3 @@
-greeting = input("Greeting: ");
+greeting = input("Greeting: ")
 
+if 
