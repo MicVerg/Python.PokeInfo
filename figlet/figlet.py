@@ -1,5 +1,6 @@
 from pyfiglet import Figlet
 from cs50 import get_string
+from sys import argv
 
 figlet = Figlet()
 
