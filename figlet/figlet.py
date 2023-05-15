@@ -19,6 +19,7 @@ elif len(sys.argv) == 3:
         print("Usage: python filemane.py -f [fontname]")
         sys.exit(1)
     else:
-        figlet.setFont(font=sys.argv[2])
+        fontName = sys.argv[2]
+        figlet.setFont(font=fontName)
         print(figlet.renderText(input))
 
