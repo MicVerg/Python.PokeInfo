@@ -1,3 +1,5 @@
 greeting = input("Greeting: ")
 
-if 
+if lowercase(greeting).startswith("hello") = true:
+    print("0$")
+elif 
