@@ -22,4 +22,5 @@ elif len(sys.argv) == 3:
         fontName = sys.argv[2]
         figlet.setFont(font=fontName)
         print(figlet.renderText(input))
-
+else:
+    sys.exit(1)
