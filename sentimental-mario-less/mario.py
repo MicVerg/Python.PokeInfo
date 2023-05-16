@@ -7,7 +7,7 @@ while True:
     else:
         break
 
-row = 0
+""" row = 0
 dots = 1
 i = 0
 while row < height:
@@ -18,4 +18,7 @@ while row < height:
     while i <= row:
         print('#')
         i += 1
-    break
+    break """
+
+for i in range (height)
+    
