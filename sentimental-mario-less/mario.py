@@ -18,5 +18,4 @@ while row < height:
     while i <= row:
         print('#')
         i += 1
-    print("\n")
     break
