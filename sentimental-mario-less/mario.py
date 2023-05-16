@@ -7,8 +7,8 @@ while True:
     else:
         break
 
-#i = 0
-for i in range(height):
-    print('.')
-    for j in range(height - 1):
-        print('#')
+row = 0
+for i in range(row < height):
+    for j in range(height - row):
+        print('.')
+    for k in range()
