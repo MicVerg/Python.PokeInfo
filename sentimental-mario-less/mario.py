@@ -8,10 +8,5 @@ while True:
         break
 
 row = 0
-j = 1
-k = 0
-for i in range(row < height):
-    for j in range(height - row):
-        print('.')
-    for k in range(k <= row):
-        print('#')
+while row < height:
+    
