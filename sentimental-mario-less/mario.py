@@ -21,4 +21,4 @@ while row < height:
     break """
 
 for i in range (height)
-    
+    print('.') * print
