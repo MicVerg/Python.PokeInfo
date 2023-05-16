@@ -9,4 +9,6 @@ while True:
 
 #i = 0
 for i in range(height):
-    print('#')
+    print('.')
+    for j in range(height - 1):
+        print('#')
