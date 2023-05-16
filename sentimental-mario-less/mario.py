@@ -9,6 +9,14 @@ while True:
 
 row = 0
 dots = 1
+i = 0
 while row < height:
     while dots < (height - row):
-        
+        print('.', end="")
+        dots += dots
+    while i <= row:
+        print('#', end="")
+        i += i
+    print("\n")
+    row += row
+    break
