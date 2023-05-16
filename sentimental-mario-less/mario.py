@@ -8,5 +8,7 @@ while True:
         break
 
 row = 0
+dots = 1
 while row < height:
-    
+    while dots < (height - row):
+        
