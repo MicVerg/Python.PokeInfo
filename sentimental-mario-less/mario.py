@@ -11,12 +11,12 @@ row = 0
 dots = 1
 i = 0
 while row < height:
+    row += 1
     while dots < (height - row):
-        print('.', end="")
-        dots += dots
+        print('.')
+        dots += 1
     while i <= row:
-        print('#', end="")
-        i += i
+        print('#')
+        i += 1
     print("\n")
-    row += row
     break
