@@ -20,5 +20,6 @@ while row < height:
         i += 1
     break """
 
-for i in range (height)
-    print('.') * print
+for i in range (height):
+    print('.', end="") * (int(height) - 1)
+    break
