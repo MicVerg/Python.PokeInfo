@@ -36,7 +36,7 @@ nickels = int(calculate_nickels(cents))
 cents = cents - quarters - dimes - nickels * 5
 
 pennies = int(calculate_pennies(cents))
-cents = cents - quarters - dimes - nickels
+cents = cents - pennies
 
 print("quarters: " , quarters , "dimes: " , dimes , "nickels: " , nickels , "pennies: " , pennies)
 coins = quarters + dimes + nickels + pennies
