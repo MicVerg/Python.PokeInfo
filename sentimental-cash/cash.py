@@ -28,17 +28,17 @@ while True:
     else:
         break
 
-quarters = calculate_quarters(cents)
-cents = cents - int(quarters) * 25
+quarters = int(calculate_quarters(cents))
+cents = cents - quarters * 0.25
 
-dimes = calculate_dimes(cents)
-cents = cents - quarters - dimes * 10
+dimes = int(calculate_dimes(cents))
+cents = cents - quarters - dimes * 0.10
 
-nickels = calculate_nickels(cents)
-cents = cents - int(nickels) * 5
+nickels = int(calculate_nickels(cents))
+cents = cents - quarters - dimes - nickels * 0.05
 
-pennies = calculate_pennies(cents)
-cents = cents - int(pennies) * 1
+pennies = int(calculate_pennies(cents))
+cents = cents - quarters - dimes - nickels - pennies * 0.01
 
 print("quarters: " , quarters , "dimes: " , dimes , "nickels: " , nickels , "pennies: " , pennies)
 coins = quarters + dimes + nickels + pennies
