@@ -19,7 +19,7 @@ while row < height:
         print('#')
         i += 1
     break """
-
+i = 1
 for i in range (height):
-    print(('.') * (int(height) - 1) + ('#') * (1))
-    break
+    print(('.') * (int(height) - i) + ('#') * (i))
+    i += 1
