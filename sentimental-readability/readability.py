@@ -43,3 +43,6 @@ sentencesTotal = count_sentences(text)
 #//L average number of letters per 100 words - S average number of sentences per 100 words
 #//use floats to calc these """
 
+grade = 0.0588 * ((lettersTotal / wordsTotal) * 100) - 0.296 * ((sentencesTotal / wordsTotal) * 100) - 15.8
+
+print("Grade: ", int(grade))
