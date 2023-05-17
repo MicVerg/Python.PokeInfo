@@ -15,4 +15,4 @@ def count_letters(text):
             letters += 1
     return letters
 
-print(letters)
+lettersTotal = count_letters(text)
