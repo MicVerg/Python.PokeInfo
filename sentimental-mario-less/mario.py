@@ -10,6 +10,6 @@ while True:
         break
 
 
-for i in range (1, height + 1):
+for i in range(1, height + 1):
     print((' ') * (height - i) + ('#') * (i))
     i += 1
