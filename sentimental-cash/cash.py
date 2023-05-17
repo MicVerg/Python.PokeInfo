@@ -9,3 +9,4 @@ while True:
     else:
         break
 
+def calculate_quarters
