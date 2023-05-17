@@ -24,14 +24,22 @@ def count_words(text):
     return words + 1
 
 
+# sentences end with . ! ?
 def count_sentences(text):
     sentences = 0
-    
+    for i in range(len(text)):
+        if(text[i] == '.' or text[i] == '!' or text[i] == '?'):
+            sentences += 1
+    return sentences
+
 #prompt for input
 text = get_string("Text: ")
 
 lettersTotal = count_letters(text)
-print(lettersTotal)
+#print(lettersTotal)
 
 wordsTotal = count_words(text)
-print(wordsTotal)
+#print(wordsTotal)
+
+sentencesTotal = count_sentences(text)
+#print(sentencesTotal)
