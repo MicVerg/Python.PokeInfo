@@ -9,6 +9,8 @@ while True:
     else:
         break
 
+
+
 def calculate_quarters(cents):
     cents = cents / 25
     return cents
