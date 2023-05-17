@@ -7,19 +7,7 @@ while True:
     else:
         break
 
-""" row = 0
-dots = 1
 i = 0
-while row < height:
-    row += 1
-    while dots < (height - row):
-        print('.')
-        dots += 1
-    while i <= row:
-        print('#')
-        i += 1
-    break """
-i = 0
-for i in range (1, height):
+for i in range (1, height + 1):
     print(('.') * (int(height) - i) + ('#') * (i))
     i += 1
