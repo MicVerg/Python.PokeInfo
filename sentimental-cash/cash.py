@@ -30,10 +30,10 @@ quarters = int(calculate_quarters(cents))
 cents = cents - quarters * 25
 
 dimes = int(calculate_dimes(cents))
-cents = cents - quarters - dimes * 10
+cents = cents - dimes * 10
 
 nickels = int(calculate_nickels(cents))
-cents = cents - quarters - dimes - nickels * 5
+cents = cents - nickels * 5
 
 pennies = int(calculate_pennies(cents))
 cents = pennies
