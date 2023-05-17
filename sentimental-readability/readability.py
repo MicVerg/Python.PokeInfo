@@ -40,4 +40,9 @@ sentencesTotal = count_sentences(text)
 
 grade = 0.0588 * ((lettersTotal / wordsTotal) * 100) - 0.296 * ((sentencesTotal / wordsTotal) * 100) - 15.8
 
-print("Grade: ", int(grade))
+if grade > 16:
+    print("Grade 16+")
+elif grade < 1:
+    print("Before Grade 1")
+else:
+    print("Grade", round(grade))
