@@ -7,7 +7,7 @@ while True:
     else:
         break
 
-i = 0
+
 for i in range (1, height + 1):
     print(('.') * (int(height) - i) + ('#') * (i))
     i += 1
