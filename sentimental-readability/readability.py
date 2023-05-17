@@ -1,7 +1,6 @@
 from cs50 import get_string
 
-#prompt for input
-text = get_string("Text: ")
+
 
 #//use formula to calculate grade
 #//index = 0.0588 * L - 0.296 * S - 15.8
@@ -14,6 +13,10 @@ def count_letters(text):
         if(text[i].isalpha()):
             letters += 1
     return letters
+
+
+#prompt for input
+text = get_string("Text: ")
 
 lettersTotal = count_letters(text)
 print(lettersTotal)
