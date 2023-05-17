@@ -1,17 +1,17 @@
 from cs50 import get_float
 
 def calculate_quarters(cents):
-    cents = cents / 25
+    cents = cents / 0.25
     return cents
 
 
 def calculate_dimes(cents):
-    cents = cents / 10
+    cents = cents / 0.10
     return cents
 
 
 def calculate_nickels(cents):
-    cents = cents / 5
+    cents = cents / 0.05
     return cents
 
 
