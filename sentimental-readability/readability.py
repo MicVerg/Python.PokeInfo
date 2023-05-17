@@ -8,4 +8,6 @@ text = get_string("Text: ")
     //L average number of letters per 100 words - S average number of sentences per 100 words
     //use floats to calc these """
 
-count_letters(text)
+def count_letters(text):
+    count = 0
+    for i in range(len(text))
