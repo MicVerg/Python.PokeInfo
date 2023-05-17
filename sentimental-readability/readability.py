@@ -15,8 +15,23 @@ def count_letters(text):
     return letters
 
 
+#count total spaces, then +1 = total amount of words
+def count_words(text):
+    words = 0
+    for i in range (len(text)):
+        if(text[i].isspace()):
+            words += 1
+    return words + 1
+
+
+def count_sentences(text):
+    sentences = 0
+    
 #prompt for input
 text = get_string("Text: ")
 
 lettersTotal = count_letters(text)
 print(lettersTotal)
+
+wordsTotal = count_words(text)
+print(wordsTotal)
