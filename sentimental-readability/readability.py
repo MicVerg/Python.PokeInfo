@@ -30,13 +30,8 @@ def count_sentences(text):
 text = get_string("Text: ")
 
 lettersTotal = count_letters(text)
-#print(lettersTotal)
-
 wordsTotal = count_words(text)
-#print(wordsTotal)
-
 sentencesTotal = count_sentences(text)
-#print(sentencesTotal)
 
 #//use formula to calculate grade
 #//index = 0.0588 * L - 0.296 * S - 15.8
