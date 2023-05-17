@@ -9,5 +9,5 @@ while True:
 
 
 for i in range (1, height + 1):
-    print((' ') * (int(height) - i) + ('#') * (i))
+    print((' ') * (height - i) + ('#') * (i))
     i += 1
