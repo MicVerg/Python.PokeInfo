@@ -1,5 +1,6 @@
 from cs50 import get_float
 
+
 def calculate_quarters(cents):
     cents = cents / 25
     return cents
@@ -38,7 +39,6 @@ cents = cents - nickels * 5
 pennies = int(calculate_pennies(cents))
 cents = pennies
 
-#print("quarters: " , quarters , "dimes: " , dimes , "nickels: " , nickels , "pennies: " , pennies)
-coins = quarters + dimes + nickels + pennies
 
+coins = quarters + dimes + nickels + pennies
 print(coins)
