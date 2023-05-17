@@ -11,8 +11,9 @@ text = get_string("Text: ")
 def count_letters(text):
     letters = 0
     for i in range(len(text)):
-        if(i.isalpha()):
+        if(text[i].isalpha()):
             letters += 1
     return letters
 
 lettersTotal = count_letters(text)
+print(lettersTotal)
