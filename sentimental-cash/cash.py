@@ -29,4 +29,17 @@ while True:
         break
 
 quarters = calculate_quarters(cents)
-cents = 
+cents = cents - int(quarters) * 25
+
+dimes = calculate_dimes(cents)
+cents = cents - int(dimes) * 10
+
+nickels = calculate_nickels(cents)
+cents = cents - int(nickels) * 5
+
+pennies = calculate_pennies(cents)
+cents = cents - int(pennies) * 1
+
+coins = quarters + dimes + nickels + pennies
+
+print(coins)
