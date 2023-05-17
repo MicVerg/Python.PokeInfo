@@ -21,7 +21,7 @@ def calculate_pennies(cents):
 
 while True:
     cents = get_float("Change owed: ")
-    if cents < 1:
+    if cents < 0:
         cents = get_float("Change owed: ")
         if cents > 0:
             break
