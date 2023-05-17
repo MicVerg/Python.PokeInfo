@@ -4,6 +4,8 @@ while True:
     height = get_int("Height: ")
     if height < 1 or height > 8:
         height = get_int("Height: ")
+        if height > 1 or height < 8:
+            break
     else:
         break
 
