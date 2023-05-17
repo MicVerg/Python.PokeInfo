@@ -23,8 +23,6 @@ while True:
     cents = get_float("Change owed: ")
     if cents > 0:
         break
-    else:
-        break
 
 quarters = int(calculate_quarters(cents))
 cents = cents - quarters * 0.25
