@@ -1,17 +1,17 @@
 from cs50 import get_float
 
 def calculate_quarters(cents):
-    cents = cents / 0.25
+    cents = cents / 25
     return cents
 
 
 def calculate_dimes(cents):
-    cents = cents / 0.10
+    cents = cents / 10
     return cents
 
 
 def calculate_nickels(cents):
-    cents = cents / 0.05
+    cents = cents / 5
     return cents
 
 
@@ -23,6 +23,8 @@ while True:
     cents = get_float("Change owed: ")
     if cents > 0:
         break
+
+cents = round(cents * 100)
 
 quarters = int(calculate_quarters(cents))
 cents = cents - quarters * 0.25
