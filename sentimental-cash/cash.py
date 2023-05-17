@@ -27,3 +27,6 @@ while True:
             break
     else:
         break
+
+quarters = calculate_quarters(cents)
+cents = 
