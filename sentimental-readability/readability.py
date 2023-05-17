@@ -9,8 +9,8 @@ text = get_string("Text: ")
     //use floats to calc these """
 
 def count_letters(text):
-    count = 0
+    letters = 0
     for i in range(len(text)):
         if(i.isalpha()):
             letters += 1
-    return letters
+return letters
