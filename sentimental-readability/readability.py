@@ -26,6 +26,7 @@ def count_sentences(text):
             sentences += 1
     return sentences
 
+
 #prompt for input
 text = get_string("Text: ")
 
