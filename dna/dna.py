@@ -42,7 +42,7 @@ def main():
     for l, slicedDatabase2 in enumerate(slicedDatabase):
         match = True
         for key, value in slicedDatabase2.items():
-            if int(value) != counts[l]:
+            if int(value) != counts[l][key]:
                 match = False
                 print(f"Key: {key}, Value: {value}, Count: {counts[l]}")
                 break
