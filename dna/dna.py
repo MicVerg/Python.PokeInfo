@@ -45,7 +45,7 @@ def main():
             if int(value) != counts[l]:
                 match = False
                 break
-    print(database)
+    print(database.name[l])
         #l = {key: value for key, value in k.items() if key}
     """ agatcCount = longest_match(sequenceReader, "AGATC")
     aatgCount = longest_match(sequenceReader, "AATG")
