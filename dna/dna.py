@@ -16,12 +16,12 @@ def main():
         dataReader = csv.DictReader(file)
         for row in dataReader:
             database.append(row)
-    print(database)
+
 
     # TODO: Read DNA sequence file into a variable
     filepathSequence = sys.argv[2]
 
-    
+
     sequenceReader = csv.Reader(filepathSequence)
 
     # TODO: Find longest match of each STR in DNA sequence
