@@ -25,7 +25,7 @@ def main():
         sequenceReader = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    counts = []
+    counts = {}
     subsequences = list(database[0].keys())[1:]
     print(subsequences)
 
