@@ -28,26 +28,6 @@ def main():
     counts = []
     i = 0
 
-    slicedDatabase = []
-    for i in database:
-        j = {key: value for key, value in i.items() if key != 'name'}
-        slicedDatabase.append(j)
-
-    for k in slicedDatabase[0]:
-        counts.append({k: longest_match(sequenceReader, k)})
-
-    for i in range(1, len(slicedDatabase)):
-        for k in slicedDatabase[i]:
-            counts[i][k] = longest_match(sequenceReader, k)
-
-    for l, slicedDatabase2 in enumerate(slicedDatabase):
-        match = True
-        for key, value in slicedDatabase2.items():
-            if int(value) != counts[l][key]:
-                match = False
-                break
-        if match:
-            print(database[l]['name'])
 
         #l = {key: value for key, value in k.items() if key}
     """ agatcCount = longest_match(sequenceReader, "AGATC")
