@@ -27,19 +27,19 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     counts = {}
     subsequences = list(database[0].keys())[1:]
-    print(subsequences)
+    # print(subsequences)
 
     for i in subsequences:
         counts[i] = longest_match(sequenceReader, i)
 
-    #print(counts)
-    print(database)
+    # print(counts)
+    # print(database)
 
 
     # TODO: Check database for matching profiles
     slicedDatabase = [{key: value for key, value in d.items() if key != 'name'} for d in database]
-    print(counts)
-    print(slicedDatabase)
+    # print(counts)
+    # print(slicedDatabase)
 
     #transform values to integers
     for i in slicedDatabase:
@@ -48,9 +48,9 @@ def main():
 
     foundIndex = slicedDatabase.index(counts)
     if counts in slicedDatabase:
-        print(database.name[foundIndex])
+        print(database[foundIndex]['name'])
     else:
-        print("no success!")
+        print("No match")
     return
 
 
