@@ -28,10 +28,13 @@ def main():
     counts = []
     i = 0
     slicedDatabase = database
+
+    slicedDatabase = []
+    for i in database:
+        j = {key: value for key, value in i.items() if key != 'name'}
+        slicedDatabase.append(j)
     print(slicedDatabase)
-    while True:
-        longest_match(sequenceReader, database[2])
-        break
+    
     agatcCount = longest_match(sequenceReader, "AGATC")
     aatgCount = longest_match(sequenceReader, "AATG")
     tatcCount = longest_match(sequenceReader, "TATC")
