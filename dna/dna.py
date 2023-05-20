@@ -34,6 +34,7 @@ def main():
         slicedDatabase.append(j)
     print(slicedDatabase)
 
+    
     agatcCount = longest_match(sequenceReader, "AGATC")
     aatgCount = longest_match(sequenceReader, "AATG")
     tatcCount = longest_match(sequenceReader, "TATC")
