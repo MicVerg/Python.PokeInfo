@@ -41,6 +41,8 @@ def main():
     print(counts)
     print(slicedDatabase)
 
+    #transform values to integers
+    for 
     if counts in slicedDatabase:
         print("success!")
     else:
