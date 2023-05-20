@@ -17,7 +17,6 @@ def main():
         for row in dataReader:
             database.append(row)
 
-
     # TODO: Read DNA sequence file into a variable
     filepathSequence = sys.argv[2]
 
@@ -35,17 +34,15 @@ def main():
     # print(counts)
     # print(database)
 
-
     # TODO: Check database for matching profiles
     slicedDatabase = [{key: value for key, value in d.items() if key != 'name'} for d in database]
     # print(counts)
     # print(slicedDatabase)
 
-    #transform values to integers
+    # transform values to integers
     for i in slicedDatabase:
         for key in i:
             i[key] = int(i[key])
-
 
     if counts in slicedDatabase:
         foundIndex = slicedDatabase.index(counts)
