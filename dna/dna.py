@@ -38,6 +38,14 @@ def main():
         counts.append(longest_match(sequenceReader, k))
     print(counts)
 
+
+    for l, dictionary in enumerate(counts):
+        match = True
+        for key, value in dictionary.items():
+            if int(value) != counts[l]:
+                match = False
+                break
+    print(database)
         #l = {key: value for key, value in k.items() if key}
     """ agatcCount = longest_match(sequenceReader, "AGATC")
     aatgCount = longest_match(sequenceReader, "AATG")
@@ -53,7 +61,7 @@ def main():
 
 
     # TODO: Check database for matching profiles
-    
+
 
     return
 
