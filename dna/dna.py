@@ -38,6 +38,9 @@ def main():
         counts.append({k: longest_match(sequenceReader, k)})
     print(counts)
 
+    for i in range(1, len(slicedDatabase)):
+        for k in slicedDatabase[i]:
+            counts[i][k] = longest_match(sequenceReader, k)
 
     for l, slicedDatabase2 in enumerate(slicedDatabase):
         match = True
