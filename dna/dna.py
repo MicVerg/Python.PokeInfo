@@ -21,8 +21,9 @@ def main():
     # TODO: Read DNA sequence file into a variable
     filepathSequence = sys.argv[2]
 
-
-    sequenceReader = csv.Reader(filepathSequence)
+    with open(filepathSequence, 'r') as file:
+        sequenceReader = file.read()
+    print(sequenceReader)
 
     # TODO: Find longest match of each STR in DNA sequence
     #agatcCount = longest_match(sequenceReader, "AGATC")
