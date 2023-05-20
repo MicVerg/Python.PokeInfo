@@ -35,7 +35,7 @@ def main():
     print(slicedDatabase)
 
     for k in slicedDatabase[0]:
-        counts.append(longest_match(sequenceReader, k))
+        counts.append({k: longest_match(sequenceReader, k)})
     print(counts)
 
 
