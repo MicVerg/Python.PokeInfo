@@ -17,7 +17,7 @@ def main():
     sequenceReader = csv.DictReader(sys.argv[2])
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    agatCount = longest_match(sequenceReader, agat)
     # TODO: Check database for matching profiles
 
     return
