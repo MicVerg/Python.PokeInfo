@@ -28,7 +28,7 @@ def main():
     counts = []
     i = 0
     while True:
-        longest_match(sequenceReader, database[])
+        longest_match(sequenceReader, database[2])
     agatcCount = longest_match(sequenceReader, "AGATC")
     aatgCount = longest_match(sequenceReader, "AATG")
     tatcCount = longest_match(sequenceReader, "TATC")
