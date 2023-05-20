@@ -27,7 +27,7 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     counts = []
     subsequences = database[0].keys()
-    print(subsequences)
+    print(subsequences[1:])
 
 
         #l = {key: value for key, value in k.items() if key}
