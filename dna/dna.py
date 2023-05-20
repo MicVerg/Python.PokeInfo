@@ -36,8 +36,8 @@ def main():
     print(database)
 
     # TODO: Check database for matching profiles
-    if database[2:] == counts:
-        print
+    for j in database[2:]:
+        
 
     return
 
