@@ -46,8 +46,9 @@ def main():
         for key in i:
             i[key] = int(i[key])
 
+    foundIndex = slicedDatabase.index(counts)
     if counts in slicedDatabase:
-        print("success!")
+        print(database.name[foundIndex])
     else:
         print("no success!")
     return
