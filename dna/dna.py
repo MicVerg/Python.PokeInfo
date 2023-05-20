@@ -46,18 +46,6 @@ def main():
         for key in i:
             i[key] = int(i[key])
 
-    n = 0
-    found_index = None
-    count = 0
-
-    for j in range(len(slicedDatabase)):
-        if slicedDatabase[k] == counts:
-            if n == count:
-                found_index = k
-                break
-        else:
-            count += 1
-            
     if counts in slicedDatabase:
         print("success!")
     else:
