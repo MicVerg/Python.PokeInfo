@@ -29,6 +29,8 @@ def main():
     subsequences = list(database[0].keys())[1:]
     print(subsequences)
 
+    for i in subsequences:
+        
 
         #l = {key: value for key, value in k.items() if key}
     """ agatcCount = longest_match(sequenceReader, "AGATC")
