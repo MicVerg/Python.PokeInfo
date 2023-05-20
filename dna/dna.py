@@ -46,8 +46,9 @@ def main():
         for key in i:
             i[key] = int(i[key])
 
-    foundIndex = slicedDatabase.index(counts)
+
     if counts in slicedDatabase:
+        foundIndex = slicedDatabase.index(counts)
         print(database[foundIndex]['name'])
     else:
         print("No match")
