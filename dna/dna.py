@@ -25,18 +25,20 @@ def main():
         sequenceReader = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    counts = []
+    
     agatcCount = longest_match(sequenceReader, "AGATC")
     aatgCount = longest_match(sequenceReader, "AATG")
     tatcCount = longest_match(sequenceReader, "TATC")
 
-    counts = []
+
     counts.append(agatcCount)
     counts.append(aatgCount)
     counts.append(tatcCount)
     print(counts)
     print(agatcCount, aatgCount, tatcCount)
 
-    
+
     # TODO: Check database for matching profiles
 
     return
