@@ -32,12 +32,13 @@ def main():
     for i in subsequences:
         counts[i] = longest_match(sequenceReader, i)
 
-    print(counts)
+    #print(counts)
     print(database)
 
 
     # TODO: Check database for matching profiles
     slicedDatabase = [{key: value for key, value in d.items() if key != 'name'} for d in database]
+    print(counts)
     print(slicedDatabase)
 
     if counts in slicedDatabase:
