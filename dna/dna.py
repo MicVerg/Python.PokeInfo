@@ -32,11 +32,9 @@ def main():
     for i in database:
         j = {key: value for key, value in i.items() if key != 'name'}
         slicedDatabase.append(j)
-    print(slicedDatabase)
 
     for k in slicedDatabase[0]:
         counts.append({k: longest_match(sequenceReader, k)})
-    print(counts)
 
     for i in range(1, len(slicedDatabase)):
         for k in slicedDatabase[i]:
@@ -47,7 +45,6 @@ def main():
         for key, value in slicedDatabase2.items():
             if int(value) != counts[l][key]:
                 match = False
-                print(f"Key: {key}, Value: {value}, Count: {counts[l].get(key, 0)}")
                 break
         if match:
             print(database[l]['name'])
