@@ -29,6 +29,7 @@ def main():
     aatgCount = longest_match(sequenceReader, "AATG")
     tatcCount = longest_match(sequenceReader, "TATC")
 
+    print(agatcCount, aatgCount, tatcCount)
     # TODO: Check database for matching profiles
 
     return
