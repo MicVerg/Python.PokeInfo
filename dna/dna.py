@@ -30,7 +30,7 @@ def main():
     print(subsequences)
 
     for i in subsequences:
-        match = longest_match(sequenceReader, database[0].keys()[i])
+        match = longest_match(sequenceReader, database[0].values())
         counts.append(match)
 
     print(counts)
