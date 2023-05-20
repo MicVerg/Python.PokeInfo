@@ -30,8 +30,10 @@ def main():
     print(subsequences)
 
     for i in subsequences:
-        
+        match = longest_match(sequenceReader, database[0].keys()[i])
+        counts.append(match)
 
+    print(counts)
         #l = {key: value for key, value in k.items() if key}
     """ agatcCount = longest_match(sequenceReader, "AGATC")
     aatgCount = longest_match(sequenceReader, "AATG")
