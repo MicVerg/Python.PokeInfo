@@ -39,7 +39,7 @@ def main():
     print(counts)
 
 
-    for l, slicedDatabase2 in enumerate(counts):
+    for l, slicedDatabase2 in enumerate(slicedDatabase):
         match = True
         for key, value in slicedDatabase2.items():
             if int(value) != counts[l]:
