@@ -45,7 +45,7 @@ def main():
     for i in slicedDatabase:
         for key in i:
             i[key] = int(i[key])
-            
+
     if counts in slicedDatabase:
         print("success!")
     else:
