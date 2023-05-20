@@ -19,8 +19,8 @@ def main():
     print(database)
 
     # TODO: Read DNA sequence file into a variable
-    #filenameSequence = sys.argv[2]
-    sequenceReader = csv.DictReader(sys.argv[2])
+    filepathSequence = sys.argv[2]
+    sequenceReader = csv.Reader(filepathSequence)
 
     # TODO: Find longest match of each STR in DNA sequence
     #agatcCount = longest_match(sequenceReader, "AGATC")
