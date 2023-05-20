@@ -5,12 +5,16 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         sys.exit("Usage: python dna.py data.csv sequence.txt")
 
     # TODO: Read database file into a variable
-    #filename = sys.argv[1]
-    dataReader = csv.DictReader(sys.argv[1])
+    filepath = sys.argv[1]
+    with open(filepath, 'r') as file:
+        dataReader = csv.reader(file)
+        for line in dataReader:
+            print(line)
+            break
 
     # TODO: Read DNA sequence file into a variable
     #filenameSequence = sys.argv[2]
@@ -20,7 +24,7 @@ def main():
     agatcCount = longest_match(sequenceReader, AGATC)
     aatgCount = longest_match(sequenceReader, AATG)
     tatcCount = longest_match(sequenceReader, TATC)
-    
+
     # TODO: Check database for matching profiles
 
     return
