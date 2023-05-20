@@ -35,11 +35,13 @@ def main():
     print(counts)
     print(database)
 
+
     # TODO: Check database for matching profiles
     slicedDatabase = [{key: value for key, value in d.items() if key != 'name'} for d in database]
     print(slicedDatabase)
+    
     if counts in slicedDatabase:
-        print()
+        print("succes!")
     return
 
 
