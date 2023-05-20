@@ -44,6 +44,7 @@ def main():
         for key, value in slicedDatabase2.items():
             if int(value) != counts[l]:
                 match = False
+                print(f"Key: {key}, Value: {value}, Count: {counts[l]}")
                 break
         if match:
             print(database[l]['name'])
