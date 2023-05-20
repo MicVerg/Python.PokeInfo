@@ -33,22 +33,11 @@ def main():
         counts[i] = longest_match(sequenceReader, i)
 
     print(counts)
-        #l = {key: value for key, value in k.items() if key}
-    """ agatcCount = longest_match(sequenceReader, "AGATC")
-    aatgCount = longest_match(sequenceReader, "AATG")
-    tatcCount = longest_match(sequenceReader, "TATC")
-
-
-    counts.append(agatcCount)
-    counts.append(aatgCount)
-    counts.append(tatcCount) """
-
-    #print(agatcCount, aatgCount, tatcCount)
-
-
+    print(database)
 
     # TODO: Check database for matching profiles
-    
+    if database[2:] == counts:
+        print
 
     return
 
