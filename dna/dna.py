@@ -27,7 +27,7 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     counts = []
     i = 0
-    slicedDatabase = database[]
+    slicedDatabase = database[1:]
     while True:
         longest_match(sequenceReader, database[2])
     agatcCount = longest_match(sequenceReader, "AGATC")
