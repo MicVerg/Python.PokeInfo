@@ -37,16 +37,16 @@ def main():
     for k in slicedDatabase[0]:
         counts.append(longest_match(sequenceReader, k))
         #l = {key: value for key, value in k.items() if key}
-    agatcCount = longest_match(sequenceReader, "AGATC")
+    """ agatcCount = longest_match(sequenceReader, "AGATC")
     aatgCount = longest_match(sequenceReader, "AATG")
     tatcCount = longest_match(sequenceReader, "TATC")
 
 
     counts.append(agatcCount)
     counts.append(aatgCount)
-    counts.append(tatcCount)
+    counts.append(tatcCount) """
     print(counts)
-    print(agatcCount, aatgCount, tatcCount)
+    #print(agatcCount, aatgCount, tatcCount)
 
 
     # TODO: Check database for matching profiles
