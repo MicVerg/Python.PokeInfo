@@ -3,3 +3,4 @@ to match the average of energy, valence and danceability
 (im sorry this question is not very clear to me, maybe my English is too bad)
 
 Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+to consider everything, including loudness, speechiness, duration etc
