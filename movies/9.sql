@@ -1,1 +1,3 @@
-SELECT name FROM people WHERE id IN (SELECT person_id FROM stars)
+SELECT name FROM people
+JOIN 
+WHERE id IN (SELECT person_id FROM stars)
