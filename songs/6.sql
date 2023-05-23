@@ -1,1 +1,1 @@
-SELECT name FROM songs WHERE artists.id = 10;
+SELECT name FROM songs JOIN artists ON songs.artist_id = artists.id WHERE artists.name = 'Post Malone';
