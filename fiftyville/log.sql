@@ -193,7 +193,7 @@ SELECT DISTINCT name
 -- check who THIEF called
 SELECT DISTINCT receiver
     FROM phone_calls
-    WHERE caller = (SELECT phone_number FROM people WHERE name IN ('Kenny', 'Taylor', 'Bruce'))
+    WHERE caller = (SELECT phone_number FROM people WHERE name = 'Bruce')
     AND duration < 60
     AND DAY = 28
     AND MONTH = 7
@@ -216,4 +216,4 @@ SELECT DISTINCT name
 SELECT caller
     FROM phone_calls
     JOIN phone_calls ON phone_calls.receiver = people.phone_number
-    WHERE phone_calls.receiver = '(066) 555-9701';
+    WHERE phone_calls.receiver = '(375) 555-8161';
