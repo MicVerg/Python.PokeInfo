@@ -152,7 +152,7 @@ SELECT passport_number
     ORDER BY hour, minute ASC
     LIMIT 1));
 
--- check passport numbers against people and suspect list
+-- check passport numbers to names
 SELECT DISTINCT name
     FROM people
     JOIN passengers ON passengers.passport_number = people.passport_number
@@ -168,7 +168,7 @@ SELECT DISTINCT name
             ORDER BY hour, minute ASC
             LIMIT 1)));
 
-
+--names of suspects on flight
 SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.caller = people.phone_number
@@ -193,7 +193,7 @@ SELECT DISTINCT name
                     AND year = 2021
                     AND transaction_type = 'withdraw'
                     AND atm_location = 'Leggett Street')))
-        AND caller in (SELECT DISTINCT name
+        AND caller in (SELECT DISTINCT people.phone_number
     FROM people
     JOIN passengers ON passengers.passport_number = people.passport_number
     WHERE people.passport_number IN
@@ -207,3 +207,5 @@ SELECT DISTINCT name
             AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
             ORDER BY hour, minute ASC
             LIMIT 1)))));
+
+    
