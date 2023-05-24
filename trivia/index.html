@@ -31,14 +31,13 @@
 
                 document.querySelector('#check').addEventListener('click', function(){
                     let input = document.querySelector('input');
-                    if (input.value === 'Cat'){
+                    if (input.value === 'Cat' || input.value === 'cat'){
                         input.style.backgroundColor = 'green';
                         document.querySelector('#feedback2').innerHTML = 'Correct, cats are awesome!!';
                     } else {
                         input.style.backgroundColor = 'red';
                         document.querySelector('#feedback2').innerHTML = 'Incorrect (hint: CATS!!)';
                     }
-
                 })
             });
         </script>
