@@ -9,3 +9,7 @@ p {
 #paragraph {
     text-align: center;
 }
+
+a[title] {
+    color: purple;
+}
