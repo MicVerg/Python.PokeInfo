@@ -87,7 +87,7 @@ SELECT DISTINCT receiver
     AND MONTH = 7
     AND year = 2021;
 
--- check that person's name
+-- check that person's name ACCOMPLICE
 SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.receiver = people.phone_number
