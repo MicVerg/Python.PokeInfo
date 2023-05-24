@@ -92,7 +92,7 @@ SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.receiver = people.phone_number
     WHERE receiver =
-        (SELECT caller
+        (SELECT receiver
         FROM phone_calls
         WHERE duration < 60
         AND DAY = 28
