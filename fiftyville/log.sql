@@ -15,3 +15,9 @@ SELECT transcript
     AND year = 2021;
 
 -- check license plates within 10 minutes of theft
+SELECT license_plate
+    FROM bakery_security_logs
+    WHERE day = 28
+    AND month = 7
+    AND year = 2021
+    AND hour = 
