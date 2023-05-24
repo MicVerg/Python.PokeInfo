@@ -103,13 +103,14 @@ SELECT DISTINCT name
 SELECT id
     FROM airports
     WHERE city = 'Fiftyville';
-    
+
 -- check the earliest flight on 29/7/2021 (ID)
 SELECT DISTINCT destination_airport_id
     FROM flights
     WHERE day = 29
     AND month = 7
     AND year = 2021
+    AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
     ORDER BY hour, minute ASC
     LIMIT 1;
 
@@ -118,8 +119,9 @@ SELECT city
     FROM airports
     WHERE id = (SELECT DISTINCT destination_airport_id
     FROM flights
-    WHERE day = 29
-    AND month = 7
-    AND year = 2021
-    ORDER BY hour, minute ASC
-    LIMIT 1);
+        WHERE day = 29
+        AND month = 7
+        AND year = 2021
+        AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
+        ORDER BY hour, minute ASC
+        LIMIT 1);
