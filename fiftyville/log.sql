@@ -24,4 +24,4 @@ SELECT license_plate
     AND minute BETWEEN 15 AND 25
     AND activity = 'exit';
 
---
+-- 
