@@ -70,7 +70,7 @@ SELECT caller
 SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.caller = people.phone_number
-    WHERE caller =
+    WHERE caller IN
         (SELECT caller
         FROM phone_calls
         WHERE duration < 60
