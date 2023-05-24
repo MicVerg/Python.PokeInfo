@@ -67,13 +67,13 @@ SELECT caller
     AND year = 2021;
 
 -- check caller phone list against suspect list
-SELECT name
-    JOIN 
+SELECT DISTINCT name
     FROM people
+    JOIN phone_calls ON phone_calls.caller = people.phone_number
     WHERE caller IN
-    (SELECT caller
-    FROM phone_calls
-    WHERE duration < 60
-    AND DAY = 28
-    AND MONTH = 7
-    AND year = 2021);
+        (SELECT caller
+        FROM phone_calls
+        WHERE duration < 60
+        AND DAY = 28
+        AND MONTH = 7
+        AND year = 2021);
