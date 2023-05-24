@@ -45,7 +45,7 @@ SELECT person_id FROM bank_accounts
         AND atm_location = 'Leggett Street');
 
 -- check combo of person IDs and license plates, these are the names of people who were at bakery + withdrew SUSPECT LIST
-SELECT name FROM people
+SELECT DISTINCT name FROM people
     JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
     WHERE people.id IN
         (SELECT person_id FROM bank_accounts
@@ -70,13 +70,10 @@ SELECT caller
 SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.caller = people.phone_number
-    WHERE caller IN
+    WHERE caller =
         (SELECT caller
         FROM phone_calls
         WHERE duration < 60
         AND DAY = 28
         AND MONTH = 7
         AND year = 2021);
-
--- again
-
