@@ -152,7 +152,7 @@ SELECT passport_number
     LIMIT 1));
 
 -- check passport numbers against people and suspect list
-SELECT DISTINCT name as flightList
+SELECT DISTINCT name
     FROM people
     JOIN passengers ON passengers.passport_number = people.passport_number
     WHERE people.passport_number IN (SELECT passport_number
