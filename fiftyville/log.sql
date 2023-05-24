@@ -7,4 +7,4 @@ SELECT description
     AND month = 7
     AND year = 2021;
 
-    
+--
