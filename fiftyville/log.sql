@@ -14,4 +14,4 @@ SELECT transcript
     AND month = 7
     AND year = 2021;
 
-    
+-- check license plates within 10 minutes of theft
