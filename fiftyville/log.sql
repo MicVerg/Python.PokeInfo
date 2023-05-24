@@ -43,3 +43,15 @@ SELECT person_id FROM bank_accounts
         AND year = 2021
         AND transaction_type = 'withdraw'
         AND atm_location = 'Leggett Street');
+
+-- check combo of person IDs and license plates
+SELECT name FROM people
+    JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
+    WHERE people.license_plate IN
+        (SELECT account_number
+        FROM atm_transactions
+        WHERE DAY = 28
+        AND MONTH = 7
+        AND year = 2021
+        AND transaction_type = 'withdraw'
+        AND atm_location = 'Leggett Street');
