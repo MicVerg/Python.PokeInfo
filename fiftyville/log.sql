@@ -91,7 +91,7 @@ SELECT DISTINCT receiver
 SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.receiver = people.phone_number
-    WHERE caller =
+    WHERE receiver =
         (SELECT caller
         FROM phone_calls
         WHERE duration < 60
