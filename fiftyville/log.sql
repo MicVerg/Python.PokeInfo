@@ -215,5 +215,9 @@ SELECT DISTINCT name
 -- check thief
 SELECT caller
     FROM phone_calls
-    JOIN phone_calls ON phone_calls.receiver = people.phone_number
-    WHERE phone_calls.receiver = '(375) 555-8161';
+    JOIN people ON phone_calls.receiver = people.phone_number
+    WHERE phone_calls.receiver = '(375) 555-8161'
+    AND duration < 60
+    AND DAY = 28
+    AND MONTH = 7
+    AND year = 2021;
