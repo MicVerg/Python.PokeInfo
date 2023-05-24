@@ -7,4 +7,9 @@ SELECT description
     AND month = 7
     AND year = 2021;
 
---
+-- check interviews of the same day
+SELECT transcript
+    FROM interviews
+    WHERE day = 28
+    AND month = 7
+    AND year = 2021;
