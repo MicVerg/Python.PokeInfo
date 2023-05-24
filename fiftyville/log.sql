@@ -77,18 +77,19 @@ SELECT DISTINCT name
         AND DAY = 28
         AND MONTH = 7
         AND year = 2021
-        WHERE name IN (SELECT DISTINCT name FROM people
-    JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-    WHERE people.id IN
-        (SELECT person_id FROM bank_accounts
-        JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
-        WHERE bank_accounts.account_number IN
-            (SELECT account_number FROM atm_transactions
-            WHERE DAY = 28
-            AND MONTH = 7
-            AND year = 2021
-            AND transaction_type = 'withdraw'
-            AND atm_location = 'Leggett Street'))));
+        WHERE name IN
+            (SELECT DISTINCT name FROM people
+            JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
+            WHERE people.id IN
+                (SELECT person_id FROM bank_accounts
+                JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
+                WHERE bank_accounts.account_number IN
+                    (SELECT account_number FROM atm_transactions
+                        WHERE DAY = 28
+                        AND MONTH = 7
+                        AND year = 2021
+                        AND transaction_type = 'withdraw'
+                        AND atm_location = 'Leggett Street'))));
 
 -- check who THIEF called
 SELECT DISTINCT receiver
