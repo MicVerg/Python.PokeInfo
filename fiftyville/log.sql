@@ -138,3 +138,4 @@ SELECT city
         AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
         ORDER BY hour, minute ASC
         LIMIT 1);
+
