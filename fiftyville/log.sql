@@ -30,4 +30,5 @@ SELECT account_number
     WHERE DAY = 28
     AND MONTH = 7
     AND year = 2021
-    AND transaction_type = 'withdraw';
+    AND transaction_type = 'withdraw'
+    AND atm_location = 'Leggett Street';
