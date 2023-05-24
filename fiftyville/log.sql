@@ -139,3 +139,13 @@ SELECT city
         ORDER BY hour, minute ASC
         LIMIT 1);
 
+SELECT passport_number
+    FROM passengers
+    WHERE flight_id = (SELECT DISTINCT id
+    FROM flights
+    WHERE day = 29
+    AND month = 7
+    AND year = 2021
+    AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
+    ORDER BY hour, minute ASC
+    LIMIT 1);
