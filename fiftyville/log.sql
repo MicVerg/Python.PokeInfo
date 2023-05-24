@@ -213,7 +213,7 @@ SELECT DISTINCT name
         AND year = 2021);
 
 -- check thief
-SELECT DISTINCT caller
-    FROM people
+SELECT caller
+    FROM phone_calls
     JOIN phone_calls ON phone_calls.receiver = people.phone_number
     WHERE phone_calls.receiver = '(066) 555-9701';
