@@ -76,4 +76,7 @@ SELECT DISTINCT name
         WHERE duration < 60
         AND DAY = 28
         AND MONTH = 7
-        AND year = 2021);
+        AND year = 2021); -- THE THIEF IS SOFIA
+
+-- check who Sofia called
+SELECT receiver
