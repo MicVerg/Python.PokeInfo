@@ -216,4 +216,4 @@ SELECT DISTINCT name
 SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.receiver = people.phone_number
-    WHERE 
+    WHERE phone_calls.receiver = 'Doris';
