@@ -242,3 +242,7 @@ SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.receiver = people.phone_number
     WHERE phone_calls.receiver = '(375) 555-8161';
+
+
+-- I really made a mess of this, sorry !!
+-- I completely lost track of what I was doing at a certain point
