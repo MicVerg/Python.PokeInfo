@@ -84,12 +84,13 @@ SELECT DISTINCT name
                 (SELECT person_id FROM bank_accounts
                 JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
                 WHERE bank_accounts.account_number IN
-                    (SELECT account_number FROM atm_transactions
-                        WHERE DAY = 28
-                        AND MONTH = 7
-                        AND year = 2021
-                        AND transaction_type = 'withdraw'
-                        AND atm_location = 'Leggett Street')))); -- SUSPECT LIST
+                    (SELECT account_number
+                    FROM atm_transactions
+                    WHERE DAY = 28
+                    AND MONTH = 7
+                    AND year = 2021
+                    AND transaction_type = 'withdraw'
+                    AND atm_location = 'Leggett Street')))); -- SUSPECT LIST
 
 -- check who THIEF called
 SELECT DISTINCT receiver
@@ -166,3 +167,43 @@ SELECT DISTINCT name
             AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
             ORDER BY hour, minute ASC
             LIMIT 1)));
+
+
+SELECT DISTINCT name
+    FROM people
+    JOIN phone_calls ON phone_calls.caller = people.phone_number
+    WHERE caller IN
+        (SELECT caller
+        FROM phone_calls
+        WHERE duration < 60
+        AND DAY = 28
+        AND MONTH = 7
+        AND year = 2021
+        AND name IN
+            (SELECT DISTINCT name FROM people
+            JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
+            WHERE people.id IN
+                (SELECT person_id FROM bank_accounts
+                JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
+                WHERE bank_accounts.account_number IN
+                    (SELECT account_number
+                    FROM atm_transactions
+                    WHERE DAY = 28
+                    AND MONTH = 7
+                    AND year = 2021
+                    AND transaction_type = 'withdraw'
+                    AND atm_location = 'Leggett Street')))
+        AND caller in (SELECT DISTINCT name
+    FROM people
+    JOIN passengers ON passengers.passport_number = people.passport_number
+    WHERE people.passport_number IN
+    (SELECT passport_number
+        FROM passengers
+        WHERE flight_id = ((SELECT DISTINCT id
+            FROM flights
+            WHERE day = 29
+            AND month = 7
+            AND year = 2021
+            AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
+            ORDER BY hour, minute ASC
+            LIMIT 1)))));
