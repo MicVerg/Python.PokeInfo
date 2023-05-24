@@ -98,3 +98,10 @@ SELECT DISTINCT name
         AND DAY = 28
         AND MONTH = 7
         AND year = 2021);
+
+-- check the earliest flight on 29/7/2021
+SELECT DISTINCT destination_airport_id
+    FROM flights
+    WHERE day = 29
+    AND month = 7
+    AND year = 2021;
