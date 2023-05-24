@@ -152,32 +152,9 @@ SELECT passport_number
     LIMIT 1));
 
 -- check passport numbers against people and suspect list
-SELECT DISTINCT name
+SELECT DISTINCT name as flightList
     FROM people
     JOIN passengers ON passengers.passport_number = people.passport_number
-    WHERE name IN (SELECT DISTINCT name
-    FROM people
-    JOIN phone_calls ON phone_calls.caller = people.phone_number
-    WHERE caller IN
-        ((SELECT caller
-        FROM phone_calls
-        WHERE duration < 60
-        AND DAY = 28
-        AND MONTH = 7
-        AND year = 2021
-        AND name IN
-            (SELECT DISTINCT name FROM people
-            JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-            WHERE people.id IN
-                (SELECT person_id FROM bank_accounts
-                JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
-                WHERE bank_accounts.account_number IN
-                    (SELECT account_number FROM atm_transactions
-                        WHERE DAY = 28
-                        AND MONTH = 7
-                        AND year = 2021
-                        AND transaction_type = 'withdraw'
-                        AND atm_location = 'Leggett Street'))))
     WHERE people.passport_number IN (SELECT passport_number
     FROM passengers
     WHERE flight_id = ((SELECT DISTINCT id
@@ -187,4 +164,4 @@ SELECT DISTINCT name
     AND year = 2021
     AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
     ORDER BY hour, minute ASC
-    LIMIT 1)))));
+    LIMIT 1)));
