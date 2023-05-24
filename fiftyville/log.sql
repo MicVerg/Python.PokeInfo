@@ -99,9 +99,22 @@ SELECT DISTINCT name
         AND MONTH = 7
         AND year = 2021);
 
--- check the earliest flight on 29/7/2021
+-- check the earliest flight on 29/7/2021 (ID)
 SELECT DISTINCT destination_airport_id
     FROM flights
     WHERE day = 29
     AND month = 7
-    AND year = 2021;
+    AND year = 2021
+    ORDER BY hour, minute ASC
+    LIMIT 1;
+
+-- check what airport that ID is
+SELECT city
+    FROM airports
+    WHERE id = (SELECT DISTINCT destination_airport_id
+    FROM flights
+    WHERE day = 29
+    AND month = 7
+    AND year = 2021
+    ORDER BY hour, minute ASC
+    LIMIT 1);
