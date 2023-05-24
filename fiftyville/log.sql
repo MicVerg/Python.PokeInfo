@@ -47,7 +47,7 @@ SELECT person_id FROM bank_accounts
 -- check combo of person IDs and license plates
 SELECT name FROM people
     JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-    WHERE people.license_plate IN
+    WHERE people.id IN
         (SELECT account_number
         FROM atm_transactions
         WHERE DAY = 28
