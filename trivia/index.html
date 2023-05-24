@@ -17,10 +17,15 @@
                     document.querySelector('#feedback1').innerHTML = 'Correct!';
                 });
                 // else change the color to red
-                let incorrect = document.querySelectorAll('#C' || '#Scratch' || '#JS');
-                incorrect.addEventListener('click', function(){
-                    incorrect.style.backgroundColor = 'red';
-                    document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                let incorrect = document.querySelectorAll('#C, #Scratch, #JS');
+                // loop over each incorrect
+                incorrect.forEach(function(element){
+                    // add click event for each element
+                    element.addEventListener('click', function(){
+                        this.style.backgroundColor = 'red';
+                        incorrect.style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                    })
                 })
             });
         </script>
