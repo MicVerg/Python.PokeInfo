@@ -22,8 +22,10 @@
                 incorrect.forEach(function(element){
                     // add click event for each element
                     element.addEventListener('click', function(){
+                        // this refers to the triggered element
                         this.style.backgroundColor = 'red';
                         incorrect.style.backgroundColor = 'red';
+                        // feedback msg
                         document.querySelector('#feedback1').innerHTML = 'Incorrect!';
                     })
                 })
