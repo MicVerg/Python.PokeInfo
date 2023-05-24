@@ -89,7 +89,7 @@ SELECT DISTINCT name
                         AND MONTH = 7
                         AND year = 2021
                         AND transaction_type = 'withdraw'
-                        AND atm_location = 'Leggett Street'))));
+                        AND atm_location = 'Leggett Street')))); -- SUSPECT LIST
 
 -- check who THIEF called
 SELECT DISTINCT receiver
