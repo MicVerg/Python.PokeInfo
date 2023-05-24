@@ -191,7 +191,7 @@ SELECT DISTINCT name
                 LIMIT 1)))));
 
 -- check who THIEF called
-SELECT DISTINCT caller, receiver
+SELECT DISTINCT receiver
     FROM phone_calls
     WHERE caller = (SELECT phone_number FROM people WHERE name IN ('Kenny', 'Taylor', 'Bruce'))
     AND duration < 60
@@ -204,9 +204,16 @@ SELECT DISTINCT name
     FROM people
     JOIN phone_calls ON phone_calls.receiver = people.phone_number
     WHERE receiver =
-        (SELECT receiver
+        (SELECT DISTINCT receiver
         FROM phone_calls
-        WHERE duration < 60
+        WHERE caller = (SELECT phone_number FROM people WHERE name IN ('Kenny', 'Taylor', 'Bruce'))
+        AND duration < 60
         AND DAY = 28
         AND MONTH = 7
         AND year = 2021);
+
+-- check thief
+SELECT DISTINCT name
+    FROM people
+    JOIN phone_calls ON phone_calls.receiver = people.phone_number
+    WHERE 
