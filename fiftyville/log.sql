@@ -77,7 +77,7 @@ SELECT DISTINCT name
         AND DAY = 28
         AND MONTH = 7
         AND year = 2021
-        WHERE name IN
+        AND name IN
             (SELECT DISTINCT name FROM people
             JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
             WHERE people.id IN
