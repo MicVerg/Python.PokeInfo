@@ -11,6 +11,12 @@
             document.addEventListener('DOMContentLoaded', function() {
 
                 // when the python button is clicked, change the color to green
+                let correct = document.querySelector('#Python');
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+                // else change the color to red
             });
         </script>
     </head>
