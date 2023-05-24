@@ -99,6 +99,11 @@ SELECT DISTINCT name
         AND MONTH = 7
         AND year = 2021);
 
+-- ID of fiftyville
+SELECT id
+    FROM airports
+    WHERE city = 'Fiftyville';
+    
 -- check the earliest flight on 29/7/2021 (ID)
 SELECT DISTINCT destination_airport_id
     FROM flights
