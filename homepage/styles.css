@@ -1,15 +1,32 @@
 .title {
-    color: orange;
+    color: purple;
+    font-size: 12;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
 p {
-    color: black;
+    color: purple;
+    font-size: 12;
+    margin-left: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
 #paragraph {
+    color: purple;
+    font-size: 12;
+    margin-left: 10px;
     text-align: center;
+    font-weight: bold;
 }
 
 a[title] {
     color: purple;
+    font-size: 12;
+    margin-left: 10px;
+    text-align: center;
+    font-weight: bold;
 }
