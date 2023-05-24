@@ -68,20 +68,12 @@ SELECT caller
 
 -- check caller phone list against suspect list
 SELECT name
+    JOIN 
     FROM people
-    WHERE name IN
-    (SELECT name
-    FROM people
-    WHERE name IN
-    (SELECT name FROM people
-    JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-    WHERE people.id IN
-        (SELECT person_id FROM bank_accounts
-        JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
-        WHERE bank_accounts.account_number IN
-            (SELECT account_number FROM atm_transactions
-            WHERE DAY = 28
-            AND MONTH = 7
-            AND year = 2021
-            AND transaction_type = 'withdraw'
-            AND atm_location = 'Leggett Street'))));
+    WHERE caller IN
+    (SELECT caller
+    FROM phone_calls
+    WHERE duration < 60
+    AND DAY = 28
+    AND MONTH = 7
+    AND year = 2021);
