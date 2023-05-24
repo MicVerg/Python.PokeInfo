@@ -150,3 +150,18 @@ SELECT passport_number
     AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
     ORDER BY hour, minute ASC
     LIMIT 1));
+
+-- check passport numbers against people and suspect list
+SELECT DISTINCT name
+    FROM people
+    JOIN passengers ON passengers.passport_number = people.passport_number
+    WHERE people.passport_number IN (SELECT passport_number
+    FROM passengers
+    WHERE flight_id = ((SELECT DISTINCT id
+    FROM flights
+    WHERE day = 29
+    AND month = 7
+    AND year = 2021
+    AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
+    ORDER BY hour, minute ASC
+    LIMIT 1)));
