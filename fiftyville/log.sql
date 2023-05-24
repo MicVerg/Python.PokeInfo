@@ -76,9 +76,9 @@ SELECT DISTINCT name
         WHERE duration < 60
         AND DAY = 28
         AND MONTH = 7
-        AND year = 2021); -- THE THIEF IS SOFIA
+        AND year = 2021);
 
--- check who Sofia called
+-- check who THIEF called
 SELECT DISTINCT receiver
     FROM phone_calls
     WHERE caller = (SELECT phone_number FROM people WHERE name = 'Sofia')
