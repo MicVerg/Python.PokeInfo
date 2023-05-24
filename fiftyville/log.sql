@@ -24,4 +24,10 @@ SELECT license_plate
     AND minute BETWEEN 15 AND 25
     AND activity = 'exit';
 
--- check combo of ATM withdrawal before 10:15 and license plates bakery
+-- check combo of ATM withdrawal before 10:15 on Leggett street and license plates bakery
+SELECT account_number
+    FROM atm_transactions
+    WHERE DAY = 28
+    AND MONTH = 7
+    AND year = 2021
+    AND transaction_type = 'withdraw';
