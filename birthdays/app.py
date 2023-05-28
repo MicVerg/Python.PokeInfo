@@ -12,7 +12,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///birthdays.db")
 
-BIRTHDAYS = {}
+BIRTHDAYS = []
 
 @app.after_request
 def after_request(response):
@@ -37,7 +37,10 @@ def index():
     else:
 
         # TODO: Display the entries in the database on index.html
+        # query for bdays
+        BIRTHDAYS = db.execute("SELECT * FROM birthdays")
 
-        return render_template("index.html")
+        # render birthdays page
+        return render_template("index.html", birthdays=BIRTHDAYS)
 
 
