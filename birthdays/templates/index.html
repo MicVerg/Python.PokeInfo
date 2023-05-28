@@ -17,8 +17,8 @@
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                 <form action="/" method="post">
                     <input name="name" type="text" placeholder="Name" autofocus>
-                    <input name="day" type="integer" placeholder="Day">
-                    <input name="month" type="integer" placeholder="Month">
+                    <input name="day" type="number" placeholder="Day" min="1" max="31">
+                    <input name="month" type="number" placeholder="Month" min="1" max="12">
                     <br>
                     <button type="submit">Save</button>
                 </form>
