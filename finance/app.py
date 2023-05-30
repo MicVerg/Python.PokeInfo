@@ -69,7 +69,7 @@ def history():
     # show table with history of transactions for every buy and sell
 
     #
-    return apology("TODO")
+    return apology("history")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -128,7 +128,7 @@ def quote():
     # youtube 11:59
 
     """Get stock quote."""
-    return apology("TODO")
+    return apology("quote")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -175,4 +175,4 @@ def sell():
 
     # when POST, check for errors (does user have stocks, negative number?)
 
-    return apology("TODO")
+    return apology("sell")
