@@ -133,15 +133,16 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     # when GET, display registration form (make new register.html)
-
+    if request.method == "GET":
+        return render_template("register.html")
     # when POST, check for errors and insert new user into users table (any field is empty -> apo, pw & confirm -> apo, username taken -> apo)
-
+    elif request.method == "POST":
+        
     # once confirmed, generate_password_hash and add that hash to the database
     # db.execute to add to table
 
     # log that user in
     # session["user_id"] = rows[0]["id"]
-    
     return apology("TODO")
 
 
