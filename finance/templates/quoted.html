@@ -5,9 +5,11 @@
 {% endblock %}
 
 {% block main %}
-        {% for stock in quote %}
+
         <li>
-            Name: {{ quote[name] }}
+            Name: {{ quote.name }} <br>
+            Price: {{ quote.price }} <br>
+            Symbol: {{ quote.symbol }} 
         </li>
-        {% endfor %}
+
 {% endblock %}
