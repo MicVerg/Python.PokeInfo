@@ -88,7 +88,7 @@ def buy():
     else:
         return apology("You ain't got no money")
 
-    return redirect("/")
+    # return redirect("/")
 
 
 @app.route("/history")
