@@ -150,7 +150,7 @@ def register():
         elif request.form.get("password") != request.form.get("confirmpassword"):
             return apology("Passwords must match", 403)
 
-        #check if user exists already
+        # check if user exists already
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         elif
 
