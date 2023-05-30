@@ -78,10 +78,13 @@ def buy():
     transactionCost = quote * shares
 
     # if yes, run SQL on db to purchase stock
-    if currentCash >= transactionCost:
-        
-
     # update transactions and update cash
+    if currentCash >= transactionCost:
+        buy the thing
+    else:
+        return apology("You ain't got no money")
+
+
     return render_template("/")
 
 
