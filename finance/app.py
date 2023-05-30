@@ -72,7 +72,8 @@ def buy():
     # add SQL table(s) with CREATE TABLE transactions = user, symbol, amount, price, timestamp
 
     # when POST buy the stock if user has enough money, if not = apology
-    currentCash = db.execute("SELECT cash FROM users WHERE username = ?", )
+    user_id = session["user_id"]
+    currentCash = db.execute("SELECT cash FROM users WHERE id = ?", id-user_id)
     # if yes, run SQL on db to purchase stock
     # update portfolio and update cash
     return render_template("/")
