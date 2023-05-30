@@ -127,8 +127,10 @@ def quote():
         return render_template("quote.html")
     # when POST, lookup stock symbol by lookup function and display result
     elif request.method == "POST":
-        
+        symbol = request.form.get("symbol")
+        quote = lookup(symbol)
         return redirect("/quoted")
+        
     # youtube 11:59
 
     return apology("quote")
