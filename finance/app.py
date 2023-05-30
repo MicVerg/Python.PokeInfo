@@ -146,7 +146,6 @@ def register():
         elif not request.form.get("confirmpassword"):
             return apology("Must confirm password", 403)
 
-        elif
     # once confirmed, generate_password_hash and add that hash to the database
     # db.execute to add to table
 
