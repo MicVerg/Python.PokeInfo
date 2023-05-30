@@ -80,7 +80,7 @@ def buy():
     # if yes, run SQL on db to purchase stock
     # update transactions and update cash
     if currentCash >= transactionCost:
-        buy the thing
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quote)
     else:
         return apology("You ain't got no money")
 
