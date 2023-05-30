@@ -129,8 +129,8 @@ def quote():
     elif request.method == "POST":
         symbol = request.form.get("symbol")
         quote = lookup(symbol)
-        return redirect("/quoted")
-        
+        return render_template("quoted.html", quoted=quote)
+
     # youtube 11:59
 
     return apology("quote")
