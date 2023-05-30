@@ -167,7 +167,7 @@ def register():
 
     # log that user in
     # session["user_id"] = rows[0]["id"]
-    return render_template("register.html")
+    # return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
