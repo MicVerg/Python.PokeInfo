@@ -58,13 +58,21 @@ def buy():
     elif request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
-        
+        quote = lookup(symbol)
+
+        if not symbol:
+            return apology("Please enter a stock symbol")
+        if not quote:
+            return apology("Invalid stock symbol")
+        if int(shares) <= 0:
+            return apology("Enter a positive amount of shares to buy")
+
     # add SQL table(s) with CREATE TABLE (TABLE STOCKS and TABLE PORTFOLIO ?) portfolio = user, symbol, amount
 
     # when POST buy the stock if user has enough money, if not = apology
     # if yes, run SQL on db to purchase stock
     # update portfolio and update cash
-    return apology("TODO")
+    return render_template("/")
 
 
 @app.route("/history")
