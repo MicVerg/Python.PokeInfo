@@ -5,11 +5,9 @@
 {% endblock %}
 
 {% block main %}
-    <ul>
         {% for stock in quote %}
         <li>
-            Name: quote["companyName"]
+            Name: {{ companyName }}
         </li>
         {% endfor %}
-    </ul>>
 {% endblock %}
