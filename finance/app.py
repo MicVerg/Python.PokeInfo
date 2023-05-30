@@ -84,7 +84,7 @@ def buy():
     if currentCash >= transactionCost:
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quote, current_timestamp)
         newCash = currentCash - transactionCost
-        db.execute("UPDATE users (user_id, cash) VALUES (?, ?)", user_id, newCash)
+        db.execute("UPDATE users SET cash = ? WHERE user_id = ?", newCash, user_id)
     else:
         return apology("You ain't got no money")
 
