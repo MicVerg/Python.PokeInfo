@@ -152,7 +152,8 @@ def register():
 
         # check if user exists already
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-        elif
+        elif rows:
+            return apology("Username already taken", 403)
 
     # once confirmed, generate_password_hash and add that hash to the database
     # db.execute to add to table
