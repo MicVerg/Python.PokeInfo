@@ -6,8 +6,10 @@
 
 {% block main %}
     <ul>
+        {% for stock in quote %}
         <li>
             Name: quote["companyName"]
         </li>
+        {% endfor %}
     </ul>>
 {% endblock %}
