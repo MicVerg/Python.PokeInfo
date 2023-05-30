@@ -123,8 +123,11 @@ def logout():
 @login_required
 def quote():
     # when GET, display form to request a stock quote
-    
+    if request.method == "GET":
+        return render_template("quote.html")
     # when POST, lookup stock symbol by lookup function and display result
+    elif request.method == "POST":
+        
     # youtube 11:59
 
     return apology("quote")
