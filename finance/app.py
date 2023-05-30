@@ -69,9 +69,10 @@ def buy():
         if shares <= 0:
             return apology("Amount must be minimal 1")
 
-    # add SQL table(s) with CREATE TABLE (TABLE STOCKS and TABLE PORTFOLIO ?) portfolio = user, symbol, amount
+    # add SQL table(s) with CREATE TABLE transactions = user, symbol, amount, price, timestamp
 
     # when POST buy the stock if user has enough money, if not = apology
+    currentCash = db.execute("SELECT cash FROM users WHERE username = ?", )
     # if yes, run SQL on db to purchase stock
     # update portfolio and update cash
     return render_template("/")
