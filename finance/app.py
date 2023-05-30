@@ -162,11 +162,12 @@ def register():
             hashedpw = generate_password_hash(request.form.get("password"))
             username = request.form.get("username")
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashedpw)
-            return redirect("/login")
+            session["user_id"] = rows[0]["id"]
+            return redirect("/")
 
 
     # log that user in
-    # session["user_id"] = rows[0]["id"]
+    #
     # return render_template("register.html")
 
 
