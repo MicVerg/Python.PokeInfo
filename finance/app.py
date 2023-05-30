@@ -156,10 +156,12 @@ def register():
             return apology("Username already taken", 403)
 
         #complete registration
-        else:
         # once confirmed, generate_password_hash and add that hash to the database
         # db.execute to add to table
-        generate_password_hash(request.form.get("password"))
+        else:
+            generate_password_hash(request.form.get("password"))
+
+
     # log that user in
     # session["user_id"] = rows[0]["id"]
     return apology("TODO")
