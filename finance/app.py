@@ -77,7 +77,7 @@ def buy():
     currentCash = currentCashQry[0]["cash"]
     
     # if yes, run SQL on db to purchase stock
-    # update portfolio and update cash
+    # update transactions and update cash
     return render_template("/")
 
 
