@@ -75,8 +75,12 @@ def buy():
     user_id = session["user_id"]
     currentCashQry = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     currentCash = currentCashQry[0]["cash"]
-    
+    transactionCost = quote * shares
+
     # if yes, run SQL on db to purchase stock
+    if currentCash >= transactionCost:
+        
+
     # update transactions and update cash
     return render_template("/")
 
