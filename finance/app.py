@@ -123,7 +123,7 @@ def logout():
 @login_required
 def quote():
     # when GET, display form to request a stock quote
-
+    
     # when POST, lookup stock symbol by lookup function and display result
     # youtube 11:59
 
