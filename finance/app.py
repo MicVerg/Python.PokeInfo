@@ -5,6 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
+from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
 
@@ -76,16 +77,18 @@ def buy():
     currentCashQry = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     currentCash = currentCashQry[0]["cash"]
     transactionCost = quote * shares
+    current_timestamp = datetime.now()
 
     # if yes, run SQL on db to purchase stock
     # update transactions and update cash
     if currentCash >= transactionCost:
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quote)
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quote, current_timestamp)
+        newCash = currentCash - transactionCost
+        db.execute("INSERT INTO users (user_id, cash) VALUES (?, ?)", user_id, newCash)
     else:
         return apology("You ain't got no money")
 
-
-    return render_template("/")
+    return redirect("/")
 
 
 @app.route("/history")
