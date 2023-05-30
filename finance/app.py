@@ -161,9 +161,7 @@ def register():
         else:
             hashedpw = generate_password_hash(request.form.get("password"))
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashedpw)
-
-
-
+            return redirect("/login")
 
     # log that user in
     # session["user_id"] = rows[0]["id"]
