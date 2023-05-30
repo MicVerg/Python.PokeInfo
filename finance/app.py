@@ -50,10 +50,13 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
-    """Buy shares of stock"""
     # when GET display form to buy stock
     # HTML form should ask for stock symbol and number of shares AND check for valid input(negative number, stock symbol OK?)
+    if request.method == "GET":
+        return render_template("buy.html")
 
+    elif request.method == "POST":
+        
     # add SQL table(s) with CREATE TABLE (TABLE STOCKS and TABLE PORTFOLIO ?) portfolio = user, symbol, amount
 
     # when POST buy the stock if user has enough money, if not = apology
