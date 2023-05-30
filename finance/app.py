@@ -163,7 +163,7 @@ def register():
             username = request.form.get("username")
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashedpw)
             session["user_id"] = rows[0]["id"]
-            return redirect("/")
+            return render_template("login.html")
 
 
     # log that user in
