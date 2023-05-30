@@ -67,7 +67,7 @@ def buy():
             return apology("Invalid stock symbol")
         if not shares.isdigit():
             return apology("Enter a positive number of shares to buy")
-        if shares <= 0:
+        if int(shares) <= 0:
             return apology("Amount must be minimal 1")
 
     # add SQL table(s) with CREATE TABLE transactions = user, symbol, amount, price, timestamp
