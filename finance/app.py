@@ -56,6 +56,8 @@ def buy():
         return render_template("buy.html")
 
     elif request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
         
     # add SQL table(s) with CREATE TABLE (TABLE STOCKS and TABLE PORTFOLIO ?) portfolio = user, symbol, amount
 
