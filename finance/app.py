@@ -127,7 +127,6 @@ def quote():
     # when POST, lookup stock symbol by lookup function and display result
     # youtube 11:59
 
-    """Get stock quote."""
     return apology("quote")
 
 
