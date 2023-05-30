@@ -162,13 +162,9 @@ def register():
             hashedpw = generate_password_hash(request.form.get("password"))
             username = request.form.get("username")
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashedpw)
+            rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
             session["user_id"] = rows[0]["id"]
-            return render_template("login.html")
-
-
-    # log that user in
-    #
-    # return render_template("register.html")
+            return redirect("/")
 
 
 @app.route("/sell", methods=["GET", "POST"])
