@@ -158,11 +158,11 @@ def register():
         #complete registration
         # once confirmed, generate_password_hash and add that hash to the database
         # db.execute to add to table
-        else:
-            hashedpw = generate_password_hash(request.form.get("password"))
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashedpw)
-            session["user_id"] = rows[0]["id"]
-            return redirect("/login")
+
+        hashedpw = generate_password_hash(request.form.get("password"))
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashedpw)
+        session["user_id"] = rows[0]["id"]
+        return redirect("/login")
 
     # log that user in
     # session["user_id"] = rows[0]["id"]
