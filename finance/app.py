@@ -141,7 +141,7 @@ def register():
 
     # log that user in
     # session["user_id"] = rows[0]["id"]
-    """Register user"""
+    
     return apology("TODO")
 
 
