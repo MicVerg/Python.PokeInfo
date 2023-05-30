@@ -159,7 +159,10 @@ def register():
         # once confirmed, generate_password_hash and add that hash to the database
         # db.execute to add to table
         else:
-            generate_password_hash(request.form.get("password"))
+            hashedpw = generate_password_hash(request.form.get("password"))
+            db.execute('INSERT INTO users (username, hash) VALUES (?, ?)', username, hashedpw)
+        
+
 
 
     # log that user in
