@@ -130,10 +130,9 @@ def quote():
         symbol = request.form.get("symbol")
         quote = lookup(symbol)
         return redirect("quoted.html", quoted=quote)
-
     # youtube 11:59
-
     return apology("quote")
+
 
 
 @app.route("/register", methods=["GET", "POST"])
