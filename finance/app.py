@@ -152,7 +152,7 @@ def register():
 
         # check if user exists already
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-        elif rows:
+        if rows:
             return apology("Username already taken", 403)
 
         #complete registration
