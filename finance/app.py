@@ -44,7 +44,7 @@ def index():
     # display table with all stocks, number of shares, current price, total value
     # display current cash
     # display total value (current cash + stocks)
-    return apology("TODO")
+    return apology("HOMEPAGE")
 
 
 @app.route("/buy", methods=["GET", "POST"])
