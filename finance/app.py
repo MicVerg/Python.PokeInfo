@@ -137,7 +137,11 @@ def register():
         return render_template("register.html")
     # when POST, check for errors and insert new user into users table (any field is empty -> apo, pw & confirm -> apo, username taken -> apo)
     elif request.method == "POST":
-        
+        if not request.form.get("username"):
+            return apology("Must provide username", 403)
+
+        elif not request.form.get("password"):
+            return apology("Must provide password", 403)
     # once confirmed, generate_password_hash and add that hash to the database
     # db.execute to add to table
 
