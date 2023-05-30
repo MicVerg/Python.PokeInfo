@@ -57,16 +57,16 @@ def buy():
 
     elif request.method == "POST":
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+        shares = request.form.get("shares")
         quote = lookup(symbol)
 
         if not symbol:
             return apology("Please enter a stock symbol")
         if not quote:
             return apology("Invalid stock symbol")
-        if shares <= 0:
+        if int(shares) <= 0:
             return apology("Enter a positive number of shares to buy")
-        if not shares.isdigit():
+        if shares.isdigit():
             return apology("Enter a positive number of shares to buy")
 
     # add SQL table(s) with CREATE TABLE (TABLE STOCKS and TABLE PORTFOLIO ?) portfolio = user, symbol, amount
