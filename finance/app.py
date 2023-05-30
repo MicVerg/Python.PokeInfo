@@ -65,8 +65,8 @@ def buy():
         if not quote:
             return apology("Invalid stock symbol")
         if int(shares) <= 0:
-            return apology("Enter a positive number of shares to buy")
-        if shares.isdigit():
+            return apology("Amount must be minimal 1")
+        if shares.isalpha():
             return apology("Enter a positive number of shares to buy")
 
     # add SQL table(s) with CREATE TABLE (TABLE STOCKS and TABLE PORTFOLIO ?) portfolio = user, symbol, amount
