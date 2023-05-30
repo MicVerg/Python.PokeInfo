@@ -161,11 +161,12 @@ def register():
         else:
             hashedpw = generate_password_hash(request.form.get("password"))
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashedpw)
+            session["user_id"] = rows[0]["id"]
             return redirect("/login")
 
     # log that user in
     # session["user_id"] = rows[0]["id"]
-    return apology("TODO")
+    return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
