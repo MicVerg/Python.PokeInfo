@@ -190,10 +190,10 @@ def register():
         elif not request.form.get("password"):
             return apology("Must provide password", 403)
 
-        elif not request.form.get("confirmpassword"):
+        elif not request.form.get("confirmation"):
             return apology("Must confirm password", 403)
 
-        elif request.form.get("password") != request.form.get("confirmpassword"):
+        elif request.form.get("password") != request.form.get("confirmation"):
             return apology("Passwords must match", 403)
 
         # check if user exists already
