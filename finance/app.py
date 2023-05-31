@@ -247,5 +247,10 @@ def sell():
     currentShares = currentSharesQry[0]["total_shares"]
 
     if currentShares >= shares:
-        db.execute("INSERT)
-    return apology("sell")
+        shares = -1 * int(shares)
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quote["price"], current_timestamp)
+        newCash = currentCash + transactionCost
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", newCash, user_id)
+        return redirect("/")
+    else:
+        return apology("You don't have that many shares to sell")
