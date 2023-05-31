@@ -6,7 +6,7 @@
     --accent-color: #b49fc1;
   }
 
-  span {
+  .title {
     font-size: 48px;
     letter-spacing: -1px;
     font-weight: 700;
