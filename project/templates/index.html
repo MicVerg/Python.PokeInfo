@@ -4,34 +4,7 @@
 {% endblock %}
 
 {% block main %}
-    <table>
-        <thead>
-            <tr>
-                <th>Symbol</th>
-                <th>Shares</th>
-                <th>Buy price</th>
-                <th>Current price</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for share in currentShares %}
-            <tr>
-                <td>{{ share.symbol }}</td>
-                <td>{{ share.shares }}</td>
-                <td>{{ share.price|usd }}</td>
-                <td>{{ updatedValue.price|usd }}</td>
-                <td>{{ (share.shares * updatedValue.price)|usd }}</td>
-            </tr>
-            {% endfor %}
-            <tr>
-                <td colspan="4">Cash</td>
-                <td>{{ (userInfo[0]["cash"])|usd }}</td>
-            </tr>
-            <tr>
-                <td colspan="4">Total Value</td>
-                <td>{{ totalValue2|usd }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+        Hello this is the index
+    </div>
 {% endblock %}
