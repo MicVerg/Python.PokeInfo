@@ -244,4 +244,5 @@ def sell():
     current_timestamp = datetime.now()
     currentSharesQry = db.execute("SELECT SUM(shares) AS total_shares FROM transactions WHERE symbol = ?", symbol)
     currentShares = currentSharesQry[0]["total_shares"]
+    
     return apology("sell")
