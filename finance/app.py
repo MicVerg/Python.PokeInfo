@@ -225,7 +225,7 @@ def sell():
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
         quote = lookup(symbol)
-        
+
     # errors
         if not symbol:
             return apology("Please enter a stock symbol")
@@ -236,4 +236,12 @@ def sell():
         if int(shares) <= 0:
             return apology("Amount must be minimal 1")
 
+    user_id = session["user_id"]
+    symbol = request.form.get("symbol")
+    currentCashQry = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    currentCash = currentCashQry[0]["cash"]
+    transactionCost = quote["price"] * int(shares)
+    current_timestamp = datetime.now()
+    currentSharesQry = db.execute("SELECT shares FROM transactions WHERE symbol = ?", symbol)
+    currentShares = currentSharesQry[0][]
     return apology("sell")
