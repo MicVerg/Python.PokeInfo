@@ -18,22 +18,26 @@
   body {
     background-color: #151019;
     color: #f3eff5;
+    font-family: Montserrat;
   }
 
   table {
     border-collapse: collapse;
     width: 100%;
+    font-family: Montserrat;
   }
 
   table td,
   table th {
     padding: 8px;
     border: 1px solid var(--secondary-color);
+    font-family: Montserrat;
   }
 
   table th {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    font-family: Montserrat;
   }
 
   .button-primary {
@@ -41,6 +45,7 @@
     color: white;
     padding: 8px 16px;
     border: none;
+    font-family: Montserrat;
     cursor: pointer;
   }
 
@@ -48,6 +53,7 @@
     background-color: var(--secondary-button-color);
     color: white;
     padding: 8px 16px;
+    font-family: Montserrat;
     border: none;
     cursor: pointer;
   }
@@ -56,6 +62,7 @@
     background-color: var(--accent-color);
     color: white;
     padding: 8px 16px;
+    font-family: Montserrat;
     border: none;
     cursor: pointer;
   }
