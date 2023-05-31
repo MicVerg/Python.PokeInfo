@@ -104,8 +104,10 @@ def buy():
 def history():
     # show table with history of transactions for every buy and sell
     # Symbol, shares and price
-    
-    return apology("history")
+    user_id = session["user_id"]
+    currentShares = db.execute("SELECT * FROM transactions WHERE user_id = ?", user_id)
+
+    return render_template("history.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
