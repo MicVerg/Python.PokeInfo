@@ -22,3 +22,11 @@ db = SQL("sqlite:///project.db")
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/dev")
+def dev():
+    return render_template("dev.html")
+
+@app.route("/datascience")
+def datascience():
+    return render_template("datascience.html")
