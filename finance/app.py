@@ -41,11 +41,19 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks"""
     # display table with all stocks, number of shares, current price, total value
+    user_id = session["user_id"]
+    currentShares = db.execute("SELECT * FROM transactions WHERE user_id = ?", user_id)
     # display current cash
+    userInfo = db.execute("SELECT * FROM users WHERE id = ?", user_id)
     # display total value (current cash + stocks)
-    return apology("HOMEPAGE")
+    totalValue = 0
+    totalValue2 = 0
+    for share in currentShares:
+        updatedValue = lookup(share["symbol"])
+        totalValue += share["shares"] * updatedValue["price"]
+    totalValue2 = totalValue + userInfo[0]["cash"]
+    return render_template("index.html", currentShares = currentShares, userInfo = userInfo, totalValue2 = totalValue2, updatedValue = updatedValue)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -76,19 +84,19 @@ def buy():
     user_id = session["user_id"]
     currentCashQry = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     currentCash = currentCashQry[0]["cash"]
-    transactionCost = quote * shares
+    transactionCost = quote["price"] * int(shares)
     current_timestamp = datetime.now()
 
     # if yes, run SQL on db to purchase stock
     # update transactions and update cash
     if currentCash >= transactionCost:
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quote, current_timestamp)
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quote["price"], current_timestamp)
         newCash = currentCash - transactionCost
-        db.execute("UPDATE users SET cash = ? WHERE user_id = ?", newCash, user_id)
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", newCash, user_id)
+        return redirect("/")
     else:
         return apology("You ain't got no money")
 
-    # return redirect("/")
 
 
 @app.route("/history")

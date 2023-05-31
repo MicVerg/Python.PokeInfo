@@ -21,3 +21,13 @@ nav .navbar-brand .green
 {
     color: #2e944b;
 }
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
