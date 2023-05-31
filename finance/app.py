@@ -185,21 +185,21 @@ def register():
     # when POST, check for errors and insert new user into users table (any field is empty -> apo, pw & confirm -> apo, username taken -> apo)
     elif request.method == "POST":
         if not request.form.get("username"):
-            return apology("Must provide username", 403)
+            return apology("Must provide username", 400)
 
         elif not request.form.get("password"):
-            return apology("Must provide password", 403)
+            return apology("Must provide password", 400)
 
         elif not request.form.get("confirmation"):
-            return apology("Must confirm password", 403)
+            return apology("Must confirm password", 400)
 
         elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("Passwords must match", 403)
+            return apology("Passwords must match", 400)
 
         # check if user exists already
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         if rows:
-            return apology("Username already taken", 403)
+            return apology("Username already taken", 400)
 
         #complete registration
         # once confirmed, generate_password_hash and add that hash to the database
