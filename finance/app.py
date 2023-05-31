@@ -243,5 +243,5 @@ def sell():
     transactionCost = quote["price"] * int(shares)
     current_timestamp = datetime.now()
     currentSharesQry = db.execute("SELECT shares FROM transactions WHERE symbol = ?", symbol)
-    currentShares = currentSharesQry[0][]
+    currentShares = currentSharesQry[0]["shares"]
     return apology("sell")
