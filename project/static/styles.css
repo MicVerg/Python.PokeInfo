@@ -6,6 +6,11 @@
     --accent-color: #b49fc1;
   }
 
+  body {
+    background-color: #151019;
+    color: #f3eff5;
+  }
+
   table {
     border-collapse: collapse;
     width: 100%;
