@@ -238,6 +238,7 @@ def sell():
 
     user_id = session["user_id"]
     symbol = request.form.get("symbol")
+    shares = request.form.get("shares")
     currentCashQry = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     currentCash = currentCashQry[0]["cash"]
     transactionCost = quote["price"] * int(shares)
@@ -245,5 +246,6 @@ def sell():
     currentSharesQry = db.execute("SELECT SUM(shares) AS total_shares FROM transactions WHERE symbol = ?", symbol)
     currentShares = currentSharesQry[0]["total_shares"]
 
-    
+    if currentShares >= shares:
+        
     return apology("sell")
