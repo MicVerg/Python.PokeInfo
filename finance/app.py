@@ -218,7 +218,22 @@ def register():
 def sell():
     """Sell shares of stock"""
     # when GET, display form
-
+    if request.method == "GET":
+        return render_template("sell.html")
     # when POST, check for errors (does user have stocks, negative number?)
+    elif request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+        quote = lookup(symbol)
+        
+    # errors
+        if not symbol:
+            return apology("Please enter a stock symbol")
+        if not quote:
+            return apology("Invalid stock symbol")
+        if not shares.isdigit():
+            return apology("Enter a positive number of shares to buy")
+        if int(shares) <= 0:
+            return apology("Amount must be minimal 1")
 
     return apology("sell")
