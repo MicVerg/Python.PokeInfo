@@ -247,5 +247,5 @@ def sell():
     currentShares = currentSharesQry[0]["total_shares"]
 
     if currentShares >= shares:
-        
+        db.execute("INSERT)
     return apology("sell")
