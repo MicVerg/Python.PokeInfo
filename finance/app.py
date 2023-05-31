@@ -246,7 +246,7 @@ def sell():
     currentSharesQry = db.execute("SELECT SUM(shares) AS total_shares FROM transactions WHERE symbol = ?", symbol)
     currentShares = currentSharesQry[0]["total_shares"]
 
-    if currentShares >= shares:
+    if currentShares >= int(shares):
         shares = -1 * int(shares)
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quote["price"], current_timestamp)
         newCash = currentCash + transactionCost
