@@ -102,10 +102,9 @@ def buy():
 @app.route("/history")
 @login_required
 def history():
-    """Show history of transactions"""
     # show table with history of transactions for every buy and sell
+    # Symbol, shares and price
     
-    #
     return apology("history")
 
 
