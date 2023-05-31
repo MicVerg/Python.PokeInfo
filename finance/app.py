@@ -49,6 +49,7 @@ def index():
     # display total value (current cash + stocks)
     totalValue = 0
     totalValue2 = 0
+    updatedValue = 0
     for share in currentShares:
         updatedValue = lookup(share["symbol"])
         totalValue += share["shares"] * updatedValue["price"]
