@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup
 from flask import redirect, render_template, request, session
 from functools import wraps
 
-url = "https://pokeapi.co/api/v2/pokemon/charmander"
-params = {}
+url = "https://pokeapi.co/api/v2/pokemon/"
+params = {"name": "charmander"}
 
 response = requests.get(url, params)
 if response.status_code == 200:
