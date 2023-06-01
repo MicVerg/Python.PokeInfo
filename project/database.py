@@ -8,7 +8,7 @@ from flask import redirect, render_template, request, session
 from functools import wraps
 
 url = "https://pokeapi.co/api/v2/pokemon/"
-params = {"name": "squirtle"}
+params = {"id": "1"}
 
 response = requests.get(url, params)
 
