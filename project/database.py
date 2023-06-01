@@ -8,5 +8,5 @@ from functools import wraps
 
 html_text = requests.get('https://www.vdab.be/vindeenjob/vacatures?trefwoord=python&locatie=West-Vlaanderen%20(Provincie)&locatieCode=BE25&sort=standaard&sinds=6&arbeidscircuit=8').text
 soup = BeautifulSoup(html_text, 'lxml')
-jobs = soup.find_all('div', class_ = 'large-8')
+jobs = soup.find_all('div', class_ = 'panel.search-results')
 print(jobs)
