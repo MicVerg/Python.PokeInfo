@@ -32,9 +32,9 @@ def datascience():
     return render_template("datascience.html")
 
 @app.route("/aboutme")
-def datascience():
+def aboutme():
     return render_template("aboutme.html")
 
 @app.route("/contact")
-def datascience():
+def contact():
     return render_template("contact.html")
