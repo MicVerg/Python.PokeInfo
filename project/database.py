@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from flask import redirect, render_template, request, session
 from functools import wraps
 
-html_text = requests.get('https://www.vdab.be/vindeenjob/vacatures?trefwoord=python&locatie=West-Vlaanderen%20(Provincie)&locatieCode=BE25&sort=standaard&sinds=6&arbeidscircuit=8').text
+html_text = requests.get('https://www.ictjob.be/nl/it-vacatures-zoeken?skills=411&locations=6').text
 soup = BeautifulSoup(html_text, 'lxml')
 jobs = soup.find_all('vej-list-item', class_ = 'display-block slat')
 print(jobs)
