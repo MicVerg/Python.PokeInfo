@@ -11,7 +11,8 @@ from functools import wraps
 url = "https://pokeapi.co/api/v2/pokemon/"
 params = {"name": "charmander"}
 
-response = requests.get(url, params)
+response = requests.get(url, params=params)
+print(response.url)
 if response.status_code == 200:
     data = json.loads(response.text)
     pprint.pprint(data)
