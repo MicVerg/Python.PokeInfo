@@ -11,4 +11,5 @@ with open('Sandbox.html', 'r') as html_file:
 
     soup = BeautifulSoup(content, 'lxml')
     tags = soup.find_all('h3')
-    print(tags)
+    for tag in tags:
+        print(tag.text)
