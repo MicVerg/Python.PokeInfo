@@ -12,7 +12,6 @@ url = "https://pokeapi.co/api/v2/pokemon/"
 params = {"name": "charmander"}
 
 response = requests.get(url, params)
-
 if response.status_code == 200:
     data = json.loads(response.text)
     pprint.pprint(data)
