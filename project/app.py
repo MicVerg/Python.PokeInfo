@@ -30,3 +30,11 @@ def dev():
 @app.route("/datascience")
 def datascience():
     return render_template("datascience.html")
+
+@app.route("/aboutme")
+def datascience():
+    return render_template("aboutme.html")
+
+@app.route("/contact")
+def datascience():
+    return render_template("contact.html")
