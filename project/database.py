@@ -9,4 +9,5 @@ from functools import wraps
 with open('Sandbox.html', 'r') as html_file:
     content = html_file.read()
 
-    
+    soup = BeautifulSoup(content, 'lxml')
+    print(soup.prettify())
