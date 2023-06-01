@@ -1,6 +1,7 @@
 import os
 import requests
 import urllib.parse
+import json
 
 from bs4 import BeautifulSoup
 from flask import redirect, render_template, request, session
@@ -12,6 +13,7 @@ params = {"name": "squirtle"}
 response = requests.get(url, params)
 
 if response.status_code == 200:
-    print(response.text)
+    data = json.loads(response.text)
+    print(data)
 else:
     print(f"Error: {reponse.status_code}")
