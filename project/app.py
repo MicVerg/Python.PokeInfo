@@ -100,6 +100,7 @@ def pokedex():
                 if evolutionChain['chain']['species']['name'] == data['forms'][0]['name']:
                     if len(evolutionChain['chain']['evolves_to']) > 0:
                         pokeEvolutions = evolutionChain['chain']['evolves_to'][0]['species']['name']
+                        evolutionImg = ("https://pokeapi.co/api/v2/pokemon/" + pokeEvolutions)
                     break
 
 
