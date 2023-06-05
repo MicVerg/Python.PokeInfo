@@ -92,19 +92,29 @@ def pokedex():
             flavor_text = flavor_text.replace('\u000c', ' ')
 
             # evolves into
+            def find_evolution(chain, target_species):
+                if chain['species']['name'] == target_species:
+                    return True
+
+                for evolution in chain['evolves_to']:
+                    if find_evolution(evolution, target_species):
+                        return True
+
+                return False
+
             pokeEvolutions = ""
             evolutionImg = "/project/static/none.icons8.png"
             pokeEvolveChain = json.loads(requests.get("https://pokeapi.co/api/v2/evolution-chain/").text)
+
             for entry in pokeEvolveChain['results']:
                 urlEvolution = entry['url']
                 evolutionChain = json.loads(requests.get(urlEvolution).text)
-                if evolutionChain['chain']['species']['name'] == data['forms'][0]['name']:
-                    if len(evolutionChain['chain']['evolves_to']) > 0:
-                        pokeEvolutions = evolutionChain['chain']['evolves_to'][0]['species']['name']
-                        evolutionImg = (json.loads(requests.get("https://pokeapi.co/api/v2/pokemon/" + pokeEvolutions).text))['sprites']['front_default']
-                    else:
-                        evolutionImg = "/project/static/none.icons8.png"
+
+                if find_evolution(evolutionChain['chain'], data['forms'][0]['name']):
+                    pokeEvolutions = evolutionChain['chain']['species']['name']
+                    evolutionImg = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon/" + pokeEvolutions).text)['sprites']['front_default']
                     break
+
 
 
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolutions=pokeEvolutions, evolutionImg=evolutionImg)
