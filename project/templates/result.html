@@ -35,11 +35,7 @@
             <tr>
                 <td style="font-weight: 700;">{{ flavor_text }}</td>
                 <td>
-                {% if evolutionImg %}
-                <img src="{{ evolutionImg }}" alt="Pokemon Image" title="{{ pokeEvolutions.capitalize() }}" style="width: 200px; height: 200px;">
-                {% else %}
-                <img src="/project/static/none.icons8.png" alt="Default Image" style="width: 200px; height: 200px;">
-                {% endif %}
+                <img src="{{ evolutionImg }}" alt="None" title="{{ pokeEvolutions.capitalize() }}" style="width: 200px; height: 200px;">
                 </td>
             </tr>
         </tbody>
