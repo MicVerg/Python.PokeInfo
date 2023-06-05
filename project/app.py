@@ -91,6 +91,7 @@ def pokedex():
                         break
             # fix u000c
             flavor_text = flavor_text.replace('\u000c', ' ')
+            flavor_text = flavor_text.replace('\u00A0', '')
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text)
         else:
             flash("Pokemon name or ID not found, please try again.")
