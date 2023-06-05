@@ -32,7 +32,7 @@
             </tr>
             <th>Info</th>
             <tr>
-                <td style="font-weight: 700;">{{ flavor_text|safe }}</td>
+                <td style="font-weight: 700;">{{ flavor_text|replace('\n', '<br>')|replace('<', '&lt;')|replace('>', '&gt;')|replace('&', '&amp;') }}</td>
             </tr>
         </tbody>
     </table>
