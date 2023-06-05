@@ -23,13 +23,9 @@ db = SQL("sqlite:///project.db")
 def index():
     return render_template("index.html")
 
-@app.route("/dev")
+@app.route("/pokedex")
 def dev():
-    return render_template("dev.html")
-
-@app.route("/datascience")
-def datascience():
-    return render_template("datascience.html")
+    return render_template("pokedex.html")
 
 @app.route("/aboutme")
 def aboutme():
