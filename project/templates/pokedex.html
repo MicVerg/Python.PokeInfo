@@ -4,6 +4,32 @@
 {% endblock %}
 
 {% block main %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#nameID').on('keyup', function() {
+                var nameID = $(this).val();
+
+                $.ajax({
+                    url: '/pokedex',
+                    type: 'POST',
+                    data: { nameID: nameID },
+                    success: function(response) {
+                        if (response.error) {
+                            console.log('Error:', response.error);
+                        } else {
+                            $('#pokemonImg').attr('src', response.img);
+                            $('#pokemonName').text(response.name);
+                            $('#pokemonType').text(response.type);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
     <form action="/pokedex" method="post">
         <div>
             Enter the name or ID you want to look up:
