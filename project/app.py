@@ -42,6 +42,8 @@ def pokedex():
             name = (data['forms'][0]['name']).capitalize()
             type = (data['types'][0]['type']['name']).capitalize()
             pokeID = data['id']
+            flavor_text = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon/" + nameID)).text)
+
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID)
         else:
             flash("Pokemon name or ID not found, please try again.")
