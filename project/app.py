@@ -38,10 +38,10 @@ def pokedex():
         response = requests.get(url)
         if response.status_code == 200:
             data = json.loads(response.text)
-            pprint.pprint(data)
             img = data['sprites'][0]['front_default']
-            name = data[']
-            return render_template("result.html", nameID=nameID, url=url, img=img)
+            name = data['forms'][0]['name']
+            type = data['types'][0]['type']['name']
+            return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type)
         else: print(f"Error: {response.status_code}")
 
 
