@@ -102,7 +102,7 @@ def pokedex():
                         pokeEvolutions = evolutionChain['chain']['evolves_to'][0]['species']['name']
                         evolutionImg = (json.loads(requests.get("https://pokeapi.co/api/v2/pokemon/" + pokeEvolutions).text))['sprites']['front_default']
                     else:
-                        evolutionImg = 
+                        evolutionImg = project/static/none.icons8.png
                     break
 
 
