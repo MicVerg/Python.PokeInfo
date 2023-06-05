@@ -107,9 +107,11 @@ def pokedex():
                     chain = chain['evolves_to'][0]
 
                 if chain['species']['name'] == data['forms'][0]['name']:
-                    pokeEvolutions = chain['species']['name']
-                    evolutionImg = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon/" + pokeEvolutions).text)['sprites']['front_default']
+                    if len(chain['evolves_to']) > 0:
+                        pokeEvolutions = chain['evolves_to'][0]['species']['name']
+                        evolutionImg = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon/" + pokeEvolutions).text)['sprites']['front_default']
                     break
+
 
 
 
