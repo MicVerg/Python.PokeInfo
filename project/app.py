@@ -95,7 +95,7 @@ def pokedex():
             pokeEvolutions = ""
             pokeEvolveChain = json.loads(requests.get("https://pokeapi.co/api/v2/evolution-chain/").text)
             for entry in pokeEvolveChain:
-                if entry['species']['name'] == (data['forms'][0]['name']):
+                if entry['results'] == (data['forms'][0]['name']):
                     pokeEvolutions = entry['chain:']['evolves_to'][0]['species']['name']
                     break
 
