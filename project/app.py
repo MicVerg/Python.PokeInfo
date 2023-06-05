@@ -79,9 +79,14 @@ def pokedex():
                     if entry['language']['name'] == 'en' and entry['version']['name'] == 'sun':
                         flavor_text = entry['flavor_text']
                         break
-            if pokeID >= 810 <= 905:
+            if pokeID >= 810 <= 899:
                 for entry in pokeSpecies['flavor_text_entries']:
                     if entry['language']['name'] == 'en' and entry['version']['name'] == 'sword':
+                        flavor_text = entry['flavor_text']
+                        break
+            if pokeID >= 899 <= 905:
+                for entry in pokeSpecies['flavor_text_entries']:
+                    if entry['language']['name'] == 'en' and entry['version']['name'] == 'legends-arceus':
                         flavor_text = entry['flavor_text']
                         break
             flavor_text = flavor_text.replace('\u000c', ' ')
