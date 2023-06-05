@@ -41,9 +41,7 @@ def pokedex():
             pprint(data)
     return render_template("result.html", nameID=nameID, url=url)
 
-@app.route("/result")
-def result():
-    return render_template("result.html")
+
 
 @app.route("/aboutme")
 def aboutme():
