@@ -92,8 +92,11 @@ def pokedex():
             flavor_text = flavor_text.replace('\u000c', ' ')
 
             # evolves into
-            pokeEvolve = json.loads(requests.get("https://pokeapi.co/api/v2/evolution-chain/").text)
-            
+            pokeEvolutions = ""
+            pokeEvolveChain = json.loads(requests.get("https://pokeapi.co/api/v2/evolution-chain/").text)
+            for entry in pokeEvolveChain['species']['name']:
+                if entry['species']['name'] == (data['forms'][0]['name']):
+                    pokeEvolutions = 
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text)
         else:
             flash("Pokemon name or ID not found, please try again.")
