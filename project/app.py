@@ -39,7 +39,9 @@ def pokedex():
         if response.status_code == 200:
             data = json.loads(response.text)
             pprint.pprint(data)
-        return render_template("result.html", nameID=nameID, url=url)
+            return render_template("result.html", nameID=nameID, url=url)
+        else: print(f"Error: {response.status_code}")
+
 
 
 @app.route("/aboutme")
