@@ -93,6 +93,7 @@ def pokedex():
 
             # evolves into
             pokeEvolve = json.loads(requests.get("https://pokeapi.co/api/v2/evolution-chain/").text)
+            
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text)
         else:
             flash("Pokemon name or ID not found, please try again.")
