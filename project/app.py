@@ -43,7 +43,9 @@ def pokedex():
             type = (data['types'][0]['type']['name']).capitalize()
             pokeID = data['id']
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID)
-        else: flash(f"Error: {response.status_code}", "error")
+        else:
+            flash("Pokemon name or ID not found, please try again.")
+            return redirect("/pokedex")
 
 
 @app.route("/aboutme")
