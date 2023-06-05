@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+import pprint
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -33,8 +34,12 @@ def pokedex():
 
     elif request.method == "POST":
         nameID = request.form.get("nameID")
-        url = "https://pokeapi.co/api/v2/pokemon/" 
-    return render_template("result.html", nameID=nameID)
+        url = "https://pokeapi.co/api/v2/pokemon/" + nameID
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = json.loads(reponse.text)
+            pprint(data)
+    return render_template("result.html", nameID=nameID, url=url)
 
 @app.route("/result")
 def result():
