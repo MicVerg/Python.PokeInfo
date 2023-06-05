@@ -23,9 +23,13 @@ db = SQL("sqlite:///project.db")
 def index():
     return render_template("index.html")
 
-@app.route("/pokedex")
-def dev():
+@app.route("/pokedex", methods=["GET", "POST"])
+def pokedex():
+    if request.method == "GET":
     return render_template("pokedex.html")
+
+    elif request.method == "POST":
+        nameID = request.form.get("nameID")
 
 @app.route("/aboutme")
 def aboutme():
