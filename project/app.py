@@ -44,10 +44,16 @@ def pokedex():
             # flavor text
             pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID).text)
             flavor_text = ""
-            for entry in pokeSpecies['flavor_text_entries']:
-                if entry['language']['name'] == 'en' and entry['version']['name'] == 'blue':
-                    flavor_text = entry['flavor_text']
-                    break
+            if pokeID >= 1 <= 151:
+                for entry in pokeSpecies['flavor_text_entries']:
+                    if entry['language']['name'] == 'en' and entry['version']['name'] == 'blue':
+                        flavor_text = entry['flavor_text']
+                        break
+             elif pokeID >= 152 <= 251:
+                for entry in pokeSpecies['flavor_text_entries']:
+                    if entry['language']['name'] == 'en' and entry['version']['name'] == 'silver':
+                        flavor_text = entry['flavor_text']
+                        break
             flavor_text = flavor_text.replace('\u000c', ' ')
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text)
         else:
