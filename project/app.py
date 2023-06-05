@@ -49,7 +49,6 @@ def pokedex():
             flash("Pokemon name or ID not found, please try again.")
             return redirect("/pokedex")
 
-
 @app.route("/aboutme")
 def aboutme():
     return render_template("aboutme.html")
