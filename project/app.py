@@ -41,7 +41,7 @@ def pokedex():
             img = data['sprites']['front_default']
             name = data['forms'][0]['name']
             type = data['types'][0]['type']['name']
-            return render_template("pokedex.html", nameID=nameID, url=url, img=img, name=name, type=type)
+            return json.dumps({'img': img, 'name': name, 'type': type})
         else: flash(f"Error: {response.status_code}", "error")
 
 
