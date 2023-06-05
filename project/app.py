@@ -101,8 +101,10 @@ def pokedex():
                     if len(evolutionChain['chain']['evolves_to']) > 0:
                         pokeEvolutions = evolutionChain['chain']['evolves_to'][0]['species']['name']
                         evolutionImg = (json.loads(requests.get("https://pokeapi.co/api/v2/pokemon/" + pokeEvolutions).text))['sprites']['front_default']
+                    else:
+                        evolutionImg = 
                     break
-             
+
 
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolutions=pokeEvolutions, evolutionImg=evolutionImg)
         else:
