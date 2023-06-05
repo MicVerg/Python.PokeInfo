@@ -4,5 +4,21 @@
 {% endblock %}
 
 {% block main %}
-
+    <table>
+        <thead>
+            <tr>
+                <th>Img</th>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ share.symbol }}</td>
+                <td>{{ share.shares }}</td>
+                <td>{{ share.price|usd }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
