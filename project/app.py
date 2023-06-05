@@ -49,7 +49,7 @@ def pokedex():
                     if entry['language']['name'] == 'en' and entry['version']['name'] == 'blue':
                         flavor_text = entry['flavor_text']
                         break
-             elif pokeID >= 152 <= 251:
+            elif pokeID >= 152 <= 251:
                 for entry in pokeSpecies['flavor_text_entries']:
                     if entry['language']['name'] == 'en' and entry['version']['name'] == 'silver':
                         flavor_text = entry['flavor_text']
