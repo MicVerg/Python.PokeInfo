@@ -43,7 +43,11 @@ def pokedex():
             type = (data['types'][0]['type']['name']).capitalize()
             pokeID = data['id']
             pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID).text)
-            flavor_text = pokeSpecies['flavor_text_entries'][0]['flavor_text']
+            flavor_text = ""
+            for entry in pokeSpecies['flavor_text_entries']:
+                if entry['language']['name'] == 'en' and entry['version']['name'] == 'blue':
+                    flavor_text = entry['flavor_text']
+                    break
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, flavor_text=flavor_text)
         else:
             flash("Pokemon name or ID not found, please try again.")
