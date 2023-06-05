@@ -33,6 +33,7 @@ def pokedex():
 
     elif request.method == "POST":
         nameID = request.form.get("nameID")
+        url = "https://pokeapi.co/api/v2/pokemon/" 
     return render_template("result.html", nameID=nameID)
 
 @app.route("/result")
