@@ -41,7 +41,7 @@ def pokedex():
             img = data['sprites']['front_default']
             name = (data['forms'][0]['name']).capitalize()
             type = (data['types'][0]['type']['name']).capitalize()
-            pokeID = data['abilities'][0]['id']
+            pokeID = data['game_indices'][0]['game_index']
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID)
         else: flash(f"Error: {response.status_code}", "error")
 
