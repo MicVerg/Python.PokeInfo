@@ -48,6 +48,7 @@ def pokedex():
                 if entry['language']['name'] == 'en' and entry['version']['name'] == 'blue':
                     flavor_text = entry['flavor_text']
                     break
+            flavor_text = flavor_text.replace('\u000c', ' ')
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, flavor_text=flavor_text)
         else:
             flash("Pokemon name or ID not found, please try again.")
