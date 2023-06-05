@@ -38,6 +38,7 @@ def pokedex():
             name = (data['forms'][0]['name']).capitalize()
             type = (data['types'][0]['type']['name']).capitalize()
             pokeID = data['id']
+            # flavor text
             pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID).text)
             flavor_text = ""
             for entry in pokeSpecies['flavor_text_entries']:
