@@ -42,7 +42,7 @@ def pokedex():
             name = (data['forms'][0]['name']).capitalize()
             type = (data['types'][0]['type']['name']).capitalize()
             pokeID = data['id']
-            pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID)).text
+            pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID).text)
             flavor_text = pokeSpecies['flavor_text_entries'][0]['flavor_text']
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, flavor_text=flavor_text)
         else:
