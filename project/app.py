@@ -54,6 +54,31 @@ def pokedex():
                     if entry['language']['name'] == 'en' and entry['version']['name'] == 'silver':
                         flavor_text = entry['flavor_text']
                         break
+            if pokeID >= 252 <= 386:
+                for entry in pokeSpecies['flavor_text_entries']:
+                    if entry['language']['name'] == 'en' and entry['version']['name'] == 'ruby':
+                        flavor_text = entry['flavor_text']
+                        break
+            if pokeID >= 387 <= 493:
+                for entry in pokeSpecies['flavor_text_entries']:
+                    if entry['language']['name'] == 'en' and entry['version']['name'] == 'diamond':
+                        flavor_text = entry['flavor_text']
+                        break
+            if pokeID >= 494 <= 649:
+                for entry in pokeSpecies['flavor_text_entries']:
+                    if entry['language']['name'] == 'en' and entry['version']['name'] == 'black':
+                        flavor_text = entry['flavor_text']
+                        break
+            if pokeID >= 650 <= 721:
+                for entry in pokeSpecies['flavor_text_entries']:
+                    if entry['language']['name'] == 'en' and entry['version']['name'] == 'x':
+                        flavor_text = entry['flavor_text']
+                        break
+            if pokeID >= 722 <= 809:
+                for entry in pokeSpecies['flavor_text_entries']:
+                    if entry['language']['name'] == 'en' and entry['version']['name'] == 'sun':
+                        flavor_text = entry['flavor_text']
+                        break
             flavor_text = flavor_text.replace('\u000c', ' ')
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text)
         else:
