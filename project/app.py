@@ -92,21 +92,23 @@ def pokedex():
             flavor_text = flavor_text.replace('\u000c', ' ')
 
             # evolves into
+            pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID).text)
+            evolutionChain = json.loads(requests.get(pokeSpecies['evolution_chain']['url']).text)['chain']
             current_pokemon = None
             for evolution in evolutionChain:
                 if evolution['species']['name'] == name:
                     current_pokemon = evolution
                     break
 
-            if current_pokemon and 'evolves_to' in current_pokemon:
-                next_evolution = current_pokemon['evolves_to'][0]['species']
-                next_evolution_name = next_evolution['name'].capitalize()
-                next_evolution_url = next_evolution['url']
-                next_evolution_id = int(re.search(r'/(\d+)/$', next_evolution_url).group(1))
-            else:
-                next_evolution_name = None
-                next_evolution_url = None
-                next_evolution_id = None
+                if current_pokemon and 'evolves_to' in current_pokemon:
+                    next_evolution = current_pokemon['evolves_to'][0]['species']
+                    next_evolution_name = next_evolution['name'].capitalize()
+                    next_evolution_url = next_evolution['url']
+                    next_evolution_id = int(re.search(r'/(\d+)/$', next_evolution_url).group(1))
+                else:
+                    next_evolution_name = None
+                    next_evolution_url = None
+                    next_evolution_id = None
 
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
