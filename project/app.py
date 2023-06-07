@@ -96,17 +96,14 @@ def pokedex():
             evolutionImg = "/static/icons8-no-entry-80.png"
             url = pokeSpecies['evolution_chain']['url']
             evolutionChain = json.loads(requests.get(url).text)['chain']
-            if 'evolves_to' in evolutionChain and len(evolutionChain['evolves_to']) > 0:
+            if 'evolves_to' in evolutionChain:
                 first_evolution = evolutionChain['evolves_to'][0]
-                if 'evolves_to' in first_evolution and len(first_evolution['evolves_to']) > 0:
-                    next_evolution = first_evolution['evolves_to'][0]['species']
-                    pokeEvolution = next_evolution['url']
-                    evolutionResponse = requests.get(pokeEvolution)
-                    evolutionData = json.loads(evolutionResponse.text)
-                    evolutionID = evolutionData['id']
-                    evolutionImg = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID)).text)['sprites']['front_default']
-                else:
-                    evolutionImg = "/static/icons8-no-entry-80.png"
+                pokeEvolution = first_evolution['species']['url']
+                evolutionResponse = requests.get(pokeEvolution)
+                evolutionData = json.loads(evolutionResponse.text)
+                evolutionID = evolutionData['id']
+                evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
+                print(evolutionImg)
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
 
