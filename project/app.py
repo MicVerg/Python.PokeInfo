@@ -92,19 +92,22 @@ def pokedex():
             flavor_text = flavor_text.replace('\u000c', ' ')
 
             # evolves into
-            pokeEvolution = ""
-            evolutionImg = "/static/icons8-no-entry-80.png"
-            url = pokeSpecies['evolution_chain']['url']
-            evolutionChain = json.loads(requests.get(url).text)['chain']
-            if 'evolves_to' in evolutionChain:
-                first_evolution = evolutionChain['evolves_to'][0]
-                pokeEvolution = first_evolution['species']['url']
+            def get_next_evolution(evolutionChain):
+                if 'evolves_to' in evolutionChain:
+                    next_evolution = evolutionChain['evolves_to'][0]
+                    return next_evolution['species']
+                else:
+                    return None
+
+            next_evolution = get_next_evolution(evolutionChain)
+            if next_evolution:
+                pokeEvolution = next_evolution['url']
                 evolutionResponse = requests.get(pokeEvolution)
                 evolutionData = json.loads(evolutionResponse.text)
                 evolutionID = evolutionData['id']
                 evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
 
-                print(evolutionChain['evolves_to'][0]['species'])
+                print(next_evolution)
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg)
