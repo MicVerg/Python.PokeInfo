@@ -97,7 +97,7 @@ def pokedex():
             url = pokeSpecies['evolution_chain']['url']
             evolutionChain = json.loads(requests.get(url).text)['chain']
             if 'evolves_to' in evolutionChain:
-                first_evolution = evolutionChain['evolves_to'][0]
+                first_evolution = evolutionChain['evolves_to'][0]['evolves_to'][0]
                 pokeEvolution = first_evolution['species']['url']
                 evolutionResponse = requests.get(pokeEvolution)
                 evolutionData = json.loads(evolutionResponse.text)
