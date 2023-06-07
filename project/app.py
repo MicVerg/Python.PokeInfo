@@ -100,8 +100,17 @@ def pokedex():
                 first_evolution = evolutionChain['evolves_to'][0]
                 pokeEvolution = first_evolution['species']['url']
                 evolutionResponse = requests.get(pokeEvolution)
-                evolutionID = (json.loads(evolutionResponse.text))['id']
-                evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
+                evolutionData = json.loads(evolutionResponse.text)
+                evolutionID = evolutionData['id']
+                evolutionImg = evolutionData['sprites']['front_default']
+
+                if 'evolves_to' in first_evolution:
+                    second_evolution = first_evolution['evolves_to'][0]
+                    pokeEvolution = second_evolution['species']['url']
+                    evolutionResponse = requests.get(pokeEvolution)
+                    evolutionData = json.loads(evolutionResponse.text)
+                    evolutionID = evolutionData['id']
+                    evolutionImg = evolutionData['sprites']['front_default']
 
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
