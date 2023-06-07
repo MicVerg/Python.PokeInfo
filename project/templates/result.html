@@ -33,7 +33,8 @@
             <tr>
                 <td style="font-weight: 700;">{{ flavor_text }}</td>
                 <td style="font-weight: 700;">
-                    <img src="{{ evolutionImg }}" alt="None" onclick="reloadWithEvolution('{{ evolutionName }}')" title="{{ pokeEvolution }}" style="width: 200px; height: 200px;">
+                    <a href="{{ pokeEvolution }}">
+                    <img src="{{ evolutionImg }}" alt="None" title="{{ pokeEvolution }}" style="width: 200px; height: 200px;">
                     </a>
                     <br>
                     {{ evolutionName.capitalize() }}
@@ -41,12 +42,4 @@
             </tr>
         </tbody>
     </table>
-{% endblock %}
-{% block scripts %}
-<script>
-    function reloadWithEvolution(evolutionName) {
-        var newURL = "/pokedex?nameID=" + evolutionName;
-        window.location.href = newURL;
-    }
-</script>
 {% endblock %}
