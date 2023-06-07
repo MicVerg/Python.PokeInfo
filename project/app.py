@@ -98,7 +98,7 @@ def pokedex():
             pokeEvolveChain = json.loads(requests.get(url).text)['chain']
 
             if 'evolves_to' in pokeEvolveChain:
-                current_pokemon_url = pokeSpecies['species']['url']
+                current_pokemon_url = data
                 evolution_chain = pokeEvolveChain
                 while True:
                     if evolution_chain['species']['url'] == current_pokemon_url:
