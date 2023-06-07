@@ -103,14 +103,14 @@ def pokedex():
                 while True:
                     if evolution_chain['species']['url'] == current_pokemon_url:
                         if 'evolves_to' in evolution_chain:
-                            next_evolution = evolution_chain['evolves_to'][0]
+                            next_evolution = evolution_chain['evolves_to']
                             pokeEvolution = next_evolution['species']['url']
                             evolutionResponse = requests.get(pokeEvolution)
                             evolutionID = (json.loads(evolutionResponse.text))['id']
                             evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
                         break
                     if 'evolves_to' in evolution_chain:
-                        evolution_chain = evolution_chain['evolves_to'][0]
+                        evolution_chain = evolution_chain['evolves_to']
                     else:
                         break
 
