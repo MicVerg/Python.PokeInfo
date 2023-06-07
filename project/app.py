@@ -105,13 +105,16 @@ def pokedex():
                 evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
 
             elif 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][0]['species']['name']:
-                second_evolution = evolutionChain['evolves_to'][0]['evolves_to'][0]
-                pokeEvolution = second_evolution['species']['url']
-                evolutionResponse = requests.get(pokeEvolution)
-                evolutionData = json.loads(evolutionResponse.text)
-                evolutionID = evolutionData['id']
-                evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
-
+                try:
+                    second_evolution = evolutionChain['evolves_to'][0]['evolves_to'][0]
+                    pokeEvolution = second_evolution['species']['url']
+                    evolutionResponse = requests.get(pokeEvolution)
+                    evolutionData = json.loads(evolutionResponse.text)
+                    evolutionID = evolutionData['id']
+                    evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
+                except IndexError:
+                    second_evolution = None
+                    
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg)
