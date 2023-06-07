@@ -97,13 +97,16 @@ def pokedex():
             url = pokeSpecies['evolution_chain']['url']
             evolutionChain = json.loads(requests.get(url).text)['chain']
             if 'evolves_to' in evolutionChain and name == evolutionChain['species']['name']:
-                first_evolution = evolutionChain['evolves_to'][0]
-                pokeEvolution = first_evolution['species']['url']
-                evolutionResponse = requests.get(pokeEvolution)
-                evolutionData = json.loads(evolutionResponse.text)
-                evolutionID = evolutionData['id']
-                evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
-
+                try:
+                    first_evolution = evolutionChain['evolves_to'][0]
+                    pokeEvolution = first_evolution['species']['url']
+                    evolutionResponse = requests.get(pokeEvolution)
+                    evolutionData = json.loads(evolutionResponse.text)
+                    evolutionID = evolutionData['id']
+                    evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
+                except IndexError:
+                    second_evolution = None
+                    
             elif 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][0]['species']['name']:
                 try:
                     second_evolution = evolutionChain['evolves_to'][0]['evolves_to'][0]
@@ -114,7 +117,7 @@ def pokedex():
                     evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
                 except IndexError:
                     second_evolution = None
-                    
+
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg)
