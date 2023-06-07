@@ -102,7 +102,7 @@ def pokedex():
                 evolutionResponse = requests.get(pokeEvolution)
                 evolutionData = json.loads(evolutionResponse.text)
                 evolutionID = evolutionData['id']
-                evolutionImg = evolutionData['sprites']['front_default']
+                evolutionImg = data['sprites']['front_default']
 
                 if 'evolves_to' in first_evolution:
                     second_evolution = first_evolution['evolves_to'][0]
@@ -110,7 +110,7 @@ def pokedex():
                     evolutionResponse = requests.get(pokeEvolution)
                     evolutionData = json.loads(evolutionResponse.text)
                     evolutionID = evolutionData['id']
-                    evolutionImg = evolutionData['sprites']['front_default']
+                    evolutionImg = data['sprites']['front_default']
 
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
