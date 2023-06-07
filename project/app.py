@@ -96,7 +96,7 @@ def pokedex():
             evolutionImg = "/static/icons8-no-entry-80.png"
             url = pokeSpecies['evolution_chain']['url']
             evolutionChain = json.loads(requests.get(url).text)['chain']
-            if 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][0]['species']['name']:
+            if 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][-1]['species']['name']:
                 first_evolution = evolutionChain['evolves_to'][0]
                 pokeEvolution = first_evolution['species']['url']
                 evolutionResponse = requests.get(pokeEvolution)
