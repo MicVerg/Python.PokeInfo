@@ -99,17 +99,16 @@ def pokedex():
                 else:
                     return None
 
-            next_evolution = get_next_evolution(evolutionChain['chain'])
-            if next_evolution:
+            if 'evolves_to' in evolutionChain and len(evolutionChain['evolves_to']) > 0:
+                next_evolution = evolutionChain['evolves_to'][0]['species']
                 pokeEvolution = next_evolution['url']
                 evolutionResponse = requests.get(pokeEvolution)
                 evolutionData = json.loads(evolutionResponse.text)
                 evolutionID = evolutionData['id']
                 evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
-
-                print(next_evolution)
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
+
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg)
 
 
