@@ -93,6 +93,7 @@ def pokedex():
 
             # evolves into
             pokeEvolution = ""
+            evolutionName = ""
             evolutionImg = "/static/icons8-no-entry-80.png"
             url = pokeSpecies['evolution_chain']['url']
             evolutionChain = json.loads(requests.get(url).text)['chain']
