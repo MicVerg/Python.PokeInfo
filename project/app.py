@@ -99,7 +99,7 @@ def pokedex():
                 else:
                     return None
 
-            next_evolution = get_next_evolution(evolutionChain)
+            next_evolution = get_next_evolution(evolutionChain['chain'])
             if next_evolution:
                 pokeEvolution = next_evolution['url']
                 evolutionResponse = requests.get(pokeEvolution)
