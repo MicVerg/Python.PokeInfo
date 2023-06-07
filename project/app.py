@@ -96,16 +96,23 @@ def pokedex():
             evolutionImg = "/static/icons8-no-entry-80.png"
             url = pokeSpecies['evolution_chain']['url']
             pokeEvolveChain = json.loads(requests.get(url).text)['chain']
+
             if 'evolves_to' in pokeEvolveChain:
                 first_evolution = pokeEvolveChain['evolves_to'][0]
                 pokeEvolution = first_evolution['species']['url']
-                evolutionResponse = requests.get(pokeEvolution)
-                evolutionID = (json.loads(evolutionResponse.text))['id']
-                evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
+
+                if 'evolves_to' in first_evolution:
+                    second_evolution = first_evolution['evolves_to'][0]
+                    blastoise_url = second_evolution['species']['url']
+                    evolutionResponse = requests.get(blastoise_url)
+                    evolutionID = (json.loads(evolutionResponse.text))['id']
+                    evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
 
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
+
             return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg)
+
 
         else:
             flash("Pokemon name or ID not found, please try again.")
