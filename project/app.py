@@ -34,8 +34,8 @@ def pokedex():
         if response.status_code == 200:
             data = json.loads(response.text)
             img = data['sprites']['front_default']
-            name = (data['forms'][0]['name']).capitalize()
-            type = (data['types'][0]['type']['name']).capitalize()
+            name = (data['forms'][0]['name'])
+            type = (data['types'][0]['type']['name'])
             pokeID = data['id']
             height = data['height']
             weight = data['weight']
@@ -96,7 +96,7 @@ def pokedex():
             evolutionImg = "/static/icons8-no-entry-80.png"
             url = pokeSpecies['evolution_chain']['url']
             evolutionChain = json.loads(requests.get(url).text)['chain']
-            if 'evolves_to' in evolutionChain:
+            if 'evolves_to' in evolutionChain and name == :
                 first_evolution = evolutionChain['evolves_to'][0]
                 pokeEvolution = first_evolution['species']['url']
                 evolutionResponse = requests.get(pokeEvolution)

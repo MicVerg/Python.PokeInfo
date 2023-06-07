@@ -23,8 +23,8 @@
         </thead>
         <tbody>
             <tr>
-                <td style="font-weight: 700;"><img src="{{ img }}" alt="Pokemon Image" title="{{ name }}" style="width: 200px; height: 200px;"><br> {{ name }}</td>
-                <td style="font-weight: 700;">{{ type }}</td>
+                <td style="font-weight: 700;"><img src="{{ img }}" alt="Pokemon Image" title="{{ name }}" style="width: 200px; height: 200px;"><br> {{ name.capitalize() }}</td>
+                <td style="font-weight: 700;">{{ type.capitalize() }}</td>
                 <td style="font-weight: 700;">#{{ pokeID }}</td>
                 <td style="font-weight: 700;">{{ height/10 }}m<br> {{ weight/10 }}kg</td>
             </tr>
