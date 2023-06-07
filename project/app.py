@@ -28,7 +28,7 @@ def pokedex():
         return render_template("pokedex.html")
 
     elif request.method == "POST":
-        nameID = request.args.get("nameID")
+        nameID = request.form.get("nameID")
         url = "https://pokeapi.co/api/v2/pokemon/" + nameID
         response = requests.get(url)
         if response.status_code == 200:
