@@ -103,7 +103,7 @@ def pokedex():
                 evolutionID = (json.loads(evolutionResponse.text))['id']
                 evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
             elif 'evolves_from_species' in pokeSpecies:
-                first_evolution = pokeEvolveChain['evolves_to'][0]
+                first_evolution = pokeSpecies['evolves_from_species'][0]
                 pokeEvolution = first_evolution['species']['url']
                 evolutionResponse = requests.get(pokeEvolution)
                 evolutionID = (json.loads(evolutionResponse.text))['id']
