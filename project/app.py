@@ -103,7 +103,7 @@ def pokedex():
                 evolutionData = json.loads(evolutionResponse.text)
                 evolutionID = evolutionData['id']
                 evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
-                print(pokeEvolution)
+                print(evolutionImg)
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
 
