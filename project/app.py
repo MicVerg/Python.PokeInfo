@@ -96,7 +96,7 @@ def pokedex():
             evolutionImg = "/static/icons8-no-entry-80.png"
             url = pokeSpecies['evolution_chain']['url']
             evolutionChain = json.loads(requests.get(url).text)['chain']
-            if 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][0]['evolves_to'][0]['species']['name']:
+            if 'evolves_to' in evolutionChain and name == evolutionChain['species']['name']:
                 first_evolution = evolutionChain['evolves_to'][0]
                 pokeEvolution = first_evolution['species']['url']
                 evolutionResponse = requests.get(pokeEvolution)
@@ -104,6 +104,13 @@ def pokedex():
                 evolutionID = evolutionData['id']
                 evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
 
+            elif 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][0]['species']['name']:
+                second_evolution = evolutionChain['evolves_to'][0]['evolves_to'][0]
+                pokeEvolution = second_evolution['species']['url']
+                evolutionResponse = requests.get(pokeEvolution)
+                evolutionData = json.loads(evolutionResponse.text)
+                evolutionID = evolutionData['id']
+                evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
 
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
