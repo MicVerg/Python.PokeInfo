@@ -104,9 +104,10 @@ def pokedex():
                     evolutionData = json.loads(evolutionResponse.text)
                     evolutionID = evolutionData['id']
                     evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
+                    evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['name']
                 except IndexError:
                     second_evolution = None
-                    
+
             elif 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][0]['species']['name']:
                 try:
                     second_evolution = evolutionChain['evolves_to'][0]['evolves_to'][0]
