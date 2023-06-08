@@ -123,7 +123,7 @@ def pokedex():
 
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
-            return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg, evolutionName=evolutionName)
+            return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg, evolutionName=evolutionName, evolutionID=evolutionID)
 
 
         else:
