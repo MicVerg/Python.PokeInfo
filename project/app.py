@@ -88,6 +88,11 @@ def pokedex():
                         if entry['language']['name'] == 'en' and entry['version']['name'] == 'legends-arceus':
                             flavor_text = entry['flavor_text']
                             break
+                if pokeID >= 906 <= 1010:
+                    for entry in pokeSpecies['flavor_text_entries']:
+                        if entry['language']['name'] == 'en' and entry['version']['name'] == 'legends-arceus':
+                            flavor_text = entry['flavor_text']
+                            break
 
                 # fix u000c
                 flavor_text = flavor_text.replace('\u000c', ' ')
@@ -134,7 +139,7 @@ def pokedex():
         if not nameID:
             flash("Please enter a Pokemon name or ID.")
             return redirect("/pokedex")
-        
+
         url = "https://pokeapi.co/api/v2/pokemon/" + nameID
         response = requests.get(url)
         if response.status_code == 200:
