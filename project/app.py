@@ -92,8 +92,7 @@ def pokedex():
             flavor_text = flavor_text.replace('\u000c', ' ')
 
             # evolves into
-            pokeEvolution = ""
-            evolutionName = ""
+            pokeEvolution, evolutionName, evolutionID = "", "", ""
             evolutionImg = "/static/icons8-no-entry-80.png"
             url = pokeSpecies['evolution_chain']['url']
             evolutionChain = json.loads(requests.get(url).text)['chain']
