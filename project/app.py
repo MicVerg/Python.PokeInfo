@@ -25,6 +25,9 @@ def index():
 @app.route("/pokedex", methods=["GET", "POST"])
 def pokedex():
     if request.method == "GET":
+        nameID = request.args.get("nameID")
+        if nameID:
+            
         return render_template("pokedex.html")
 
     elif request.method == "POST":
