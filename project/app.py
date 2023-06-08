@@ -25,6 +25,7 @@ def index():
 @app.route("/pokedex", methods=["GET", "POST"])
 def pokedex():
     # GET
+    nameID = None
     if request.method == "GET":
         if nameID:
             url = "https://pokeapi.co/api/v2/pokemon/" + nameID
