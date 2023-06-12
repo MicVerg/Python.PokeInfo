@@ -8,6 +8,8 @@
     document.addEventListener('keydown', function(event) {
         if (event.key === 'ArrowLeft') {
             window.location.href = '/pokedex?nameID={{ pokeIDPrevious }}';
+        } else if (event.key === 'ArrowRight') {
+            window.location.href = '/pokedex?nameID={{ pokeIDNext }}';
         }
     });
 </script>
