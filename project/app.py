@@ -41,7 +41,7 @@ def pokedex():
                 weight = data['weight']
                 pokeIDPrevious = pokeID - 1
                 pokeIDNext = pokeID + 1
-                
+
                 # flavor text
                 pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID).text)
                 flavor_text = ""
@@ -131,7 +131,7 @@ def pokedex():
                     evolutionFromName = evolutionFrom['evolves_from_species']['name']
                     evolutionFromImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionFromName))).text))['sprites']['front_default']
 
-                return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg, evolutionName=evolutionName, evolutionID=evolutionID, evolutionFromImg=evolutionFromImg, evolutionFromName=evolutionFromName)
+                return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg, evolutionName=evolutionName, evolutionID=evolutionID, evolutionFromImg=evolutionFromImg, evolutionFromName=evolutionFromName, pokeIDPrevious=pokeIDPrevious, pokeIDNext=pokeIDNext)
             else:
                 flash("Pokemon name or ID not found, please try again.")
         return render_template("pokedex.html")
@@ -153,6 +153,8 @@ def pokedex():
             pokeID = data['id']
             height = data['height']
             weight = data['weight']
+            pokeIDPrevious = pokeID - 1
+            pokeIDNext = pokeID + 1
 
             # flavor text
             pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID).text)
@@ -242,7 +244,7 @@ def pokedex():
                 evolutionFromName = evolutionFrom['evolves_from_species']['name']
                 evolutionFromImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionFromName))).text))['sprites']['front_default']
 
-            return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg, evolutionName=evolutionName, evolutionID=evolutionID, evolutionFromImg=evolutionFromImg, evolutionFromName=evolutionFromName)
+            return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg, evolutionName=evolutionName, evolutionID=evolutionID, evolutionFromImg=evolutionFromImg, evolutionFromName=evolutionFromName, pokeIDPrevious=pokeIDPrevious, pokeIDNext=pokeIDNext)
         else:
             flash("Pokemon name or ID not found, please try again.")
             return redirect("/pokedex")
