@@ -228,6 +228,7 @@ def pokedex():
 
             # evolves from
             pokeEvolutionFrom, evolutionFromName, evolutionFromID = "", "", ""
+            if 'evolves_from_species' in 
 
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
