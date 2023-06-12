@@ -33,7 +33,17 @@
             <th style="width: 25%;">Evolves into</th>
             <tr>
                 <td style="font-weight: 700;">{{ flavor_text }}</td>
-                <td style="font-weight: 700;"></td>
+                <td style="font-weight: 700;">
+                    {% if evolutionFromName %}
+                    <a href="/pokedex?nameID={{ evolutionFromName }}">
+                    <img src="{{ evolutionFromImg }}" alt="None" title="{{ evolutionFromName.capitalize() }}" style="width: 200px; height: 200px;">
+                    </a>
+                    {% else %}
+                    <img src="/static/icons8-no-entry-80.png" alt="None" title="No evolution.">
+                    {% endif %}
+                    <br>
+                    {{ evolutionFromName.capitalize() }}
+                </td>
                 <td style="font-weight: 700;">
                     {% if evolutionID %}
                     <a href="/pokedex?nameID={{ evolutionID }}">
