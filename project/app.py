@@ -1,5 +1,6 @@
 import requests
 import json
+import re
 
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
@@ -89,6 +90,7 @@ def pokedex():
                 # fix flavor text
                 flavor_text = flavor_text.replace('\u000c', ' ')
                 flavor_text = flavor_text.replace("&shy;", "").replace(";\xad", "").replace("\xad", "").replace("\n", " ").replace("-", " - ")
+                flavor_text = re.sub(r'\b(\w+)\s+(\w+)\b', r'\1 \2', flavor_text).strip()
 
                 # evolves into
                 pokeEvolution, evolutionName, evolutionID = "", "", ""
@@ -207,6 +209,8 @@ def pokedex():
             # fix flavor text
             flavor_text = flavor_text.replace('\u000c', ' ')
             flavor_text = flavor_text.replace("&shy;", "").replace(";\xad", "").replace("\xad", "").replace("\n", " ").replace("-", " - ")
+            flavor_text = re.sub(r'\b(\w+)\s+(\w+)\b', r'\1 \2', flavor_text).strip()
+
 
             # evolves into
             pokeEvolution, evolutionName, evolutionID = "", "", ""
