@@ -39,7 +39,9 @@ def pokedex():
                 pokeID = data['id']
                 height = data['height']
                 weight = data['weight']
-
+                pokeIDPrevious = pokeID - 1
+                pokeIDNext = pokeID + 1
+                
                 # flavor text
                 pokeSpecies = json.loads(requests.get("https://pokeapi.co/api/v2/pokemon-species/" + nameID).text)
                 flavor_text = ""
