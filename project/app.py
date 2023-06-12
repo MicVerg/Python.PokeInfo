@@ -228,9 +228,9 @@ def pokedex():
 
             # evolves from
             pokeEvolutionFrom, evolutionFromName, evolutionFromID = "", "", ""
-            evolutionFromName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon-species/" + pokeID)).text))
-            if 'evolves_from_species' in evolutionFromName and evolutionFromName['evolves_from_species'] != "null":
-                
+            evolutionFrom = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon-species/" + pokeID)).text))
+            if 'evolves_from_species' in evolutionFrom and evolutionFrom['evolves_from_species'] != "null":
+                evolutionFromName = 
 
 
             else:
