@@ -89,7 +89,7 @@ def pokedex():
 
                 # fix flavor text
                 flavor_text = flavor_text.replace('\u000c', ' ')
-                flavor_text = flavor_text.replace("&shy", '').replace(";\xad","").replace("\xad","")
+                flavor_text = flavor_text.replace("&shy", "").replace(";\xad", "").replace("\xad", "")
 
                 # evolves into
                 pokeEvolution, evolutionName, evolutionID = "", "", ""
