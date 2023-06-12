@@ -204,7 +204,7 @@ def pokedex():
                     if entry['language']['name'] == 'en' and entry['version']['name'] == 'legends-arceus':
                         flavor_text = entry['flavor_text']
                         break
-                    
+
             # fix u000c
             flavor_text = flavor_text.replace('\u000c', ' ')
 
@@ -245,7 +245,7 @@ def pokedex():
                 evolutionFromName = evolutionFrom['evolves_from_species']['name']
                 evolutionFromImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionFromName))).text))['sprites']['front_default']
 
-            return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg, evolutionName=evolutionName, evolutionID=evolutionID, evolutionFromImg=evolutionFromImg, evolutionFromName=evolutionFromName)
+            return render_template("result.html", nameID=nameID, url=url, img=img, name=name, type=type, pokeID=pokeID, height=height, weight=weight, flavor_text=flavor_text, pokeEvolution=pokeEvolution, evolutionImg=evolutionImg, evolutionName=evolutionName, evolutionID=evolutionID, evolutionFromImg=evolutionFromImg, evolutionFromName=evolutionFromName, pokeIDPrevious=pokeIDPrevious, pokeIDNext=pokeIDNext)
         else:
             flash("Pokemon name or ID not found, please try again.")
             return redirect("/pokedex")
