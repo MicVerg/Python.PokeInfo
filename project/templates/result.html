@@ -6,11 +6,22 @@
 {% block main %}
 <form action="/pokedex" method="post">
     <div>
+        <div style="position: absolute; top: 140px; left: 20px;">
+            <button class="button-primary no-underline" type="submit" style="width: 90px; height: 90px; border-radius: 8px; display: flex; justify-content: center; align-items: center;">
+              <img src="static/backArrow.png" alt="Image">
+            </button>
+          </div>
+    </div>
+    <div>
+        <div style="position: absolute; top: 140px; right: 20px;">
+            <button class="button-primary no-underline" type="submit" style="width: 90px; height: 90px; border-radius: 8px; display: flex; justify-content: center; align-items: center;">
+              <img src="static/forwardArrow.png" alt="Image">
+            </button>
+          </div>
+    </div>
+    <div>
         Enter the name or ID you want to look up:
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="nameID" name="nameID" placeholder="Name or ID" type="text">
-        <button class="button-primary no-underline" type="submit" style="width: 110px; height: 110px; border-radius: 8px; position: relative;">
-            <img src="static/backArrow.png" alt="Image" style="position: absolute; top: 0; left: 0;">
-        </button>
         <button class="button-primary no-underline" type="submit" style="width: 236px; height: 38px; border-radius: 8px;">Find pokemon</button>
     </div>
     <br>
