@@ -88,7 +88,7 @@ def pokedex():
 
                 # fix flavor text
                 flavor_text = flavor_text.replace('\u000c', ' ')
-                flavor_text = flavor_text.replace("&shy;", "").replace(";\xad", "").replace("\xad", "").replace("\n", "")
+                flavor_text = flavor_text.replace("&shy;", "").replace(";\xad", "").replace("\xad", "").replace("\n", " ").replace("-", " - ")
 
                 # evolves into
                 pokeEvolution, evolutionName, evolutionID = "", "", ""
@@ -206,7 +206,7 @@ def pokedex():
 
             # fix flavor text
             flavor_text = flavor_text.replace('\u000c', ' ')
-            flavor_text = flavor_text.replace("&shy;", "").replace(";\xad", "").replace("\xad", "").replace("\n", "")
+            flavor_text = flavor_text.replace("&shy;", "").replace(";\xad", "").replace("\xad", "").replace("\n", " ").replace("-", " - ")
 
             # evolves into
             pokeEvolution, evolutionName, evolutionID = "", "", ""
