@@ -228,7 +228,8 @@ def pokedex():
 
             # evolves from
             pokeEvolutionFrom, evolutionFromName, evolutionFromID = "", "", ""
-            if 'evolves_from_species' in 
+            evolutionFromCall = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon-species/" + pokeID))))
+            if 'evolves_from_species' in
 
             else:
                 evolutionImg = "/static/icons8-no-entry-80.png"
