@@ -94,30 +94,33 @@ def pokedex():
                 evolutionImg = "/static/icons8-no-entry-80.png"
                 url = pokeSpecies['evolution_chain']['url']
                 evolutionChain = json.loads(requests.get(url).text)['chain']
-                if 'evolves_to' in evolutionChain and name == evolutionChain['species']['name']:
-                    try:
-                        first_evolution = evolutionChain['evolves_to'][0]
-                        pokeEvolution = first_evolution['species']['url']
-                        evolutionResponse = requests.get(pokeEvolution)
-                        evolutionData = json.loads(evolutionResponse.text)
-                        evolutionID = evolutionData['id']
-                        evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
-                        evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['forms'][0]['name']
-                    except IndexError:
-                        second_evolution = None
+                try:
+                    if 'evolves_to' in evolutionChain and name == evolutionChain['species']['name']:
+                        try:
+                            first_evolution = evolutionChain['evolves_to'][0]
+                            pokeEvolution = first_evolution['species']['url']
+                            evolutionResponse = requests.get(pokeEvolution)
+                            evolutionData = json.loads(evolutionResponse.text)
+                            evolutionID = evolutionData['id']
+                            evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
+                            evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['forms'][0]['name']
+                        except IndexError:
+                            second_evolution = None
 
-                elif 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][0]['species']['name']:
-                    try:
-                        second_evolution = evolutionChain['evolves_to'][0]['evolves_to'][0]
-                        pokeEvolution = second_evolution['species']['url']
-                        evolutionResponse = requests.get(pokeEvolution)
-                        evolutionData = json.loads(evolutionResponse.text)
-                        evolutionID = evolutionData['id']
-                        evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
-                        evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['forms'][0]['name']
-                    except IndexError:
-                        second_evolution = None
-
+                    elif 'evolves_to' in evolutionChain and name == evolutionChain['evolves_to'][0]['species']['name']:
+                        try:
+                            second_evolution = evolutionChain['evolves_to'][0]['evolves_to'][0]
+                            pokeEvolution = second_evolution['species']['url']
+                            evolutionResponse = requests.get(pokeEvolution)
+                            evolutionData = json.loads(evolutionResponse.text)
+                            evolutionID = evolutionData['id']
+                            evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
+                            evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['forms'][0]['name']
+                        except IndexError:
+                            second_evolution = None
+                except IndexError:
+                    first_evolution = None
+                    second_evolution = None
                 # evolves from
                 evolutionFromName = ""
                 evolutionFromImg = "/static/icons8-no-entry-80.png"
