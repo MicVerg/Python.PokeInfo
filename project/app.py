@@ -204,6 +204,7 @@ def pokedex():
                     if entry['language']['name'] == 'en' and entry['version']['name'] == 'legends-arceus':
                         flavor_text = entry['flavor_text']
                         break
+                    
             # fix u000c
             flavor_text = flavor_text.replace('\u000c', ' ')
 
