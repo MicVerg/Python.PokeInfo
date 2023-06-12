@@ -91,9 +91,8 @@ def pokedex():
                 flavor_text = flavor_text.replace('\u000c', ' ')
                 flavor_text = flavor_text.replace("&shy;", "").replace(";\xad", "").replace("\xad", "").replace("\n", " ").replace("-", " - ")
 
-                flavor_text = re.sub(r'\b(\w+)\s+-(?=\s+\w+\b)', r'\1-', flavor_text).replace(' ', '')
-
-                flavor_text = ' '.join(re.findall(r'\b\w+\b', flavor_text))
+                words = re.split(r'\W+', flavor_text)
+                flavor_text = ' '.join(words)
 
                 # evolves into
                 pokeEvolution, evolutionName, evolutionID = "", "", ""
@@ -213,9 +212,8 @@ def pokedex():
             flavor_text = flavor_text.replace('\u000c', ' ')
             flavor_text = flavor_text.replace("&shy;", "").replace(";\xad", "").replace("\xad", "").replace("\n", " ").replace("-", " - ")
 
-            flavor_text = re.sub(r'\b(\w+)\s+-(?=\s+\w+\b)', r'\1-', flavor_text).replace(' ', '')
-
-            flavor_text = ' '.join(re.findall(r'\b\w+\b', flavor_text))
+            words = re.split(r'\W+', flavor_text)
+            flavor_text = ' '.join(words)
 
 
             # evolves into
