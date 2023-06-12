@@ -139,7 +139,7 @@ def pokedex():
 
     # POST
     elif request.method == "POST":
-        nameID = request.form.get("nameID")
+        nameID = (request.form.get("nameID")).lower()
         if not nameID:
             flash("Please enter a Pokemon name or ID.")
             return redirect("/pokedex")
