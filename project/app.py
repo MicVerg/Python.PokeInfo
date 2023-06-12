@@ -23,7 +23,7 @@ def pokedex():
     nameID = None
     # GET
     if request.method == "GET":
-        nameID = request.args.get("nameID")
+        nameID = (request.args.get("nameID")).lower()
         if nameID:
             url = "https://pokeapi.co/api/v2/pokemon/" + nameID
             response = requests.get(url)
