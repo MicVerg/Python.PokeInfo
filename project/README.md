@@ -36,3 +36,13 @@ I used the bootstrap library again, as this was nice and easy to use as we learn
 I used icons8 for the few additional icons I needed.
 
 Pokedex.html
+Contains a basic search field and button to start the pokedex.
+
+Result.html
+Contains a simple table of 2 rows and 4 columns, I wanted to keep the information limited with what I feel like what's fun about pokemon, instead of bloating it with other information.
+I did link to an external website in case you'd want to find more specific information on a certain pokemon though.
+This all has some basic CSS, most of it in-line.
+What I also learned doing this project is that I really don't like messing around with CSS or design in general, I had most fun just learning how the API's worked, and how I could manipulate the data extracted from pokeapi to something I wanted to be shown.
+
+Index.html
+Just links to Pokedex.html
