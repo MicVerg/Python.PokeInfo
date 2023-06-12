@@ -230,7 +230,7 @@ def pokedex():
             pokeEvolutionFrom, evolutionFromName, evolutionFromID = "", "", ""
             evolutionFromImg = "/static/icons8-no-entry-80.png"
             evolutionFrom = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon-species/" + str(pokeID))).text))
-            if 'evolves_from_species' in evolutionFrom and evolutionFrom['evolves_from_species'] != "null":
+            if 'evolves_from_species' in evolutionFrom and evolutionFrom['evolves_from_species'] is not None:
                 evolutionFromName = evolutionFrom['evolves_from_species']['name']
                 evolutionFromImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionFromName))).text))['sprites']['front_default']
 
