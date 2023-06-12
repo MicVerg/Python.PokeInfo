@@ -89,7 +89,7 @@ def pokedex():
 
                 # fix flavor text
                 flavor_text = flavor_text.replace('\u000c', ' ')
-                print(flavor_text)
+                print(list(flavor_text))
                 flavor_text = flavor_text.replace("&shy", '').replace(";\xad","").replace("\xad","")
 
                 # evolves into
@@ -208,7 +208,7 @@ def pokedex():
 
             # fix flavor text
             flavor_text = flavor_text.replace('\u000c', ' ')
-            print(flavor_text)
+            print(list(flavor_text))
             flavor_text = flavor_text.replace("&shy", '').replace(";\xad","").replace("\xad","")
 
             # evolves into
