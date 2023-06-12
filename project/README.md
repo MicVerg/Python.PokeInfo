@@ -30,3 +30,9 @@ HTML
 The HTMLs speak for itself I suppose, I did not spend a lot of time on design here because I don't really enjoy that.
 The most interesting in the HTMLs was manipulating the Jinja conditionals into the thing I needed, or if the "no evolution" image had to be shown etc.
 Also added a small eventlistener so you can use the arrow-keys to stroll through the pokedex.
+
+Layout.html
+I used the bootstrap library again, as this was nice and easy to use as we learned with making finance.
+I used icons8 for the few additional icons I needed.
+
+Pokedex.html
