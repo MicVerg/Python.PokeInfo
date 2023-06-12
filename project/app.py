@@ -104,7 +104,7 @@ def pokedex():
                         evolutionResponse = requests.get(pokeEvolution)
                         evolutionData = json.loads(evolutionResponse.text)
                         evolutionID = evolutionData['id']
-                        evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['other']['dream_world']['front_default']
+                        evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
                         evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['forms'][0]['name']
                     except IndexError:
                         second_evolution = None
@@ -116,7 +116,7 @@ def pokedex():
                         evolutionResponse = requests.get(pokeEvolution)
                         evolutionData = json.loads(evolutionResponse.text)
                         evolutionID = evolutionData['id']
-                        evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['other']['dream_world']['front_default']
+                        evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
                         evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['forms'][0]['name']
                     except IndexError:
                         second_evolution = None
@@ -209,7 +209,7 @@ def pokedex():
                     evolutionResponse = requests.get(pokeEvolution)
                     evolutionData = json.loads(evolutionResponse.text)
                     evolutionID = evolutionData['id']
-                    evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['other']['dream_world']['front_default']
+                    evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
                     evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['forms'][0]['name']
                 except IndexError:
                     second_evolution = None
@@ -221,7 +221,7 @@ def pokedex():
                     evolutionResponse = requests.get(pokeEvolution)
                     evolutionData = json.loads(evolutionResponse.text)
                     evolutionID = evolutionData['id']
-                    evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['other']['dream_world']['front_default']
+                    evolutionImg = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['sprites']['front_default']
                     evolutionName = (json.loads((requests.get("https://pokeapi.co/api/v2/pokemon/" + str(evolutionID))).text))['forms'][0]['name']
                 except IndexError:
                     second_evolution = None
