@@ -1,5 +1,5 @@
 def convert(text):
-    text = text.replace(":)", "🙂").replace(":(","🙁")
+    text.replace(":)", "🙂").replace(":(","🙁")
 
 def main():
     text=input()
