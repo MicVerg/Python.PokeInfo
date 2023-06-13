@@ -4,3 +4,4 @@ def convert(text):
 def main():
     text=input()
     convert(text)
+    print(text)
