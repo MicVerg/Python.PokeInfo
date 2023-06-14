@@ -23,6 +23,4 @@ def is_valid(s):
         if [char:-1][0] == '0':
             return False
 
-
-
 main()
