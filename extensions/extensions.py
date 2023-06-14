@@ -1,6 +1,6 @@
 text = input("File name: ")
 text = text.strip(' ').lower()
-splitText = text.split('.')[1]
+splitText = text.split('.')[-1]
 
 if splitText == "gif":
     print("image/gif")
