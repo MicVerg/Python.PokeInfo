@@ -17,5 +17,6 @@ while True:
         continue
 
     if due <= 0:
-        print("Change owed: " (0 - due))
+        change = 0 - due
+        print("Change owed: " + str(change))
         break
