@@ -1,7 +1,11 @@
 word = input("camelCase : ")
+new word = ""
 
 for char in word:
     if char.isupper():
-        new_char = char.replace(char, char.lower() + "_")
-        word.insert(char, new_char)
-print(word)
+        new_char = "_" + char.lower()
+        new_word += new_char
+    else:
+        new_word += char
+
+print(new_word)
