@@ -3,7 +3,10 @@ fruits = {
 }
 
 user_input = (input("Item: ")).lower()
-if fruits[user_input]:
-    print("Calories: " + fruits[user_input])
+
+calories = fruits.get(user_input)
+
+if calories:
+    print("Calories: " + calories)
 else:
     pass
