@@ -11,7 +11,7 @@ while True:
             user_input = input("Fraction: ")
 
         percentage = int((x / y) * 100)
-        if percentage < 1:
+        if percentage <= 1:
             print("E")
         elif percentage >= 99:
             print("F")
