@@ -2,7 +2,8 @@
 while True:
     try:
         user_input = input("Fraction: ")
-    except ValueError:
+    
+    except (ValueError, ZeroDivisionError):
         pass
-    except ZeroDivisionError:
-        pass
+    else:
+        break
