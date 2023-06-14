@@ -1,6 +1,4 @@
-due = 0
-paid = 0
-change = 0
+due, paid, change = 0, 0, 0
 
 print("Amount Due: 50")
 
