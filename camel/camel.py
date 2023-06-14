@@ -1,5 +1,5 @@
 word = input("camelCase : ")
-new_word = word
+new_word = ""
 
 for char in word:
     if char.isupper():
