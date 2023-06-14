@@ -6,7 +6,7 @@ def main():
 
 
 def dollars_to_float(d):
-    d = d.lstrip('$')
+    d = float(d.lstrip('$'))
     return d
 
 
