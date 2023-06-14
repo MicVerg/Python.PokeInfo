@@ -6,8 +6,9 @@ while True:
         x = int(split[0])
         y = int(split[1])
 
-        percentage = (x / y) * 100
-        print(percentage + "%")
+        percentage = int((x / y) * 100)
+        print(str(percentage) + "%")
+        
     except (ValueError, ZeroDivisionError):
         pass
     else:
