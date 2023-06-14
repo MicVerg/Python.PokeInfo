@@ -5,7 +5,7 @@ def main():
 
 
 def convert(text):
-    text.replace(":)", "A").replace(":(","B")
-
+    text = text.replace(":)", "A").replace(":(","B")
+    return text
 
 main()
