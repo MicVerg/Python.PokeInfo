@@ -18,6 +18,7 @@ def is_valid(s):
     for char in s:
         if char.isdigit():
             check_numbers = [char:-1]
+        if 
 
 
 
