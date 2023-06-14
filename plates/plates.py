@@ -20,7 +20,7 @@ def is_valid(s):
             check_numbers = s[index:].isdigit()
             if check_numbers == False:
                 return False
-        if s[index:][0] == '0':
+        if index == 0 and char == '0':
             return False
 
     return True
