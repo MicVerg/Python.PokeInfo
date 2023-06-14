@@ -15,12 +15,13 @@ def is_valid(s):
         return False
 
     # numbers must come at the end, the first number cannot be 0
-    for char in s:
+    for index, char in enumerate(s):
         if char.isdigit():
-            check_numbers = [char:-1].isdigit()
+            check_numbers = s[index:-1].isdigit()
         if check_numbers == False:
             return False
-        if [char:-1][0] == '0':
+        if s[index:-1][0] == '0':
             return False
-
+        
+    return True
 main()
