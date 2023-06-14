@@ -16,8 +16,8 @@ def is_valid(s):
 
     # numbers must come at the end, the first number cannot be 0
     for char in s:
-        if s.isdigit():
-            
+        if char.isdigit():
+            check_numbers = [char:-1]
 
 
 
