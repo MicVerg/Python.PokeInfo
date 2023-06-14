@@ -13,7 +13,11 @@ def is_valid(s):
     plate_length = len(s)
     if plate_length < 2 or plate_length > 6:
         return False
-    
+
+    # numbers must come at the end, the first number cannot be 0
+    for char in s:
+        if s.isdigit():
+            
 
 
 
