@@ -2,5 +2,6 @@ word = input("camelCase : ")
 
 for char in word:
     if char.isupper():
-        char.replace(char, char.lower() + "_")
-        print(word)
+        new_char = char.replace(char, char.lower() + "_")
+        word.insert(char, new_char)
+print(word)
