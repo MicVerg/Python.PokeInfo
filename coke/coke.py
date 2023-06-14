@@ -10,5 +10,8 @@ while True:
         due = 50 - paid
         print("Amount Due: " + str(due))
 
+    else:
+        continue
+
     if due <= 0:
         break
