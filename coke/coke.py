@@ -11,6 +11,9 @@ while True:
         print("Amount Due: " + str(due))
 
     else:
+        paid += int(user_input)
+        due = 50 - paid
+        print("Amount Due: " + str(due))
         continue
 
     if due <= 0:
