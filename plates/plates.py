@@ -7,7 +7,10 @@ def main():
 
 
 def is_valid(s):
-    two_letters = s[0:2]
+    two_letters = s[0:2].isalpha()
+    if two_letters = False:
+        return False
+    
 
 
 main()
