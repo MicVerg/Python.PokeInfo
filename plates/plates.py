@@ -18,10 +18,10 @@ def is_valid(s):
     for index, char in enumerate(s):
         if char.isdigit():
             check_numbers = s[index:-1].isdigit()
-        if check_numbers == False:
-            return False
+            if check_numbers == False:
+                return False
         if s[index:-1][0] == '0':
             return False
-        
+
     return True
 main()
