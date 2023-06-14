@@ -1,3 +1,4 @@
 text = input("File name: ")
 text = text.strip(' ').lower()
-if text == 
+splitText = text.split('.')
+if text ==
