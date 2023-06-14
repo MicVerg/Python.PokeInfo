@@ -17,10 +17,10 @@ def is_valid(s):
     # numbers must come at the end, the first number cannot be 0
     for index, char in enumerate(s):
         if char.isdigit():
-            check_numbers = s[index:-1].isdigit()
+            check_numbers = s[index:].isdigit()
             if check_numbers == False:
                 return False
-        if s[index:-1][0] == '0':
+        if s[index:][0] == '0':
             return False
 
     return True
