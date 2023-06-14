@@ -1,11 +1,11 @@
 def main():
-    text=input()
-    convert(text)
+    text = input()
+    text = convert(text)
     print(text)
 
 
 def convert(text):
-    text = text.replace(":)", "A").replace(":(","B")
+    text = text.replace(":)", "🙂").replace(":(","🙁")
     return text
 
 main()
