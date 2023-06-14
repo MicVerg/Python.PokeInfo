@@ -2,8 +2,11 @@
 while True:
     try:
         user_input = input("Fraction: ")
-        x, blergh, y = user_input.split('/')
-        print(x, y)
+        split = user_input.split('/')
+        x = int(split[0])
+        y = int(split[2])
+
+        
     except (ValueError, ZeroDivisionError):
         pass
     else:
