@@ -7,7 +7,7 @@ def main():
 
 
 def is_valid(s):
-    ...
+    two_letters = s[0:2]
 
 
 main()
