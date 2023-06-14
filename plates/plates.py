@@ -20,7 +20,8 @@ def is_valid(s):
             check_numbers = [char:-1].isdigit()
         if check_numbers == False:
             return False
-        
+        if [char:-1].isdigit()
+
 
 
 
