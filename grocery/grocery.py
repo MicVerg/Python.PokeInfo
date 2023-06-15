@@ -13,5 +13,6 @@ while True:
 
     except KeyError:
         pass
+
     except EOFError:
-        print(items)
+        for item, amount in items.
