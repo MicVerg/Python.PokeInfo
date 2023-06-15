@@ -21,9 +21,14 @@ while True:
 
     if "/" in user_input:
         M, D, Y = user_input.split('/')
+        if int(M > 12:
+            user_input = input("Date: ")
+            M, D, Y = user_input.split('/')
+        if D > 31:
+            user_input = input("Date: ")
+            M, D, Y = user_input.split('/')
         print(f"{Y}-{int(M):02d}-{int(D):02d}")
         break
 
     if "," in user_input:
         M, D, Y = user_input.split(' ')
-        
