@@ -1,18 +1,18 @@
 
 while True:
     try:
-        items = {}
+        grocery_list = {}
         user_input = input()
 
 
-        if user_input in items:
-            items[user_input] += 1
+        if user_input in grocery_list:
+            grocery_list[user_input] += 1
         else:
-            items[user_input] = 1
+            grocery_list[user_input] = 1
 
 
     except KeyError:
         pass
 
     except EOFError:
-        for item, amount in items.
+        print(grocery_list.items())
