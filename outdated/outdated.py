@@ -32,4 +32,5 @@ while True:
 
     if "," in user_input:
         M, D, Y = user_input.split(' ')
+        D = D.replace(',', '')
         print(f"{Y}-{M}-{D}")
