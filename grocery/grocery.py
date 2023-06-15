@@ -14,4 +14,4 @@ while True:
     except KeyError:
         pass
     except EOFError:
-        break
+        print(items)
