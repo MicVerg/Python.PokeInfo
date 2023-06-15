@@ -6,7 +6,9 @@ while True:
 
 
         if user_input in items:
-            items[user]
+            items[user_input] += 1
+        else:
+            items[user_input] = 1
 
 
     except KeyError:
