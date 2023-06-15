@@ -3,9 +3,10 @@ while True:
     try:
         items = {}
         user_input = input()
-        
 
-        items[user_input] =
+
+        if user_input in items:
+            items[user]
 
 
     except KeyError:
