@@ -29,6 +29,12 @@ while True:
         if int(D) > 31:
             user_input = input("Date: ")
             M, D, Y = user_input.split('/')
+        if not M.isalpha() :
+            user_input = input("Date: ")
+            M, D, Y = user_input.split('/')
+        if not D.isalpha() :
+            user_input = input("Date: ")
+            M, D, Y = user_input.split('/')
 
         # format month and date to pad leading 0
         print(f"{Y}-{int(M):02d}-{int(D):02d}")
