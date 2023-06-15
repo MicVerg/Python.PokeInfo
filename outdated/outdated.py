@@ -39,7 +39,7 @@ while True:
         # remove trailing ,
         D = D.replace(',', '')
         # change month string to integer
-        M = months.index(M)
+        M = (months.index(M)) + 1
 
         # if month is too big, reprompt
         if int(M) > 12:
