@@ -29,10 +29,10 @@ while True:
         if int(D) > 31:
             user_input = input("Date: ")
             M, D, Y = user_input.split('/')
-        if M.isalpha() :
+        if M.isalpha():
             user_input = input("Date: ")
             M, D, Y = user_input.split('/')
-        if D.isalpha() :
+        if D.isalpha():
             user_input = input("Date: ")
             M, D, Y = user_input.split('/')
 
