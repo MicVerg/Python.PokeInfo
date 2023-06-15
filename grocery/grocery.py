@@ -3,8 +3,9 @@ while True:
     try:
         items = {}
         user_input = input()
+        
 
-        items[user_input] = 
+        items[user_input] =
 
 
     except KeyError:
