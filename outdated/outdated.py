@@ -12,11 +12,12 @@ months = [
     "November",
     "December"
 ]
+# change from MM/DD/YYYY to YYYY-MM-DD
+# examples: 12/31/1636 OR december 31, 1636
 
 while True:
 
-# change from MM/DD/YYYY to YYYY-MM-DD
-# examples: 12/31/1636 OR december 31, 1636
+
 
     user_input = input("Date: ")
 
