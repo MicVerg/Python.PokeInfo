@@ -29,12 +29,25 @@ while True:
         if int(D) > 31:
             user_input = input("Date: ")
             M, D, Y = user_input.split('/')
+
         # format month and date to pad leading 0
         print(f"{Y}-{int(M):02d}-{int(D):02d}")
         break
 
     if "," in user_input:
         M, D, Y = user_input.split(' ')
+        # if month is too big, reprompt
+        if int(M) > 12:
+            user_input = input("Date: ")
+            M, D, Y = user_input.split(' ')
+        # if day is too big, reprompt
+        if int(D) > 31:
+            user_input = input("Date: ")
+            M, D, Y = user_input.split('/')
+
         # remove trailing ,
         D = D.replace(',', '')
-        print(f"{Y}-{M}-{D}")
+        # change month string to integer
+        M = months.index(M)
+        print(f"{Y}-{int(M):02d}-{int(D):02d}")
+        break
