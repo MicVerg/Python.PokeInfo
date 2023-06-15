@@ -18,4 +18,5 @@ months = [
 
 user_input = input("Date: ")
 
-split = user_input.split('/')
+M, D, Y = user_input.split('/')
+print(f"{Y}-{M:02}-{D:02}")
