@@ -14,4 +14,6 @@ while True:
         pass
 # start print UPPERCASE, sorted alpha, starting with value
     except EOFError:
+        for item in grocery_list:
+            print(grocery_list.value() + )
         print(grocery_list.items())
