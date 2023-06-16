@@ -1,5 +1,5 @@
 import random
-
+import sys
 
 def main():
     get_level()
@@ -7,14 +7,13 @@ def main():
 
 def get_level():
     # prompt for a level and reprompt if needed
-    level = input("Level: ")
-    level = int(level)
     while True:
+        level = input("Level: ")
         if not level == 1 or level == 2 or level == 3:
             level = input("Level: ")
         else:
             return level
-        break
+
 
 
 
