@@ -8,11 +8,11 @@ while True:
     if int(level) < 1 or level.isalpha():
         level = input("Level: ")
     else:
-        guess = int(input("Guess: "))
-        if guess < randy or not guess.isdigit():
+        guess = input("Guess: ")
+        if int(guess) < randy or not guess.isdigit():
             print("Too small!")
-        elif guess > randy or not guess.isdigit():
+        elif int(guess) > randy or not guess.isdigit():
             print("Too large!")
-        elif guess == randy:
+        elif int(guess) == randy:
             print("Just right!")
             sys.exit()
