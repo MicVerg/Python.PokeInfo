@@ -7,8 +7,9 @@ def main():
     for i in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
-        input(str(x) + " + " + str(y) + " = ")
-        
+        answer = input(str(x) + " + " + str(y) + " = ")
+        if not answer == (x + y):
+            print("EEE")
 
 def get_level():
     # prompt for a level and reprompt if needed
