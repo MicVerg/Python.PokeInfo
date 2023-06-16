@@ -17,9 +17,14 @@ def main():
             if mistake_counter >= 3:
                 questions_counter += 1
                 print(str(x) + " + " + str(y) + " = " + str((int(x) + int(y))))
-        elif answer == (x + y):
+        elif int(answer) == int((x + y)):
             questions_counter += 1
             correct_counter += 1
+
+        if questions_counter >= 10:
+            print("Score: " + str(correct_counter))
+            break
+
 
 
 def get_level():
