@@ -6,4 +6,5 @@ while True:
         names.append(user_input)
 
     except EOFError:
-        print("Adieu, adieu, to " + names[0])
+        if len(sys.argv) == 2:
+            print("Adieu, adieu, to " + names[0])
