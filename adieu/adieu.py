@@ -6,4 +6,4 @@ while True:
         names.append(user_input)
 
     except EOFError:
-        print("Adieu, adieu, to " names[0])
+        print("Adieu, adieu, to " + names[0])
