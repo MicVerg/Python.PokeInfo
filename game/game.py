@@ -1,9 +1,9 @@
 import random
 import sys
 
+level = input("Level: ")
 while True:
-    level = input("Level: ")
-    if int(level) < 1:
+    if level < 1:
         level = input("Level: ")
 
         randy = random.randint(1, level)
