@@ -10,10 +10,8 @@ while True:
         guess = int(input("Guess: "))
         if guess < randy:
             print("Too small!")
-            guess = input("Guess: ")
         elif guess > randy:
             print("Too large!")
-            guess = input("Guess: ")
         elif guess == randy:
             print("Just right!")
             sys.exit()
