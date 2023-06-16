@@ -2,8 +2,11 @@ import random
 import sys
 
 def main():
-    get_level()
-
+    level = get_level()
+    x = generate_integer(level)
+    y = generate_integer(level)
+    for i in range(10):
+        
 
 def get_level():
     # prompt for a level and reprompt if needed
