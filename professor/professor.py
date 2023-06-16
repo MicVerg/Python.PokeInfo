@@ -3,12 +3,13 @@ import sys
 
 def main():
     level = get_level()
-
+    mistake_counter = 0
     for i in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
         answer = input(str(x) + " + " + str(y) + " = ")
         if not answer == (x + y):
+            mistake_counter += 1
             print("EEE")
 
 def get_level():
