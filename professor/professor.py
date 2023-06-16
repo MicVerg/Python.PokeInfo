@@ -12,7 +12,7 @@ def main():
             mistake_counter += 1
             print("EEE")
             if mistake_counter >= 3:
-                print(str(x) + " + " + str(y) + " = " + (int(x) + int(y)))
+                print(str(x) + " + " + str(y) + " = " + str((int(x) + int(y))))
 
 def get_level():
     # prompt for a level and reprompt if needed
