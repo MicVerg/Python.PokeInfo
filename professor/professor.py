@@ -3,10 +3,11 @@ import sys
 
 def main():
     level = get_level()
+    questions_counter = 0
     mistake_counter = 0
     correct_counter = 0
-    
-    for i in range(10):
+
+    while True:
         x = generate_integer(level)
         y = generate_integer(level)
         answer = input(str(x) + " + " + str(y) + " = ")
