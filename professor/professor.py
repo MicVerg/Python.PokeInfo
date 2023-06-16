@@ -26,6 +26,7 @@ def main():
         if questions_counter >= 10:
             print("Score: " + str(correct_counter))
             break
+        sys.exit()
 
 
 
