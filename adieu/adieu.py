@@ -7,14 +7,15 @@ names = []
 while True:
     try:
         user_input = input("Name: ")
-        names.append(user_input)
+        names = p.join(user_input)
+        print(names)
 
     except EOFError:
         if len(names) == 1:
-            print("Adieu, adieu, to " + names[0])
+            print("Adieu, adieu, to " + names)
             sys.exit()
         elif len(names) == 2:
-            print("Adieu, adieu, to " + names[0] + ' and ' + names[1])
+            print("Adieu, adieu, to " + names + ' and ' + names)
             sys.exit()
         elif len(names) > 2:
-            print("Adieu, adieu, to " + names[0])
+            print("Adieu, adieu, to " + names)
