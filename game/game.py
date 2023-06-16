@@ -13,9 +13,13 @@ while True:
 while True:
     guess = input("Guess: ")
     if not guess.isdigit():
+        guess = input("Guess: ")
+
+    guess = int(guess)
+    if guess < randy:
         print("Too small!")
-    elif int(guess) > randy or not guess.isdigit():
+    elif guess > randy:
         print("Too large!")
-    elif int(guess) == randy:
+    elif guess == randy:
         print("Just right!")
         sys.exit()
