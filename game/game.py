@@ -6,8 +6,8 @@ while True:
     if int(level) < 1:
         level = input("Level: ")
 
-    randy = random.randint(1, level)
-    guess = input("Guess: ")
+        randy = random.randint(1, level)
+        guess = input("Guess: ")
         if guess < randy:
             print("Too small!")
             guess = input("Guess: ")
