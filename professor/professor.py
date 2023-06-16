@@ -18,7 +18,13 @@ def get_level():
 
 def generate_integer(level):
     # return a non-negative integer with LEVEL digits or raise a ValueError if level is not 1 2 or 3
-    
+    randy = 0
+    if level == 1:
+        randy = random.randint(1, 9)
+    elif level == 2:
+        randy = random.randint(10, 99)
+    elif level == 3:
+        randy = random.randint(100, 999)
     return SOMEVARIABLE
 
 if __name__ == "__main__":
