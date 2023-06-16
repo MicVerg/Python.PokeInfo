@@ -12,9 +12,10 @@ def get_level():
     while True:
         if not level == 1 or level == 2 or level == 3:
             level = input("Level: ")
-            level = int(level)
+        else:
+            return level
         break
-    return level
+
 
 
 def generate_integer(level):
