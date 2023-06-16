@@ -9,10 +9,11 @@ def get_level():
     # prompt for a level and reprompt if needed
     while True:
         level = input("Level: ")
+        level = int(level)
         if not level == 1 or level == 2 or level == 3:
             level = input("Level: ")
         else:
-            return level
+            return int(level)
 
 
 
