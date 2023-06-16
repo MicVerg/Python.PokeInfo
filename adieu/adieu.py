@@ -8,5 +8,8 @@ while True:
         names.append(user_input)
 
     except EOFError:
-        if len(sys.argv) == 2:
-            print("Adieu, adieu, to " + names[1])
+        if len(names) == 1:
+            print("Adieu, adieu, to " + names[0])
+            sys.exit()
+        if len(names) > 1:
+            print("Adieu, adieu, to)
