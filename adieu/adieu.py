@@ -11,9 +11,9 @@ while True:
         names = p.join(names)
 
     except EOFError:
-        print(names)
+        print("Adieu, adieu, to " + names)
         sys.exit()
-        
+
         if len(names) == 1:
             print("Adieu, adieu, to " + names)
             sys.exit()
