@@ -13,10 +13,10 @@ def main():
         answer = input(str(x) + " + " + str(y) + " = ")
 
         if not int(answer) == int((x + y)):
+            questions_counter += 1
             mistake_counter += 1
             print("EEE")
             if mistake_counter >= 3:
-                questions_counter += 1
                 print(str(x) + " + " + str(y) + " = " + str((int(x) + int(y))))
 
         elif int(answer) == int((x + y)):
