@@ -5,13 +5,13 @@ level = input("Level: ")
 randy = random.randint(1, int(level))
 
 while True:
-    if int(level) < 1:
+    if int(level) < 1 or level.isalpha():
         level = input("Level: ")
     else:
         guess = int(input("Guess: "))
-        if guess < randy:
+        if guess < randy or not guess.isdigit():
             print("Too small!")
-        elif guess > randy:
+        elif guess > randy or not guess.isdigit():
             print("Too large!")
         elif guess == randy:
             print("Just right!")
