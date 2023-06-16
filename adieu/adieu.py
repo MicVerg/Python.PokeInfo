@@ -1,3 +1,5 @@
+import sys
+
 names = []
 
 while True:
@@ -7,4 +9,4 @@ while True:
 
     except EOFError:
         if len(sys.argv) == 2:
-            print("Adieu, adieu, to " + names[0])
+            print("Adieu, adieu, to " + names[1])
