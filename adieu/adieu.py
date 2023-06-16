@@ -15,4 +15,4 @@ while True:
             print("Adieu, adieu, to " + names[0] + ' and ' + names[1])
             sys.exit()
         if len(names) > 2:
-            print("Adieu, adieu, to " + )
+            print("Adieu, adieu, to " + names)
