@@ -25,7 +25,9 @@ def generate_integer(level):
         randy = random.randint(10, 99)
     elif level == 3:
         randy = random.randint(100, 999)
-    return SOMEVARIABLE
+    else:
+        raise ValueError
+    return randy
 
 if __name__ == "__main__":
     main()
