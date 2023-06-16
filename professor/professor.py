@@ -7,6 +7,12 @@ def main():
 
 def get_level():
     # prompt for a level and reprompt if needed
+    level = input("Level: ")
+    level = int(level)
+    while True:
+        if not level == 1 or level == 2 or level == 3:
+            level = input("Level: ")
+            level = int(level)
 
 
 def generate_integer(level):
