@@ -3,9 +3,11 @@ import sys
 
 def main():
     level = get_level()
-    x = generate_integer(level)
-    y = generate_integer(level)
+
     for i in range(10):
+        x = generate_integer(level)
+        y = generate_integer(level)
+        input(str(x) + " + " + str(y) + " = ")
         
 
 def get_level():
