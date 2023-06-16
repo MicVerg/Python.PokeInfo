@@ -14,6 +14,7 @@ def main():
             if mistake_counter >= 3:
                 print(str(x) + " + " + str(y) + " = " + str((int(x) + int(y))))
 
+
 def get_level():
     # prompt for a level and reprompt if needed
     while True:
