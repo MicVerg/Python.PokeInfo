@@ -8,11 +8,11 @@ def main():
 
 def value(greeting):
     if greeting[0:5] == "hello":
-        return "$0"
+        return int("0")
     elif greeting[0:1] == 'h':
-        return "$20"
+        return int("20")
     else:
-        return "$100"
+        return int("100")
 
 
 if __name__ == "__main__":
