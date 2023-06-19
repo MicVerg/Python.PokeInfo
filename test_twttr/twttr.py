@@ -1,6 +1,6 @@
 def main():
     word = input("Input: ")
-    shorten(word)
+    print(shorten(word))
 
 
 def shorten(word):
