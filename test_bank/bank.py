@@ -9,3 +9,14 @@ elif greeting[0:1] == 'h':
     print("$20", end="")
 else:
     print("$100", end="")
+
+def main():
+    ...
+
+
+def value(greeting):
+    ...
+
+
+if __name__ == "__main__":
+    main()
