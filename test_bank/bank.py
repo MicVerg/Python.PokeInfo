@@ -1,21 +1,18 @@
 from cs50 import get_string
 
 
-greeting = input("Greeting: ").lower().lstrip()
-
-
-
 def main():
-    ...
+    greeting = input("Greeting: ").lower().lstrip()
+    print(value(greeting))
 
 
 def value(greeting):
     if greeting[0:5] == "hello":
-        print("$0", end="")
+        return "$0"
     elif greeting[0:1] == 'h':
-        print("$20", end="")
+        return "$20"
     else:
-        print("$100", end="")
+        return "$100"
 
 
 if __name__ == "__main__":
