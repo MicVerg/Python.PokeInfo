@@ -1,9 +1,7 @@
-user_input = input("Input: ")
-
-
-
 def main():
-    ...
+    user_input = input("Input: ")
+
+
 
 
 def shorten(word):
