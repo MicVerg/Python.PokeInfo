@@ -28,13 +28,13 @@ def main():
 
 
 def convert(fraction):
-    split = user_input.split('/')
+    split = fraction.split('/')
     x = int(split[0])
     y = int(split[1])
     if x > y:
-        user_input = input("Fraction: ")
+        fraction = input("Fraction: ")
     if y == 0:
-        user_input = input("Fraction: ")
+        fraction = input("Fraction: ")
 
 
 def gauge(percentage):
