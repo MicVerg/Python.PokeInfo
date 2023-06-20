@@ -11,9 +11,9 @@ def convert(fraction):
     x = int(split[0])
     y = int(split[1])
     if x > y:
-        fraction = input("Fraction: ")
+        raise ValueError("X can't be greater than Y")
     if y == 0:
-        fraction = input("Fraction: ")
+        raise ZeroDivisionError("Can't divide by zero")
     percentage = int((x / y) * 100)
 
     return percentage
