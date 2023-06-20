@@ -1,7 +1,7 @@
 
 while True:
     try:
-        user_input = input("Fraction: ")
+        fraction = input("Fraction: ")
         split = user_input.split('/')
         x = int(split[0])
         y = int(split[1])
@@ -24,11 +24,17 @@ while True:
         break
 
 def main():
-    ...
+    fraction = input("Fraction: ")
 
 
 def convert(fraction):
-    ...
+    split = user_input.split('/')
+    x = int(split[0])
+    y = int(split[1])
+    if x > y:
+        user_input = input("Fraction: ")
+    if y == 0:
+        user_input = input("Fraction: ")
 
 
 def gauge(percentage):
