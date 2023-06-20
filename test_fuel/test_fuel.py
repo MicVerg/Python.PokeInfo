@@ -15,5 +15,5 @@ def test_convert_40():
 def test_convert_80():
     assert convert("80 / 100") == 80
 
-def test_convert_99():
-    assert convert("99 / 100") == 'F'
+def test_gauge_1():
+    assert gauge("1") == 'E'
