@@ -16,4 +16,4 @@ def test_convert_80():
     assert convert("80 / 100") == 80
 
 def test_convert_99():
-    assert convert("99 / 100") == F
+    assert convert("99 / 100") == 'F'
