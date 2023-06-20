@@ -1,4 +1,4 @@
 from fuel import convert, gauge
 
-def convert_string():
-    
+def test_convert_string():
+    assert convert("cat") == 
