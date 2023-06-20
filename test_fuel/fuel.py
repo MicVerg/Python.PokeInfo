@@ -25,6 +25,8 @@ while True:
 
 def main():
     fraction = input("Fraction: ")
+    convert(fraction)
+    gauge(percentage)
 
 
 def convert(fraction):
