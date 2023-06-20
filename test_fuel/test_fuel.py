@@ -11,3 +11,9 @@ def test_convert_y0():
 
 def test_convert_40():
     assert convert("40 / 100") == 40
+
+def test_convert_80():
+    assert convert("80 / 100") == 80
+
+def test_convert_99():
+    assert convert("99 / 100") == F
