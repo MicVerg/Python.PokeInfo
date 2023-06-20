@@ -20,7 +20,7 @@ while True:
 
     except (ValueError, ZeroDivisionError):
         pass
-    else:
+    else: 
         break
 
 def main():
