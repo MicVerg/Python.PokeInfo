@@ -8,6 +8,7 @@ else:
     try:
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
-            print(reader)
+            for row in reader:
+                print(row)
     except(FileNotFoundError):
         sys.exit("Could not read " + sys.argv[1] + " invalid_file.csv")
