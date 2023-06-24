@@ -14,7 +14,7 @@ else:
         with open(sys.argv[1], "r") as file:
             try:
                 for line in file:
-                    if not line.startswith('#') and not line.startswith(' '):
+                    if not line.startswith('#') and not line.startswith(' ') and not line.startswith('\n'):
                         line_counter += 1
                 print(line_counter)
             except (FileNotFoundError):
