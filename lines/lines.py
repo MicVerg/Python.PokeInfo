@@ -14,6 +14,7 @@ else:
         with open(sys.argv[1], "r") as file:
             try:
                 for line in file:
+                    line = line.strip()
                     if line and not line.startswith('#') and not line.startswith('\n') and not line.isspace():
                         line_counter += 1
                 print(line_counter)
