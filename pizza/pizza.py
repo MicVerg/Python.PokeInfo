@@ -5,7 +5,11 @@ if len(sys.argv) < 2:
 elif len(sys.argv) > 2:
     sys.exit("Too many command-line arguments")
 else:
-    try:
+    if not sys.argv[1].endswith(".csv"):
+        sys.exit("Not a CSV file")
+    else:
 
-    except(FileNotFoundError):
-        sys.exit("File does not exist")
+        try:
+            
+        except(FileNotFoundError):
+            sys.exit("File does not exist")
