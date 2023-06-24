@@ -6,5 +6,7 @@ elif len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
 else:
     try:
+        with open(sys.argv[1]) as file:
+            reader = csv.DictReader(file)
     except(FileNotFoundError):
         sys.exit("Could not read " + sys.argv[1] + " invalid_file.csv")
