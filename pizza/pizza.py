@@ -14,6 +14,6 @@ else:
         try:
             with open(sys.argv[1]) as file:
                 reader = csv.reader(file)
-                print(tabulate(reader))
+                print(tabulate(reader, tablefmt="grid"))
         except(FileNotFoundError):
             sys.exit("File does not exist")
