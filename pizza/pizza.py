@@ -10,6 +10,7 @@ else:
     else:
 
         try:
-            
+            with open(sys.argv[1]) as file:
+                reader = csv.reader(file)
         except(FileNotFoundError):
             sys.exit("File does not exist")
