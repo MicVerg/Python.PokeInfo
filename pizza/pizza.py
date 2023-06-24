@@ -1,4 +1,5 @@
 import sys, csv
+from tabulate import tabulate
 
 if len(sys.argv) < 2:
     sys.exit("Too few command-line arguments")
@@ -12,5 +13,6 @@ else:
         try:
             with open(sys.argv[1]) as file:
                 reader = csv.reader(file)
+                print(tabulate(reader))
         except(FileNotFoundError):
             sys.exit("File does not exist")
