@@ -6,10 +6,11 @@ if len(sys.argv) < 2:
 elif len(sys.argv) > 2:
     sys.exit("Too many command-line arguments")
 else:
+    # should be CSV file
     if not sys.argv[1].endswith(".csv"):
         sys.exit("Not a CSV file")
     else:
-
+        # try block for file not found
         try:
             with open(sys.argv[1]) as file:
                 reader = csv.reader(file)
