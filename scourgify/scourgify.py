@@ -22,7 +22,7 @@ else:
         with open('after.csv', 'w') as file:
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             for entry in first_names:
-                writer.writerow([])
+                writer.writerow([first])
 
 
     except(FileNotFoundError):
