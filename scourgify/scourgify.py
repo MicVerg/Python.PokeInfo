@@ -4,6 +4,7 @@ last_names = []
 house = []
 fieldnames = ['first', 'last', 'house']
 
+
 if len(sys.argv) < 3:
     sys.exit("Too few command-line arguments")
 elif len(sys.argv) > 3:
@@ -19,10 +20,10 @@ else:
                 first_names = first_names[1]
                 house = row['house']
 
-        with open('after.csv', 'w') as file:
-            writer = csv.DictWriter(file, fieldnames=fieldnames)
-            for entry in first_names:
-                writer.writerow([first])
+        data_to_write = [first_names, last_names, house]
+        print(data_to_write)
+
+
 
 
     except(FileNotFoundError):
