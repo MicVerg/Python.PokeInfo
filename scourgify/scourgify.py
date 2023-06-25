@@ -15,15 +15,12 @@ else:
             for row in reader:
                 first_names = row['name'].split(',')
 
-                last_names = first_names[0]
-                first_names = first_names[1]
-                house = row['house']
+                last_names.append(first_names[0])
+                first_names.append(first_names[1])
+                house.append(row['house'])
         data_to_write = [first_names, last_names, house]
-        
-        with open('after.csv', 'w') as file:
-            writer = csv.DictWriter(file, fieldnames=fieldnames)
-            for entry in first_names:
-                writer.writerow(data_to_write)
+        print(data_to_write)
+
 
 
 
