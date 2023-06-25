@@ -11,8 +11,3 @@ elif splitext(argv[2])[1] != '.jpg' or splitext(argv[2])[1] != '.jpeg' or splite
     sys.exit("Invalid output")
 elif splitext(argv[1])[1] != splitext(argv[2])[1]:
     sys.exit("Input and output have different extensions")
-else:
-    try:
-        
-    except(FileNotFoundError):
-        sys.exit("Input does not exist")
