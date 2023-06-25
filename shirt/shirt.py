@@ -17,7 +17,7 @@ try:
     else:
         photo_before = sys.argv[1]
         shirt = Image.open("shirt.png")
-        photo.paste(photo_before, shirt)
+        photo_before.paste(shirt, shirt)
 
 except(FileNotFoundError):
     sys.exit("Input does not exist")
