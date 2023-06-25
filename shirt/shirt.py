@@ -16,7 +16,8 @@ try:
         sys.exit("Input and output have different extensions")
     else:
         photo_before = sys.argv[1]
-        
+        shirt = Image.open("shirt.png")
+        photo.paste(photo_before, shirt)
 
 except(FileNotFoundError):
     sys.exit("Input does not exist")
