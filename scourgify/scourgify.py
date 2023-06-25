@@ -21,7 +21,8 @@ else:
 
         with open('after.csv', 'w') as file:
             writer = csv.DictWriter(file, fieldnames=fieldnames)
-            for
+            for entry in first_names:
+                writer.writerow([])
 
 
     except(FileNotFoundError):
