@@ -1,5 +1,5 @@
 import sys, pip, os
-
+from os.path import splitext
 
 if len(sys.argv) < 3:
     sys.exit("Too few command-line arguments")
