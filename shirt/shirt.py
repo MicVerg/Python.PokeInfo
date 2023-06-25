@@ -1,5 +1,7 @@
 import sys, pip, os
 from os.path import splitext
+from PIL import Image
+
 
 try:
     if len(sys.argv) < 3:
@@ -13,7 +15,8 @@ try:
     if splitext(sys.argv[1])[1] != splitext(sys.argv[2])[1]:
         sys.exit("Input and output have different extensions")
     else:
-        shirt = Image.open("shirt.png")
+        photo_before = sys.argv[1]
+        
 
 except(FileNotFoundError):
     sys.exit("Input does not exist")
