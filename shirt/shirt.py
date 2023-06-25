@@ -15,7 +15,7 @@ try:
     if splitext(sys.argv[1])[1] != splitext(sys.argv[2])[1]:
         sys.exit("Input and output have different extensions")
     else:
-        photo_before = sys.argv[1]
+        photo_before = Image.open(sys.argv[1])
         shirt = Image.open("shirt.png")
         photo_before.paste(shirt, shirt)
 
