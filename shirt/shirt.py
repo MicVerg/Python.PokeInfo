@@ -18,6 +18,7 @@ try:
         photo_before = Image.open(sys.argv[1])
         photo_before_size = photo_before.size
         shirt = Image.open("shirt.png")
+        shirt_size = shirt.size
         photo_before.paste(shirt, shirt)
 
 except(FileNotFoundError):
