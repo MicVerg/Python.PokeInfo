@@ -20,7 +20,10 @@ else:
                 house.append(row['house'])
         data_to_write = [first_names, last_names, house]
         print(data_to_write)
-
+        with open('after.csv', 'w') as file:
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+            for entry in first_names:
+                writer.writerow(data_to_write)
 
 
 
