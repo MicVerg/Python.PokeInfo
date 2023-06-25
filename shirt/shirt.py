@@ -1,6 +1,6 @@
 import sys, pip, os
 from os.path import splitext
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 try:
@@ -16,20 +16,13 @@ try:
         sys.exit("Input and output have different extensions")
     else:
         photo_before = Image.open(sys.argv[1])
-        photo_before_size = photo_before.size
         shirt = Image.open("shirt.png")
         shirt_size = shirt.size
 
-        w = shirt_size[0]
-        h = shirt_size[1]
+        photo_after = ImageOps.fit(photo_before, shirt_size)
+        photo_after.paste(shirt, shirt)
 
-        photo_before = photo_before.resize((w,h+70)).crop(box=None)
-
-        after = Image.new(photo_before.mode, (w,h))
-        after.paste(photo_before)
-        after.paste(shirt, shirt)
-
-        after.save(sys.argv[2])
+        photo_after.save(sys.argv[2])
 
 except(FileNotFoundError):
     sys.exit("Input does not exist")
