@@ -23,7 +23,7 @@ try:
         w = shirt_size[0]
         h = shirt_size[1]
 
-        photo_before = photo_before.resize((w,h)).crop(box=None)
+        photo_before = photo_before.resize((w,h+70)).crop(box=None)
 
         after = Image.new(photo_before.mode, (w,h))
         after.paste(photo_before)
