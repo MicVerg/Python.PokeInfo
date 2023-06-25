@@ -2,7 +2,7 @@ import sys, csv
 first_names = []
 last_names = []
 house = []
-
+fieldnames = ['first', 'last', 'house']
 
 if len(sys.argv) < 3:
     sys.exit("Too few command-line arguments")
@@ -17,9 +17,11 @@ else:
 
                 last_names = first_names[0]
                 first_names = first_names[1]
-                
-                print(last_names)
-        # with open(sys.argv[1]) as file:
+                house = row['house']
+
+        with open('after.csv', 'w') as file:
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+            for
 
 
     except(FileNotFoundError):
