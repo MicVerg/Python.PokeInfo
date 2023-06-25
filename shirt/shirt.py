@@ -19,7 +19,17 @@ try:
         photo_before_size = photo_before.size
         shirt = Image.open("shirt.png")
         shirt_size = shirt.size
-        photo_before.paste(shirt, shirt)
+
+        w = shirt_size[0]
+        h = shirt_size[1]
+
+        photo_before = photo_before.resize((w,h)).crop(box=None)
+
+        after = Image.new(photo_before.mode, (w,h))
+        after.paste(photo_before)
+        after.paste(shirt, shirt)
+
+        after.save(sys.argv[2])
 
 except(FileNotFoundError):
     sys.exit("Input does not exist")
