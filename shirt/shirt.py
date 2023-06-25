@@ -16,6 +16,7 @@ try:
         sys.exit("Input and output have different extensions")
     else:
         photo_before = Image.open(sys.argv[1])
+        photo_before_size = photo_before.size
         shirt = Image.open("shirt.png")
         photo_before.paste(shirt, shirt)
 
