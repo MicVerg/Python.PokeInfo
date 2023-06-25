@@ -13,6 +13,7 @@ else:
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
             for row in reader:
-                row.values()
+                first_names = row['name'].split(',')
+                print(first_names)
     except(FileNotFoundError):
         sys.exit("Could not read " + sys.argv[1] + " invalid_file.csv")
