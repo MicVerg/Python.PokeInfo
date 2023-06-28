@@ -14,4 +14,5 @@ def test3():
 
 
 def test4():
-    assert convert("10:7 AM - 5:1 PM") == ValueError
+    with pytest.raises(ValueError):
+        convert("7 AM - 8 AM")
