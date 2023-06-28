@@ -1,8 +1,8 @@
 from working import new_format, convert
 import pytest
 
-# def test1():
-  #  assert convert("09:00 AM to 5:00 PM") == "09:00 to 17:00"
+def test1():
+    assert convert("09:00 AM to 5:00 PM") == "09:00 to 17:00"
 
 
 def test2():
