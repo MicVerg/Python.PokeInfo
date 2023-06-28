@@ -12,7 +12,8 @@ def parse(s):
 
     if re.findall(regex, s):
         return URL
-
+    else:
+        None
 
 
 
