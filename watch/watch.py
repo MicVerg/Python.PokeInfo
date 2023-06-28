@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    ...
+    regex = r"<iframe.*?src="(.*?youtube\.com/embed/.*?)".*?>"
 
 
 ...
