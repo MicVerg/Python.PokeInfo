@@ -7,8 +7,11 @@ def main():
 
 
 def validate(ip):
-    matches = re.search(r"^$")
-
+    pattern = r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}$'
+    if re.match(pattern, ip_address):
+        return True
+    else:
+        return False
 
 
 
