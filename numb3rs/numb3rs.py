@@ -8,7 +8,7 @@ def main():
 
 def validate(ip):
     pattern = r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}$'
-    if re.match(pattern, ip_address):
+    if re.match(pattern, ip):
         return True
     else:
         return False
