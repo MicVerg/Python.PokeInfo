@@ -10,15 +10,15 @@ def main():
 def convert(s):
     regex = r"^(([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M) to (([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M)$"
     correct_format = re.search(regex, s)
-        if correct_format:
-            groups = correct_format.groups()
-            if int(groups[1]) > 12 or int(groups[5]) > 12:
-                raise ValueError
-            first_time = new_format(groups[1], groups[2], groups[3])
-            second_time = new_format(groups[5], groups[6], groups[7])
-            return first_time + ' to ' + second_time
-        else:
+    if correct_format:
+        groups = correct_format.groups()
+        if int(groups[1]) > 12 or int(groups[5]) > 12:
             raise ValueError
+        first_time = new_format(groups[1], groups[2], groups[3])
+        second_time = new_format(groups[5], groups[6], groups[7])
+        return first_time + ' to ' + second_time
+    else:
+        raise ValueError
 
 def new_format(hour, minute, am_pm):
     if am_pm == 'PM':
