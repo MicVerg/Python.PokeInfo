@@ -16,3 +16,13 @@ def test3():
 def test4():
     with pytest.raises(ValueError):
         convert("7 AM - 8 AM")
+
+
+def test5():
+    with pytest.raises(ValueError):
+        convert("16 AM - 17 AM")
+
+
+def test6():
+    with pytest.raises(ValueError):
+        convert("9:99 AM - 10:61 AM")
