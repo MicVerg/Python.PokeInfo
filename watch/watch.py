@@ -10,10 +10,10 @@ def parse(s):
     regex = r'<iframe.*?src="(.*?youtube\.com/embed/.*?)".*?>'
     URL = re.search(regex, s)
 
-    if re.search(regex, s):
-        return URL
+    if URL:
+        return URL.group(1)
     else:
-        None
+        return None
 
 
 
