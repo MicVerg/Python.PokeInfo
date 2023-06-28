@@ -17,5 +17,8 @@ def convert(s):
         else:
             raise ValueError
 
+def new_format(hour, minute, am_pm):
+    if am_pm == 'PM':
+        
 if __name__ == "__main__":
     main()
