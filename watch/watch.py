@@ -8,9 +8,9 @@ def main():
 
 def parse(s):
     regex = r'<iframe.*?src="(.*?youtube\.com/embed/.*?)".*?>'
-    URL = re.findall(regex, s)
+    URL = re.search(regex, s)
 
-    if re.findall(regex, s):
+    if re.search(regex, s):
         return URL
     else:
         None
