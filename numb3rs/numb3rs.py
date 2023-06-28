@@ -7,7 +7,7 @@ def main():
 
 
 def validate(ip):
-    matches = re.search()
+    matches = re.search(r"^$")
 
 
 
