@@ -11,10 +11,11 @@ def parse(s):
     URL = re.search(regex, s)
 
     if URL:
-        return URL.group(1)
+        video_id = URL.group(1)
+        youtube_link = f"https://youtu.be/{video_id}"
+        return youtube_link
     else:
         return None
-
 
 
 if __name__ == "__main__":
