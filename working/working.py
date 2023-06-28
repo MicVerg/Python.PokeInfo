@@ -8,7 +8,7 @@ def main():
 
 def convert(s):
     # Regular expression pattern to match the input formats
-    pattern = r'^(\d{1,2})(?::(\d{2}))?\s+(AM|PM)$'
+    pattern = r'^(\d{1,2})(?::(\d{1,2}))?\s+(AM|PM)$'
 
     # Match the input against the pattern
     match = re.match(pattern, s)
