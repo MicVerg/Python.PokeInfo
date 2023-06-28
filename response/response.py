@@ -8,8 +8,10 @@ def main():
 
 
 def validate(s):
-    validators.email(s)
-    
+    if validators.email(s) == True:
+        return "Valid"
+    else:
+        return "Invalid"
 
 
 if __name__ == "__main__":
