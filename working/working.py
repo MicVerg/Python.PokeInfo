@@ -16,7 +16,7 @@ def convert(s):
                 raise ValueError
             first_time = new_format(groups[1], groups[2], groups[3])
             second_time = new_format(groups[5], groups[6], groups[7])
-            return first_time + 'to' + second_time
+            return first_time + ' to ' + second_time
         else:
             raise ValueError
 
