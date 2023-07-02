@@ -7,6 +7,8 @@ p = inflect.engine()
 def main():
     try:
         user_input = input("Date of birth: ")
+    except:
+        sys.exit("Invalid date")
         user_input_date = datetime.strptime(user_input, "%Y-%m-%d")
         current_date = datetime.today()
 
@@ -15,8 +17,7 @@ def main():
         difference_in_words = p.number_to_words(difference_date_minutes, andword="")
 
         print(difference_in_words.capitalize() + " minutes")
-    except:
-        sys.exit("Invalid date")
+
 
 
 
