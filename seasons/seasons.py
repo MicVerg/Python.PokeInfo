@@ -12,7 +12,8 @@ def main():
 
         difference_date = current_date - user_input_date
         difference_date_minutes = round(difference_date.total_seconds() / 60)
-        print(difference_date_minutes)
+        difference_in_words = p.number_to_words(difference_date_minutes)
+        print(difference_in_words)
     except:
         print("Invalid date")
 
