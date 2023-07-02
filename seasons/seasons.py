@@ -3,13 +3,13 @@ from datetime import date
 
 
 def main():
-    ...
+    print(datetime.date.today)
 
 
-...
 
 
-def
+
+
 
 if __name__ == "__main__":
     main()
