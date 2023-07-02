@@ -9,8 +9,9 @@ def main():
         user_input = input("Date of birth: ")
     except:
         sys.exit("Invalid date")
+    print(calc_minutes(user_input))
 
-def calc_minutes():
+def calc_minutes(user_input):
     user_input_date = datetime.strptime(user_input, "%Y-%m-%d")
     current_date = datetime.today()
 
