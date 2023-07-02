@@ -12,12 +12,12 @@ def main():
 
         difference_date = current_date - user_input_date
         print(difference_date)
-    except 
+    except:
+        print("Invalid date")
 
 
 
 
-def calculate():
 
 
 
