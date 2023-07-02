@@ -1,5 +1,5 @@
 import inflect, sys
-from datetime import datetime
+from datetime import datetime, date
 
 p = inflect.engine()
 
@@ -12,8 +12,8 @@ def main():
     print(calc_minutes(user_input))
 
 def calc_minutes(user_input):
-    user_input_date = datetime.strptime(user_input, "%Y-%m-%d")
-    current_date = datetime.today()
+    user_input_date = date.strptime(user_input, "%Y-%m-%d")
+    current_date = date.today()
 
     difference_date = current_date - user_input_date
     difference_date_minutes = difference_date.days * 24 * 60
