@@ -9,14 +9,16 @@ def main():
         user_input = input("Date of birth: ")
     except:
         sys.exit("Invalid date")
-        user_input_date = datetime.strptime(user_input, "%Y-%m-%d")
-        current_date = datetime.today()
 
-        difference_date = current_date - user_input_date
-        difference_date_minutes = difference_date.days * 24 * 60
-        difference_in_words = p.number_to_words(difference_date_minutes, andword="")
+def calc_minutes():
+    user_input_date = datetime.strptime(user_input, "%Y-%m-%d")
+    current_date = datetime.today()
 
-        print(difference_in_words.capitalize() + " minutes")
+    difference_date = current_date - user_input_date
+    difference_date_minutes = difference_date.days * 24 * 60
+    difference_in_words = p.number_to_words(difference_date_minutes, andword="")
+
+    return (difference_in_words.capitalize() + " minutes")
 
 
 
