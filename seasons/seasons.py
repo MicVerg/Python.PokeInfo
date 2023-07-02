@@ -4,7 +4,7 @@ from datetime import date
 p = inflect.engine()
 
 def main():
-    print(datetime.date.today)
+    print(date.today)
 
 
 
