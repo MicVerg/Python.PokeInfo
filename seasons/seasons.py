@@ -1,5 +1,5 @@
-import inflect, re, sys
-from datetime import date, datetime, timedelta
+import inflect, sys
+from datetime import datetime
 
 p = inflect.engine()
 
