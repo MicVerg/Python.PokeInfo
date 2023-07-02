@@ -11,7 +11,7 @@ def main():
         current_date = datetime.now()
 
         difference_date = current_date - user_input_date
-        difference_date_minutes = (difference_date.total_seconds() / 60)
+        difference_date_minutes = round(difference_date.total_seconds() / 60)
         print(difference_date_minutes)
     except:
         print("Invalid date")
