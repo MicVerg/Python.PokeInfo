@@ -15,7 +15,7 @@ def main():
         difference_in_words = p.number_to_words(difference_date_minutes)
         print(difference_in_words.capitalize() + " minutes")
     except:
-        print("Invalid date")
+        sys.exit("Invalid date")
 
 
 
