@@ -6,13 +6,13 @@ p = inflect.engine()
 
 def main():
     try:
-        user_input = input("Date of birth: ")
+        year, month, day = input("Date of birth: ").split("-")
     except:
         sys.exit("Invalid date")
-    print(calc_minutes(user_input))
+    print(calc_minutes(year, month, day))
 
-def calc_minutes(user_input):
-    user_input_date = date.strptime(user_input, "%Y-%m-%d")
+def calc_minutes(year, month, day):
+    user_input_date = date(int(year), int(month), int(day))
     current_date = date.today()
 
     difference_date = current_date - user_input_date
