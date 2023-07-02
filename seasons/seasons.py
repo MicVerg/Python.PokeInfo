@@ -5,7 +5,8 @@ p = inflect.engine()
 
 
 def main():
-    print(date.today())
+    try:
+        user_input = input("Date of birth: ")
 
 
 
