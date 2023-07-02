@@ -16,7 +16,7 @@ def calc_minutes(year, month, day):
     current_date = date.today()
 
     difference_date = current_date - user_input_date
-    difference_date_minutes = difference_date.days * 24 * 60
+    difference_date_minutes = int(difference_date.total_seconds() / 60)
     difference_in_words = p.number_to_words(difference_date_minutes, andword="")
 
     return (difference_in_words.capitalize() + " minutes")
