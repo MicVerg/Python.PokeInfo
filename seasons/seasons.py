@@ -1,14 +1,14 @@
-import inflect
+import inflect, re, sys
 from datetime import date
 
 p = inflect.engine()
 
 def main():
     print(date.today())
-    
 
 
 
+def calculate():
 
 
 
