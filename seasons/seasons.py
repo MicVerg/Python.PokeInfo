@@ -3,6 +3,11 @@ from datetime import date
 
 p = inflect.engine()
 
+
+class DateCalculation:
+    
+
+
 def main():
     print(date.today())
 
