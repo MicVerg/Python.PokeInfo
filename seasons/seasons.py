@@ -4,8 +4,8 @@ from datetime import date
 p = inflect.engine()
 
 def main():
-    print(date.today)
-
+    print(date.today())
+    
 
 
 
