@@ -1,17 +1,15 @@
 from fpdf import FPDF
 
 
-
-# def set_text_color(self, 255, 255, 255):
-
 class PDF(FPDF):
     def header(self):
         self.set_font("helvetica", "B", 32)
         self.cell(0, 0, "CS50 Shirtificate", border=0, align="C")
+        self.ln(100)
 
 
     def body(self, shirt_text):
-        self.image("./shirtificate.png", x = 30, y = 50, w = 150, h = 150)
+        self.image("./shirtificate.png", x = 20, y = 50, w = 170, h = 170)
         self.set_font("helvetica", "B", 20)
         self.set_text_color(255, 255, 255)
         self.cell(0, 0, shirt_text, align = "C")
