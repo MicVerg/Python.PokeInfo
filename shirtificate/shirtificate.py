@@ -11,9 +11,10 @@ class PDF(FPDF):
         self.cell(80)
         self.cell(30, 10, "CS50 Shirtificate", border=0, align="C")
         self.cell(-80)
-        self.cell(40, 10, user_input)
+        self.cell(700, 300, user_input)
 
 
 pdf = PDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
 pdf.output("shirtificate.pdf")
+
