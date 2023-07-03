@@ -8,8 +8,9 @@ class PDF(FPDF):
     def header(self):
         self.image("../shirtificate.png", 10, 8, 33)
         self.set_font("helvetica", "B", 16)
+        self.add_page()
+        self.cell(40, 10, user_input)
+        self.output("shirtificate.pdf")
 pdf = FPDF(orientation="P", unit="mm", format="A4")
-pdf.add_page()
 
-pdf.cell(40, 10, user_input)
-pdf.output("shirtificate.pdf")
+
