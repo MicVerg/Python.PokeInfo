@@ -10,6 +10,6 @@ class PDF(FPDF):
         self.set_font("helvetica", "B", 16)
         self.add_page()
         self.cell(40, 10, user_input)
-        self.output("shirtificate.pdf")
+        pdf.output("shirtificate.pdf")
 
 
