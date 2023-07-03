@@ -10,7 +10,7 @@ class PDF(FPDF):
 
     def body(self, shirt_text):
         self.image("./shirtificate.png", x = 20, y = 50, w = 170, h = 170)
-        self.set_font("helvetica", "B", 20)
+        self.set_font("helvetica", "B", 23)
         self.set_text_color(255, 255, 255)
         self.cell(0, 0, shirt_text, align = "C")
 
