@@ -11,6 +11,6 @@ class PDF(FPDF):
         self.cell(40, 10, user_input)
 
 
-pdf = PDF()
+pdf = PDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
 pdf.output("shirtificate.pdf")
