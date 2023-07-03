@@ -6,7 +6,7 @@ user_input = input("Name: ")
 
 class PDF(FPDF):
     def header(self):
-        self.image("../shirtificate.png", 10, 8, 33)
+        self.image("./shirtificate.png", 10, 8, 33)
         self.set_font("helvetica", "B", 16)
         self.cell(40, 10, user_input)
 
