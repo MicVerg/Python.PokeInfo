@@ -12,7 +12,9 @@ class PDF(FPDF):
 
     def body():
         self.image("./shirtificate.png", x = 30, y = 50, w = 150, h = 150)
-
+        self.set_font("helvetica", "B", 20)
+        self.set_text_color(255, 255, 255)
+        
 
 def main():
     user_input = input("Name: ")
