@@ -20,7 +20,7 @@ class App(customtkinter.CTk):
 
         # create scrollable frame
         self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="My lists")
-        self.scrollable_frame.grid(row=1, column=2, padx=(0, 0), pady=(0, 0), sticky="new")
+        self.scrollable_frame.grid(row=0, column=2, padx=(0, 0), pady=(0, 20), sticky="nsew")
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
         self.scrollable_frame_switches = []
         for i in range(10):
@@ -29,7 +29,7 @@ class App(customtkinter.CTk):
             self.scrollable_frame_switches.append(switch)
 
         self.slider_progressbar_frame = customtkinter.CTkFrame(self, fg_color="transparent")
-        self.slider_progressbar_frame.grid(row=1, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
+        self.slider_progressbar_frame.grid(row=2, column=1, padx=(20, 0), pady=(0, 20), sticky="nsew")
         self.slider_progressbar_frame.grid_columnconfigure(0, weight=1)
         self.slider_progressbar_frame.grid_rowconfigure(4, weight=1)
         self.seg_button_1 = customtkinter.CTkSegmentedButton(self.slider_progressbar_frame)
