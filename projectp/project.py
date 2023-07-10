@@ -34,13 +34,11 @@ class App(customtkinter.CTk):
         self.slider_progressbar_frame.grid_rowconfigure(4, weight=1)
 
         # add list button
-        self.seg_button_1 = customtkinter.CTkSegmentedButton(self.slider_progressbar_frame)
-        self.seg_button_1.add_button("Add a new list")
-        self.seg_button_1.grid(row=0, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
+        self.button_1 = customtkinter.CTkButton(self.slider_progressbar_frame)
+        self.button_1.grid(row=0, column=0, padx=(20, 10), pady=(10, 10), sticky="ew", text="Add a new list")
         # remove list button
-        self.seg_button_2 = customtkinter.CTkSegmentedButton(self.slider_progressbar_frame)
-        self.seg_button_2.add_button("Remove a list")
-        self.seg_button_2.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
+        self.button_2 = customtkinter.CTkButton(self.slider_progressbar_frame)
+        self.button_2.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew", text="Remove a list")
 
 
 
