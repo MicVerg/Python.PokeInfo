@@ -35,9 +35,11 @@ class App(customtkinter.CTk):
 
         # add list button
         self.seg_button_1 = customtkinter.CTkSegmentedButton(self.slider_progressbar_frame)
+        self.seg_button_1.text = "Add a new list"
         self.seg_button_1.grid(row=0, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
         # remove list button
         self.seg_button_2 = customtkinter.CTkSegmentedButton(self.slider_progressbar_frame)
+        self.seg_button_2.text = "Remove a list"
         self.seg_button_2.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 
 
