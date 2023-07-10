@@ -8,7 +8,7 @@ root.geometry("750x525")
 
 
 
-def login():
+def add_list():
     print("Test")
 
 
