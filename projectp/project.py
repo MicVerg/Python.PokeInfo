@@ -5,33 +5,20 @@ import customtkinter
 customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("dark-blue")
 
-root = customtkinter.CTk()
-root.geometry("750x525")
 
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-def add_list():
-    print("Test")
+        # configure window
+        self.title("CustomTkinter complex_example.py")
+        self.geometry(f"{750}x{500}")
 
 
-frame = customtkinter.CTkFrame(master=root)
-frame.pack(pady=20, padx=60, fill="both", expand=True)
+    def add_list():
+        print("Test")
 
-label = customtkinter.CTkLabel(master=frame, text="Login system")
-label.pack(pady=12, padx=10)
 
-entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Username")
-entry1.pack(pady=12, padx=10)
-
-entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Password", show="*")
-entry1.pack(pady=12, padx=10)
-
-button = customtkinter.CTkButton(master=frame, text="Login", command=login)
-button.pack(pady=12, padx=10)
-
-checkbox = customtkinter.CTkCheckBox(master=frame, text="Remember me")
-checkbox.pack(pady=12, padx=10)
-
-root.mainloop()
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
