@@ -36,6 +36,14 @@ class App(customtkinter.CTk):
         print("Test")
 
 
+    def remove_list():
+        print("Test")
+
+
+    def add_item():
+        print("Test")
+
+
 if __name__ == "__main__":
     app = App()
     app.mainloop()
