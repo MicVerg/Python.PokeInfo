@@ -19,7 +19,7 @@ class App(customtkinter.CTk):
         self.grid_columnconfigure(2, weight=1)
 
         # create scrollable frame
-        self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="My lists")
+        self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="My lists", font=("Montserrat", 24))
         self.scrollable_frame.grid(row=0, column=0, columnspan=3, padx=(0, 0), pady=(0, 20), sticky="nsew")
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
         self.scrollable_frame_switches = []
