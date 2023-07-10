@@ -29,7 +29,7 @@ class App(customtkinter.CTk):
             self.scrollable_frame_switches.append(switch)
 
         self.slider_progressbar_frame = customtkinter.CTkFrame(self, fg_color="transparent")
-        self.slider_progressbar_frame.grid(row=2, column=1, padx=(20, 0), pady=(0, 20), sticky="nsew")
+        self.slider_progressbar_frame.grid(row=1, column=0, columnspan=3, padx=(20, 0), pady=(0, 20), sticky="nsew")
         self.slider_progressbar_frame.grid_columnconfigure(0, weight=1)
         self.slider_progressbar_frame.grid_rowconfigure(4, weight=1)
         self.seg_button_1 = customtkinter.CTkSegmentedButton(self.slider_progressbar_frame)
