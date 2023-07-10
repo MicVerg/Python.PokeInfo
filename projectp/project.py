@@ -1,12 +1,16 @@
+import tkinter
+import tkinter.messagebox
 import customtkinter
 
-customtkinter.set_appearance_mode("dark")
+customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("dark-blue")
 
 root = customtkinter.CTk()
 root.geometry("750x525")
 
-
+class App(customtkinter.CTk):
+    def __init__(self):
+        super().__init__()
 
 def add_list():
     print("Test")
