@@ -14,7 +14,18 @@ class App(customtkinter.CTk):
         self.title("CustomTkinter complex_example.py")
         self.geometry(f"{750}x{500}")
 
+        # configure grid layout (4x4)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure((2, 3), weight=0)
+        self.grid_rowconfigure((0, 1, 2), weight=1)
 
+
+
+
+
+
+
+        
     def add_list():
         print("Test")
 
