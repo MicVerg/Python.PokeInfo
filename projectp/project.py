@@ -11,7 +11,7 @@ class App(customtkinter.CTk):
         super().__init__()
 
         # configure window
-        self.title("Boodschappenlijst")
+        self.title("Grocery lists")
         self.geometry(f"{750}x{500}")
 
         # configure grid layout (4x4)
@@ -20,7 +20,7 @@ class App(customtkinter.CTk):
         self.grid_rowconfigure((0, 1, 2), weight=1)
 
         # create scrollable frame
-        self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="Mijn lijsten")
+        self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="My lists")
         self.scrollable_frame.grid(row=1, column=2, padx=(0, 0), pady=(0, 0), sticky="nsew")
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
         self.scrollable_frame_switches = []
