@@ -19,13 +19,21 @@ class App(customtkinter.CTk):
         self.grid_columnconfigure((2, 3), weight=0)
         self.grid_rowconfigure((0, 1, 2), weight=1)
 
+        # create scrollable frame
+        self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="CTkScrollableFrame")
+        self.scrollable_frame.grid(row=1, column=2, padx=(20, 0), pady=(20, 0), sticky="nsew")
+        self.scrollable_frame.grid_columnconfigure(0, weight=1)
+        self.scrollable_frame_switches = []
+        for i in range(100):
+            switch = customtkinter.CTkSwitch(master=self.scrollable_frame, text=f"CTkSwitch {i}")
+            switch.grid(row=i, column=0, padx=10, pady=(0, 20))
+            self.scrollable_frame_switches.append(switch)
 
 
 
 
 
 
-        
     def add_list():
         print("Test")
 
