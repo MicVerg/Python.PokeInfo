@@ -15,7 +15,8 @@ class App(customtkinter.CTk):
         self.geometry(f"{375}x{667}")
 
         # configure grid layout (4x4)
-
+        self.grid_rowconfigure(1, weight=1)
+        self.grid_columnconfigure(2, weight=1)
 
         # create scrollable frame
         self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="My lists")
