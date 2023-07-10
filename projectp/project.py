@@ -11,7 +11,7 @@ class App(customtkinter.CTk):
         super().__init__()
 
         # configure window
-        self.title("CustomTkinter complex_example.py")
+        self.title("Boodschappenlijst")
         self.geometry(f"{750}x{500}")
 
         # configure grid layout (4x4)
