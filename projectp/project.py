@@ -12,7 +12,7 @@ class App(customtkinter.CTk):
 
         # configure window
         self.title("Grocery lists")
-        self.geometry(f"{750}x{500}")
+        self.geometry(f"{375}x{667}")
 
         # configure grid layout (4x4)
 
