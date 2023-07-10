@@ -42,28 +42,28 @@ class App(customtkinter.CTk):
 
 
 
-    def add_list():
-        print("Test")
+def add_list():
+    print("Add")
 
 
-    def remove_list():
-        print("Test")
+def remove_list():
+    print("Remove")
 
 
-    def add_item():
-        print("Test")
+def add_item():
+    print("Add item")
 
 
-    def remove_item():
-        print("Test")
+def remove_item():
+    print("Remove item")
 
 
-    def check_item():
-        print("Test")
+def check_item():
+    print("Check item")
 
 
-    def uncheck_item():
-        print("Test")
+def uncheck_item():
+    print("UNcheck item")
 
 
 if __name__ == "__main__":
