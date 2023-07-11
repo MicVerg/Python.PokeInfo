@@ -83,7 +83,7 @@ class App(customtkinter.CTk):
 
 
 
-def remove_list():
+def remove_list_item():
     print("Remove")
 
 
