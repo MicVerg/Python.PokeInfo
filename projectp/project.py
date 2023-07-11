@@ -62,15 +62,20 @@ class App(customtkinter.CTk):
             switch = customtkinter.CTkSwitch(master=switch_frame, text=add_text)
             switch.grid(row=0, column=0)
 
-            open_button = tkinter.Button(switch_frame, text="Open", command=lambda: self.open_list_window(add_text))
-            open_button.grid(row=0, column=1, padx=5)
+            button_frame = tkinter.Frame(switch_frame)
+            button_frame.grid(row=0, column=1)
 
-            remove_button = tkinter.Button(switch_frame, text="Remove", command=lambda: self.remove_list_item(switch_frame))
-            remove_button.grid(row=0, column=2, padx=5)
+            open_button = tkinter.Button(button_frame, text="Open", command=lambda: self.open_list_window(add_text))
+            open_button.pack(side="left", padx=5)
 
+            remove_button = tkinter.Button(button_frame, text="Remove", command=lambda: self.remove_list_item(switch_frame))
+            remove_button.pack(side="left", padx=5)
+
+            switch_frame.grid_columnconfigure(0, weight=1)
             self.scrollable_frame_switches.append(switch)
 
         add_textbox.master.destroy()  # Close the popup window after adding the item
+
 
 
 
