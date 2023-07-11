@@ -43,13 +43,19 @@ class App(customtkinter.CTk):
     def add_list_window(self):
         add_window = tkinter.Toplevel(self)
         add_window.title("Add a list")
-        add_window.geometry("200x100")
+        add_window.geometry("200x150")
 
         add_textbox = customtkinter.CTkTextbox(add_window)
         add_textbox.pack()
 
-        add_button = tkinter.Button(add_window, text="Add", command=lambda: self.add_list(add_textbox))
-        add_button.pack()
+        button_frame = tkinter.Frame(add_window)
+        button_frame.pack(pady=10)
+
+        confirm_button = tkinter.Button(button_frame, text="Confirm", command=lambda: self.add_list(add_textbox))
+        confirm_button.pack(side="left", padx=5)
+
+        cancel_button = tkinter.Button(button_frame, text="Cancel", command=add_window.destroy)
+        cancel_button.pack(side="left", padx=5)
 
     def add_list(self, add_textbox):
         add_text = add_textbox.get("1.0", tkinter.END)
