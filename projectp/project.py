@@ -44,7 +44,6 @@ class App(customtkinter.CTk):
         add_window = tkinter.Toplevel(self)
         add_window.title("Add a list")
         
-
         add_textbox = customtkinter.CTkTextbox(add_window)
         add_textbox.pack(padx=10, pady=10)
 
