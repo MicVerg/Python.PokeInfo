@@ -41,20 +41,20 @@ class App(customtkinter.CTk):
         self.button_2.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 
     def add_list_window(self):
-        add_window = tkinter.Toplevel(self)
+        add_window = customtkinter.CTkToplevel(self)
         add_window.title("Add a list")
         add_window.geometry("300x300")
 
         add_textbox = customtkinter.CTkTextbox(add_window)
         add_textbox.pack(padx=10, pady=10)
 
-        button_frame = tkinter.Frame(add_window)
+        button_frame = customtkinter.CTkFrame(add_window)
         button_frame.pack(pady=5)
 
-        confirm_button = tkinter.Button(button_frame, text="Confirm", command=lambda: self.add_list(add_textbox))
+        confirm_button = customtkinter.CTkButton(button_frame, text="Confirm", command=lambda: self.add_list(add_textbox))
         confirm_button.pack(side="left", padx=5)
 
-        cancel_button = tkinter.Button(button_frame, text="Cancel", command=add_window.destroy)
+        cancel_button = customtkinter.CTkButton(button_frame, text="Cancel", command=add_window.destroy)
         cancel_button.pack(side="left", padx=5)
 
     def add_list(self, add_textbox):
