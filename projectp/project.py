@@ -43,7 +43,7 @@ class App(customtkinter.CTk):
     def add_list_window(self):
         add_window = tkinter.Toplevel(self)
         add_window.title("Add a list")
-        add_window.geometry("200x150")
+        add_window.geometry("350x200")
 
         add_textbox = customtkinter.CTkTextbox(add_window)
         add_textbox.pack()
