@@ -46,16 +46,16 @@ class App(customtkinter.CTk):
         add_window.geometry("350x200")
 
         add_textbox = customtkinter.CTkTextbox(add_window)
-        add_textbox.pack()
+        add_textbox.grid(row=0, column=0, padx=10, pady=10)
 
         button_frame = tkinter.Frame(add_window)
-        button_frame.pack(pady=10)
+        button_frame.grid(row=1, column=0, padx=10, pady=5)
 
         confirm_button = tkinter.Button(button_frame, text="Confirm", command=lambda: self.add_list(add_textbox))
-        confirm_button.pack(side="left", padx=5)
+        confirm_button.grid(row=0, column=0, padx=5)
 
         cancel_button = tkinter.Button(button_frame, text="Cancel", command=add_window.destroy)
-        cancel_button.pack(side="left", padx=5)
+        cancel_button.grid(row=0, column=1, padx=5)
 
     def add_list(self, add_textbox):
         add_text = add_textbox.get("1.0", tkinter.END)
