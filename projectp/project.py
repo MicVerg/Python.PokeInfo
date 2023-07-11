@@ -92,7 +92,33 @@ class App(customtkinter.CTk):
         self.scrollable_frame_switches.remove(switch_frame.winfo_children()[0])
 
 
-    def open_list_window():
+    def open_list_window(self, list_name):
+        open_window = customtkinter.CTkToplevel(self)
+        open_window.title(list_name)
+        open_window.geometry("500x300")
+
+        # Create a frame for the three columns
+        columns_frame = customtkinter.CTkFrame(open_window)
+        columns_frame.pack(fill="both", expand=True, padx=10, pady=10)
+
+        # Column 1: Image
+        image_frame = customtkinter.CTkFrame(columns_frame)
+        image_frame.pack(side="left", padx=10)
+
+        # Add your image widget or label here
+
+        # Column 2: Description
+        description_frame = customtkinter.CTkFrame(columns_frame)
+        description_frame.pack(side="left", padx=10)
+
+        # Add your description widget or label here
+
+        # Column 3: Checkbox
+        checkbox_frame = customtkinter.CTkFrame(columns_frame)
+        checkbox_frame.pack(side="left", padx=10)
+
+        checkbox = customtkinter.CTkCheckbutton(checkbox_frame, text="Select")
+        checkbox.pack(side="left")
 
 
 
