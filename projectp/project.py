@@ -85,7 +85,8 @@ class App(customtkinter.CTk):
         self.scrollable_frame_switches.remove(switch_frame.winfo_children()[0])
 
 
-
+    def open_list_item():
+        
 
 
 
