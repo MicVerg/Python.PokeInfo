@@ -66,7 +66,7 @@ class App(customtkinter.CTk):
             button_frame = customtkinter.CTkFrame(switch_frame)
             button_frame.grid(row=0, column=1, padx=5)
 
-            open_button = tkinter.Button(button_frame, text="Open", command=lambda: self.open_list_window(add_text))
+            open_button = customtkinter.CTkButton(button_frame, text="Open", command=lambda: self.open_list_window(add_text))
             open_button.pack(side="left")
 
             # remove button
