@@ -56,17 +56,17 @@ class App(customtkinter.CTk):
     def add_list(self, add_textbox):
         add_text = add_textbox.get("1.0", tkinter.END).strip()  # Strip any leading/trailing whitespace
         if add_text:
-            switch_frame = tkinter.Frame(self.scrollable_frame)
+            switch_frame = customtkinter.CTkFrame(self.scrollable_frame)
             switch_frame.grid(row=len(self.scrollable_frame_switches), column=0, padx=10, pady=(0, 20))
 
             switch = customtkinter.CTkSwitch(master=switch_frame, text=add_text)
             switch.grid(row=0, column=0)
 
-            button_frame = tkinter.Frame(switch_frame)
-            button_frame.grid(row=0, column=1)
+            button_frame = customtkinter.CTkFrame(switch_frame)
+            button_frame.grid(row=0, column=1, padx=5)
 
             open_button = tkinter.Button(button_frame, text="Open", command=lambda: self.open_list_window(add_text))
-            open_button.pack(side="left", padx=5)
+            open_button.pack(side="left")
 
             remove_button = tkinter.Button(button_frame, text="Remove", command=lambda: self.remove_list_item(switch_frame))
             remove_button.pack(side="left", padx=5)
@@ -75,6 +75,7 @@ class App(customtkinter.CTk):
             self.scrollable_frame_switches.append(switch)
 
         add_textbox.master.destroy()  # Close the popup window after adding the item
+
 
 
 
