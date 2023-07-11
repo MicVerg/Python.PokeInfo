@@ -62,7 +62,7 @@ class App(customtkinter.CTk):
 
     def add_list(self, add_textbox):
         add_text = add_textbox.get("1.0", tkinter.END)
-        print("Add:", add_text)
+        return add_text
 
 
 def remove_list():
