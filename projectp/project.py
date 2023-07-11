@@ -70,7 +70,7 @@ class App(customtkinter.CTk):
             open_button.pack(side="left")
 
             remove_image_path = "./img/icons8-remove-48.png"
-            remove_image = PhotoImage(file=remove_image_path)
+            remove_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-remove-48.png"), dark_image=Image.open("./img/icons8-remove-48.png"))
             remove_button = customtkinter.CTkButton(button_frame, image=remove_image, text="", command=lambda: self.remove_list_item(switch_frame))
             remove_button.pack(side="left", padx=5)
 
