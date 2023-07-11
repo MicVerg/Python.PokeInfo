@@ -46,7 +46,7 @@ class App(customtkinter.CTk):
         add_window.transient(self)
         add_window.geometry("300x300")
 
-        add_textbox = customtkinter.CTkTextbox(add_window)
+        add_textbox = customtkinter.CTkTextbox(add_window, font=("Montserrat", 22))
         add_textbox.pack(padx=10, pady=10)
 
         button_frame = customtkinter.CTkFrame(add_window)
