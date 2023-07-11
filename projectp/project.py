@@ -41,10 +41,19 @@ class App(customtkinter.CTk):
         self.button_2.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 
 
-    def add_list(self):
-        add_textbox = customtkinter.CTkTextbox(self)
-        add_textbox.grid(row=2, column=0, padx=10, pady=10)
-        add_text = add_textbox.get("1.0", tkinter.END)
+    def open_add_list_window(self):
+        add_window = tkinter.Toplevel(self)
+        add_window.title("Add a list")
+        add_window.geometry("200x100")
+
+        add_textbox = customtkinter.CTkTextbox(add_window)
+        add_textbox.pack()
+
+        add_button = tkinter.Button(add_window, text="Add", command=lambda: self.add_list(add_textbox))
+        add_button.pack()
+
+    def add_list(self, textbox):
+        add_text = textbox.get("1.0", tkinter.END)
         print("Add:", add_text)
 
 
