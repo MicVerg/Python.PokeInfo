@@ -80,8 +80,10 @@ class App(customtkinter.CTk):
         add_textbox.master.destroy()  # Close the popup window after adding the item
 
 
-    def remove_list_item():
-        print("Remove")
+    def remove_list_item(self, switch_frame):
+        switch_frame.destroy()
+        self.scrollable_frame_switches.remove(switch_frame.winfo_children()[0])
+
 
 
 
