@@ -141,14 +141,14 @@ class App(customtkinter.CTk):
         cancel_item_button.pack(side="left", padx=5)
 
 
-    def add_item():
+    def add_item(self, add_item_textbox):
         add_item_text = add_item_textbox.get("1.0", tkinter.END).strip()  # Strip any leading/trailing whitespace
         if add_item_text:
             switch_item_frame = customtkinter.CTkFrame(self.scrollable_frame)
             switch_item_frame.grid(row=len(self.scrollable_frame_switches), column=0, padx=10, pady=(0, 20))
 
-            switch = customtkinter.CTkSwitch(master=switch_frame, text=add_text, font=("Montserrat", 20))
-            switch.grid(row=0, column=0)
+            item_checkbox = customtkinter.CTkCheckBox(master=switch_frame, text=add_item_text, font=("Montserrat", 20))
+            item_checkbox.grid(row=0, column=0)
 
             button_frame = customtkinter.CTkFrame(switch_frame)
             button_frame.grid(row=1, column=0, padx=5, pady=(10, 0))
@@ -161,10 +161,10 @@ class App(customtkinter.CTk):
             remove_button = customtkinter.CTkButton(button_frame, image=remove_image, text="", command=lambda: self.remove_list_item(switch_frame))
             remove_button.pack(side="left", padx=5)
 
-            switch_frame.grid_columnconfigure(0, weight=1)
-            self.scrollable_frame_switches.append(switch)
+            switch_item_frame.grid_columnconfigure(0, weight=1)
+            self.scrollable_frame_switches.append(item_checkbox)
 
-        add_textbox.master.destroy()
+        add_item_textbox.master.destroy()
 
 
 def remove_item():
