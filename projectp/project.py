@@ -60,11 +60,11 @@ class App(customtkinter.CTk):
             switch_frame = customtkinter.CTkFrame(self.scrollable_frame)
             switch_frame.grid(row=len(self.scrollable_frame_switches), column=0, padx=10, pady=(0, 20))
 
-            switch = customtkinter.CTkSwitch(master=switch_frame, text=add_text)
+            switch = customtkinter.CTkSwitch(master=switch_frame, text=add_text, font=("Montserrat", 20))
             switch.grid(row=0, column=0)
 
             button_frame = customtkinter.CTkFrame(switch_frame)
-            button_frame.grid(row=1, column=0, padx=5, pady=(10, 0)) 
+            button_frame.grid(row=1, column=0, padx=5, pady=(10, 0))
 
             open_button = customtkinter.CTkButton(button_frame, text="Open", command=lambda: self.open_list_window(add_text))
             open_button.pack(side="left")
