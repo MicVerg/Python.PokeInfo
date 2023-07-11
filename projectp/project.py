@@ -1,5 +1,5 @@
 import tkinter
-from tkinter import PhotoImage
+from PIL import Image
 import customtkinter
 from functools import partial
 
