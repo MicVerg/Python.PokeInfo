@@ -43,7 +43,7 @@ class App(customtkinter.CTk):
 
     def add_list(self):
         add_textbox = customtkinter.CTkTextbox(self)
-        add_textbox.pack()
+        add_textbox.grid(row=2, column=0, padx=10, pady=10)
         add_text = add_textbox.get("1.0", tkinter.END)
         print("Add:", add_text)
 
