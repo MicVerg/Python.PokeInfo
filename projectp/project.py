@@ -128,6 +128,18 @@ class App(customtkinter.CTk):
         add_item_window.transient(self)
         add_item_window.geometry("375x667")
 
+        add_item_textbox = customtkinter.CTkTextbox(add_item_window, font=("Montserrat", 22))
+        add_item_textbox.pack(padx=10, pady=10)
+
+        button_item_frame = customtkinter.CTkFrame(add_item_window)
+        button_item_frame.pack(pady=5)
+
+        confirm_item_button = customtkinter.CTkButton(button_item_frame, text="Confirm", command=lambda: self.add_list(add_item_textbox))
+        confirm_item_button.pack(side="left", padx=5)
+
+        cancel_item_button = customtkinter.CTkButton(button_item_frame, text="Cancel", command=add_item_window.destroy)
+        cancel_item_button.pack(side="left", padx=5)
+
 
     def add_item():
         add_text = add_textbox.get("1.0", tkinter.END).strip()  # Strip any leading/trailing whitespace
