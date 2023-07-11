@@ -44,7 +44,7 @@ class App(customtkinter.CTk):
 
 def add_list():
     add_textbox = customtkinter.CTkTextbox(app)
-    add_text = textbox.get("0.0", "end")
+    add_text = add_textbox.get("0.0", "end")
     print("Add")
 
 
