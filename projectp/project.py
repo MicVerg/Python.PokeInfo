@@ -134,7 +134,7 @@ class App(customtkinter.CTk):
         button_item_frame = customtkinter.CTkFrame(add_item_window)
         button_item_frame.pack(pady=5)
 
-        confirm_item_button = customtkinter.CTkButton(button_item_frame, text="Confirm", command=lambda: self.add_list(add_item_textbox))
+        confirm_item_button = customtkinter.CTkButton(button_item_frame, text="Confirm", command=lambda: self.add_item(add_item_textbox))
         confirm_item_button.pack(side="left", padx=5)
 
         cancel_item_button = customtkinter.CTkButton(button_item_frame, text="Cancel", command=add_item_window.destroy)
