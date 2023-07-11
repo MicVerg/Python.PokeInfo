@@ -2,7 +2,7 @@ import tkinter
 import tkinter.messagebox
 import customtkinter
 
-customtkinter.set_appearance_mode("Dark")
+customtkinter.set_appearance_mode("Dark")Rotterdam, Nederland
 customtkinter.set_default_color_theme("dark-blue")
 
 
