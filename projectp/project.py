@@ -142,10 +142,10 @@ class App(customtkinter.CTk):
 
 
     def add_item():
-        add_text = add_textbox.get("1.0", tkinter.END).strip()  # Strip any leading/trailing whitespace
-        if add_text:
-            switch_frame = customtkinter.CTkFrame(self.scrollable_frame)
-            switch_frame.grid(row=len(self.scrollable_frame_switches), column=0, padx=10, pady=(0, 20))
+        add_item_text = add_item_textbox.get("1.0", tkinter.END).strip()  # Strip any leading/trailing whitespace
+        if add_item_text:
+            switch_item_frame = customtkinter.CTkFrame(self.scrollable_frame)
+            switch_item_frame.grid(row=len(self.scrollable_frame_switches), column=0, padx=10, pady=(0, 20))
 
             switch = customtkinter.CTkSwitch(master=switch_frame, text=add_text, font=("Montserrat", 20))
             switch.grid(row=0, column=0)
