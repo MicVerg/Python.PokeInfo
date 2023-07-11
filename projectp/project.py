@@ -118,7 +118,7 @@ class App(customtkinter.CTk):
         checkbox_frame = customtkinter.CTkFrame(columns_frame)
         checkbox_frame.pack(side="left", padx=10)
 
-        checkbox = customtkinter.CTkCheckbutton(checkbox_frame, text="Select")
+        checkbox = customtkinter.CTkCheckBox(checkbox_frame, text="Select")
         checkbox.pack(side="left")
 
 
