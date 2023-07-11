@@ -59,7 +59,7 @@ class App(customtkinter.CTk):
     def add_list(self, add_textbox):
         add_text = add_textbox.get("1.0", tkinter.END).strip()  # Strip any leading/trailing whitespace
         if add_text:
-            switch = customtkinter.CTkSwitch(master=self.scrollable_frame, text=add_text)
+            switch = customtkinter.CTkSwitch(master=self.scrollable_frame, text=add_text, font=("Montserrat", 20))
             switch.grid(row=len(self.scrollable_frame_switches), column=0, padx=10, pady=(0, 20))
             self.scrollable_frame_switches.append(switch)
         add_textbox.master.destroy()
