@@ -49,11 +49,12 @@ class App(customtkinter.CTk):
         add_textbox = customtkinter.CTkTextbox(add_window)
         add_textbox.pack()
 
-        add_button = tkinter.Button(add_window, text="Add", command=lambda: self.add_list(add_textbox))
+        add_button = tkinter.Button(add_window, text="Add", command=partial(self.add_list, add_textbox))
+
         add_button.pack()
 
-    def add_list(self, add_textbox):
-        add_text = add_textbox.get("1.0", tkinter.END)
+    def add_list(self, textbox):
+        add_text = textbox.get("1.0", tkinter.END)
         print("Add:", add_text)
 
 
