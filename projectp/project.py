@@ -41,11 +41,11 @@ class App(customtkinter.CTk):
         self.button_2.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 
         self.add_textbox = None
-        
+
     def add_list(self):
-        self.add_textbox = customtkinter.CTkTextbox(self)
-        self.add_textbox.pack()
-        add_text = self.add_textbox.get("1.0", tkinter.END)
+        add_textbox = customtkinter.CTkTextbox(self)
+        add_textbox.pack()
+        add_text = add_textbox.get("1.0", tkinter.END)
         print("Add:", add_text)
 
 
