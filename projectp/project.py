@@ -41,7 +41,7 @@ class App(customtkinter.CTk):
         self.button_2.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 
 
-    def open_add_list_window(self):
+    def add_list_window(self):
         add_window = tkinter.Toplevel(self)
         add_window.title("Add a list")
         add_window.geometry("200x100")
