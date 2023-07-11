@@ -125,8 +125,30 @@ class App(customtkinter.CTk):
 
 
 
-def add_item():
-    print("Add item")
+    def add_item():
+        add_text = add_textbox.get("1.0", tkinter.END).strip()  # Strip any leading/trailing whitespace
+        if add_text:
+            switch_frame = customtkinter.CTkFrame(self.scrollable_frame)
+            switch_frame.grid(row=len(self.scrollable_frame_switches), column=0, padx=10, pady=(0, 20))
+
+            switch = customtkinter.CTkSwitch(master=switch_frame, text=add_text, font=("Montserrat", 20))
+            switch.grid(row=0, column=0)
+
+            button_frame = customtkinter.CTkFrame(switch_frame)
+            button_frame.grid(row=1, column=0, padx=5, pady=(10, 0))
+
+            open_button = customtkinter.CTkButton(button_frame, text="Open", command=lambda: self.open_list_window(add_text))
+            open_button.pack(side="left")
+
+            # remove button
+            remove_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-remove-48.png"), dark_image=Image.open("./img/icons8-remove-48.png"))
+            remove_button = customtkinter.CTkButton(button_frame, image=remove_image, text="", command=lambda: self.remove_list_item(switch_frame))
+            remove_button.pack(side="left", padx=5)
+
+            switch_frame.grid_columnconfigure(0, weight=1)
+            self.scrollable_frame_switches.append(switch)
+
+        add_textbox.master.destroy()
 
 
 def remove_item():
