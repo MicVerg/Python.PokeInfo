@@ -123,6 +123,7 @@ class App(customtkinter.CTk):
 
 
     def add_item_window(self):
+        add_item_window = customtkinter.CTkTopLevel(self)
         
 
 
