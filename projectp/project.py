@@ -95,7 +95,8 @@ class App(customtkinter.CTk):
     def open_list_window(self, list_name):
         open_window = customtkinter.CTkToplevel(self)
         open_window.title(list_name)
-        open_window.geometry("500x300")
+        open_window.transient(self)
+        open_window.geometry("300x300")
 
         # Create a frame for the three columns
         columns_frame = customtkinter.CTkFrame(open_window)
