@@ -122,7 +122,8 @@ class App(customtkinter.CTk):
         checkbox.pack(side="left")
 
 
-
+    def add_item_window(self):
+        
 
 
     def add_item():
