@@ -80,11 +80,12 @@ class App(customtkinter.CTk):
         add_textbox.master.destroy()  # Close the popup window after adding the item
 
 
+    def remove_list_item():
+        print("Remove")
 
 
 
-def remove_list_item():
-    print("Remove")
+
 
 
 def add_item():
