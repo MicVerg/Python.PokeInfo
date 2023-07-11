@@ -40,6 +40,7 @@ class App(customtkinter.CTk):
         self.button_2 = customtkinter.CTkButton(self.slider_progressbar_frame, text="Remove a list", command=remove_list)
         self.button_2.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 
+
     def add_list_window(self):
         add_window = customtkinter.CTkToplevel(self)
         add_window.title("Add a list")
@@ -57,6 +58,7 @@ class App(customtkinter.CTk):
 
         cancel_button = customtkinter.CTkButton(button_frame, text="Cancel", command=add_window.destroy)
         cancel_button.pack(side="left", padx=5)
+
 
     def add_list(self, add_textbox):
         add_text = add_textbox.get("1.0", tkinter.END)
