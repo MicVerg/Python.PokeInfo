@@ -68,7 +68,9 @@ class App(customtkinter.CTk):
             open_button = tkinter.Button(button_frame, text="Open", command=lambda: self.open_list_window(add_text))
             open_button.pack(side="left")
 
-            remove_button = tkinter.Button(button_frame, image="./img/icons8-remove-48.png", command=lambda: self.remove_list_item(switch_frame))
+            remove_image_path = "./img/icons8-remove-48.png"
+            remove_image = PhotoImage(file=remove_image_path)
+            remove_button = tkinter.Button(button_frame, image=remove_image, command=lambda: self.remove_list_item(switch_frame))
             remove_button.pack(side="left", padx=5)
 
             switch_frame.grid_columnconfigure(0, weight=1)
