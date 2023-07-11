@@ -64,7 +64,7 @@ class App(customtkinter.CTk):
             switch.grid(row=0, column=0)
 
             button_frame = customtkinter.CTkFrame(switch_frame)
-            button_frame.grid(row=0, column=1, padx=5)
+            button_frame.grid(row=1, column=0, padx=5, pady=(10, 0)) 
 
             open_button = customtkinter.CTkButton(button_frame, text="Open", command=lambda: self.open_list_window(add_text))
             open_button.pack(side="left")
