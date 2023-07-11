@@ -12,12 +12,12 @@ grains_list = ["baguette", "sourdough", "ciabatta", "naan", "croissant", "muffin
 dairy_list = ["milk", "cheese", "yogurt", "butter", "cream", "sour cream", "cottage cheese", "whipped cream", "cheddar", "mozzarella", "parmesan", "swiss", "gouda", "brie", "feta", "cream cheese", "ricotta", "blue cheese", "goat cheese", "mascarpone", "provolone", "ghee", "buttermilk", "evaporated milk", "condensed milk"]
 spices_list = ["cinnamon", "turmeric", "ginger", "cumin", "paprika", "coriander", "nutmeg", "cloves", "cardamom", "garlic powder", "onion powder", "chili powder", "oregano", "thyme", "rosemary", "bay leaf", "cayenne pepper", "black pepper", "white pepper", "red pepper flakes", "saffron", "mustard seeds", "fenugreek", "allspice", "star anise", "fennel seeds", "vanilla", "celery salt", "dill", "tarragon", "marjoram", "clove", "caraway seeds", "curry powder", "garam masala", "pumpkin pie spice"]
 alcohol_list = ["beer", "wine", "whiskey", "vodka", "rum", "tequila", "gin", "brandy", "champagne", "cocktail", "martini", "margarita", "mojito", "sake", "scotch", "bourbon", "cognac", "liqueur", "absinthe", "vermouth", "cider", "sherry", "port", "amaretto", "baileys", "schnapps", "prosecco", "pinot noir", "merlot", "chardonnay", "sauvignon blanc", "pinot grigio", "rosé", "red wine", "white wine"]
-fruits_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-remove-48.png"), dark_image=Image.open("./img/icons8-remove-48.png"))
-vegetables_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-remove-48.png"), dark_image=Image.open("./img/icons8-remove-48.png"))
-grains_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-remove-48.png"), dark_image=Image.open("./img/icons8-remove-48.png"))
-dairy_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-remove-48.png"), dark_image=Image.open("./img/icons8-remove-48.png"))
-spices_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-remove-48.png"), dark_image=Image.open("./img/icons8-remove-48.png"))
-remove_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-remove-48.png"), dark_image=Image.open("./img/icons8-remove-48.png"))
+fruits_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-fruit-48.png"), dark_image=Image.open("./img/icons8-fruit-48.png"))
+vegetables_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-vegetables-48.png"), dark_image=Image.open("./img/icons8-vegetables-48.png"))
+grains_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-grains-64.png"), dark_image=Image.open("./img/icons8-grains-64.png"))
+dairy_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-cheese-48.png"), dark_image=Image.open("./img/icons8-cheese-48.png"))
+spices_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-spices-48.png"), dark_image=Image.open("./img/icons8-spices-48.png"))
+remove_image = customtkinter.CTkImage(light_image=Image.open("./img/icons8-alcohol-30.png"), dark_image=Image.open("./img/icons8-alcohol-30.png"))
 
 
 
