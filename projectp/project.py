@@ -8,7 +8,8 @@ customtkinter.set_default_color_theme("dark-blue")
 
 fruits = ["apple", "banana", "orange", "grape", "kiwi", "pineapple", "mango", "strawberry", "watermelon", "pear", "peach", "blueberry", "raspberry", "lemon", "lime", "cherry", "plum", "pomegranate", "apricot", "avocado", "blackberry", "coconut", "fig", "grapefruit"]
 vegetables = ["carrot", "broccoli", "spinach", "tomato", "potato", "cucumber", "lettuce", "bell pepper", "onion", "garlic", "zucchini", "celery", "corn", "mushroom", "green bean", "peas", "cabbage", "cauliflower", "asparagus", "radish", "eggplant", "beetroot", "sweet potato", "brussels sprouts"]
-food_words = ["baguette", "sourdough", "ciabatta", "naan", "croissant", "muffin", "toast", "crust", "rye", "whole wheat", "focaccia", "panini", "pita", "scone", "brioche", "tortilla", "rice", "basmati", "jasmine", "wild", "brown", "fried", "risotto", "sushi", "paella", "noodles", "spaghetti", "linguine", "fettuccine", "lasagna", "macaroni", "ravioli", "gnocchi", "penne", "orzo"]
+grains = ["baguette", "sourdough", "ciabatta", "naan", "croissant", "muffin", "toast", "crust", "rye", "whole wheat", "focaccia", "panini", "pita", "scone", "brioche", "tortilla", "rice", "basmati", "jasmine", "wild", "brown", "fried", "risotto", "sushi", "paella", "noodles", "spaghetti", "linguine", "fettuccine", "lasagna", "macaroni", "ravioli", "gnocchi", "penne", "orzo"]
+
 
 class App(customtkinter.CTk):
     def __init__(self):
