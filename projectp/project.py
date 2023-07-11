@@ -124,7 +124,7 @@ class App(customtkinter.CTk):
 
     def add_item_window(self):
         add_item_window = customtkinter.CTkToplevel(self)
-        add_item_window.title("Add your items for this grocery list")
+        add_item_window.title("Add your items")
         add_item_window.transient(self)
         add_item_window.geometry("375x667")
 
