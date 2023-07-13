@@ -22,4 +22,7 @@ that's it!
 I used phone dimensions, simply because it made sense for me to remake the mobile app I already use like that. (Whilst it do)
 This application needs a lot of polishing, it needs editing lists/ items, windows should be shown properly on top of eachother (something I've struggled immensely with and haven't found a proper solution for).
 On different screens different elements need more polishing actually, more specifically the positioning and sizing of the different elements.
-In hindsight perhaps I should have just tried to make a mobile app from the 
+In hindsight perhaps I should have just tried to make a mobile app from the start, but alas, I figured making a desktop GUI would be more beginner friendly.
+
+The customtkinter buildup kind of speaks for itself, there's not a lot of flexibility in usage, the point will remain to be to make a frame and to add elements to that frame, those elements which you can connect to different commands/ functions to pass variables and get the info you need from 1 place to the other.
+
