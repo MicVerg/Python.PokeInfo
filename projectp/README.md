@@ -31,4 +31,6 @@ I also don't know how to test my GUI functions to be completely honest, so I wor
 
 I THINK more ideal would have been to practise more OOP with Java or C, but I'm very unsure, OOP is definitely something I'll need more practise for and I do see and understand now why it is implemented commonly, it still feels strange to go from procedural to OOP though.
 
+I also learned quite a bit about moving between codespace and local machine development, since the GUI tester of codespace was down a lot..
+
 At the end of the day, I'm not stoked about the result of this program at all, it's quite ugly and unpolished, but I learned a lot and got more comfortable because of making it.
