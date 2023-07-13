@@ -20,4 +20,5 @@ you can use the switch button to mark a list as completed
 that's it!
 
 I used phone dimensions, simply because it made sense for me to remake the mobile app I already use like that. (Whilst it do)
-This application needs a lot of polishing, it needs editing lists/ items, windows should be shown properly on top of eachother (something I've struggled immensely with and haven't found a proper solution for)
+This application needs a lot of polishing, it needs editing lists/ items, windows should be shown properly on top of eachother (something I've struggled immensely with and haven't found a proper solution for).
+On different screens 
