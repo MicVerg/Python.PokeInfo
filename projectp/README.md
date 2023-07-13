@@ -26,4 +26,5 @@ In hindsight perhaps I should have just tried to make a mobile app from the star
 
 The customtkinter buildup kind of speaks for itself, there's not a lot of flexibility in usage, the point will remain to be to make a frame and to add elements to that frame, those elements which you can connect to different commands/ functions to pass variables and get the info you need from 1 place to the other.
 
-I somewhat worked around the CS50 check, since my functions aren't on the same level as main, I don't really understand why that is a requirement, because of that
+I somewhat worked around the CS50 check, since my functions aren't on the same indentation level as main, I don't really understand why that is a requirement.
+I also don't know how to test my GUI functions to be completely honest, so I worked around that as well to get the CS50 check done.
