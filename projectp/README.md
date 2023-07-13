@@ -28,3 +28,7 @@ The customtkinter buildup kind of speaks for itself, there's not a lot of flexib
 
 I somewhat worked around the CS50 check, since my functions aren't on the same indentation level as main, I don't really understand why that is a requirement.
 I also don't know how to test my GUI functions to be completely honest, so I worked around that as well to get the CS50 check done.
+
+I THINK more ideal would have been to practise more OOP with Java or C, but I'm very unsure, OOP is definitely something I'll need more practise for and I do see and understand now why it is implemented commonly, it still feels strange to go from procedural to OOP though.
+
+At the end of the day, I'm not stoked about the result of this program at all, it's quite ugly and unpolished, but I learned a lot and got more comfortable because of making it.
