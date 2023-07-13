@@ -237,12 +237,16 @@ class App(customtkinter.CTk):
 
 
 
-def check_item():
-    print("Check item")
+def function_1():
+    return
 
 
-def uncheck_item():
-    print("UNcheck item")
+def function_2():
+    return
+
+
+def function_n():
+    return
 
 
 def main():
