@@ -1,5 +1,5 @@
 # QUICKLIST
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/7I27_QL7sfU
 #### Description:
 The point of this project was to replicate an existing grocery list app I already use on my phone, but to copy and implement it into a desktop GUI.
 More specifically, the point of this project was to learn more about OOP. I've been somewhat struggling with the concept so figured this would be good practise.
