@@ -34,3 +34,4 @@ I THINK more ideal would have been to practise more OOP with Java or C, but I'm 
 I also learned quite a bit about moving between codespace and local machine development, since the GUI tester of codespace was down a lot..
 
 At the end of the day, I'm not stoked about the result of this program at all, it's quite ugly and unpolished, but I learned a lot and got more comfortable because of making it.
+I will continue to practise on OOP with a different project.
