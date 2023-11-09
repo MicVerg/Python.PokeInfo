@@ -19,7 +19,7 @@ SELECT * FROM "scans"
 WHERE "package_id" = 384;
 
 SELECT * FROM "addresses"
-WHERE "address_id" = 854;
+WHERE "id" = 854;
 
 -- *** The Devious Delivery ***
 
