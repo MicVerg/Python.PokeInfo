@@ -22,6 +22,13 @@ SELECT * FROM "addresses"
 WHERE "id" = 854;
 
 -- *** The Devious Delivery ***
+SELECT * FROM "packages"
+WHERE "from_address_id" IS NULL;
 
+SELECT * FROM "scans"
+WHERE "package_id" = 5098;
+
+SELECT * FROM "addresses"
+WHERE "id" = 348;
 -- *** The Forgotten Gift ***
 
