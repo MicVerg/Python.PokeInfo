@@ -15,7 +15,12 @@ WHERE "from_address_id" = (SELECT "id" FROM "addresses" WHERE "address" = '900 S
 SELECT * FROM "packages"
 WHERE "contents" LIKE '%Congratulatory%';
 
-SELECT * FROM "addresses
+SELECT * FROM "scans"
+WHERE "package_id" = 384;
+
+SELECT * FROM "addresses"
+WHERE "address_id" = 854;
+
 -- *** The Devious Delivery ***
 
 -- *** The Forgotten Gift ***
