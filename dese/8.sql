@@ -1,11 +1,4 @@
-SELECT "expenditures"."district_id", "expenditures"."pupils"
+SELECT "districts"."name", "expenditures"."pupils"
 FROM "expenditures"
-JOIN schools
-ON
-
-
-
-SELECT Students.name, Courses.course_name
-FROM Students
-JOIN Courses
-ON Students.id = Courses.student_id;
+JOIN "districts"
+ON "expenditures"."id" = "districts"."id";
