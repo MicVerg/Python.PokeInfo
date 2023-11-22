@@ -7,5 +7,9 @@ CREATE TABLE "passengers"(
 );
 
 CREATE TABLE "check-ins"(
-    "id" INTEGER
-)
+    "id" INTEGER,
+    "datetime" NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "flight" TEXT,
+    PRIMARY KEY ("id")
+);
+
