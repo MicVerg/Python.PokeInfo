@@ -21,3 +21,15 @@ CREATE TABLE "airlines"(
     "concourses" TEXT,
     PRIMARY KEY ("id")
 );
+
+CREATE TABLE "flights"(
+    "id" INTEGER,
+    "flight_number" INTEGER,
+    "airline_id" INTEGER,
+    "departure_code" TEXT,
+    "arrival_code" TEXT,
+    "expected_departure_time" NUMERIC,
+    "expected_arrival_time" NUMERIC,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY ("airline_id") REFERENCES "airlines"("id")
+);
