@@ -19,5 +19,15 @@ CREATE TABLE "orders"(
     "ordernumber" INTEGER,
     "orderdonuts" TEXT,
     "customer" TEXT,
+    "customer_id" INTEGER,
+    PRIMARY KEY ("id")
+    FOREIGN KEY "customer_id" REFERENCES "customers"("id")
+);
+
+CREATE TABLE "customers"(
+    "id" INTEGER,
+    "firstname" TEXT,
+    "lastname" TEXT,
+    "orderhistory" TEXT,
     PRIMARY KEY ("id")
 )
