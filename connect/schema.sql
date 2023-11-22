@@ -26,7 +26,11 @@ CREATE TABLE "companies"(
 
 CREATE TABLE "connections"(
     "id" INTEGER,
-    "user1" TEXT,
-    "user2" TEXT,
-    
-)
+    "user_id" INTEGER,
+    "school_id" INTEGER,
+    "company_id" INTEGER,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY("user_id") REFERENCES "users"("id"),
+    FOREIGN KEY ("school_id") REFERENCES "schools"("id"),
+    FOREIGN KEY ("company_id") REFERENCES "companies"("id")
+);
