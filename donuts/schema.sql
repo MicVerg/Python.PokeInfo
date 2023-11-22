@@ -21,7 +21,7 @@ CREATE TABLE "orders"(
     "customer" TEXT,
     "customer_id" INTEGER,
     PRIMARY KEY ("id")
-    FOREIGN KEY "customer_id" REFERENCES "customers"("id")
+    FOREIGN KEY ("customer_id") REFERENCES "customers"("id")
 );
 
 CREATE TABLE "customers"(
