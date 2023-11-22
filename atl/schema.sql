@@ -8,8 +8,16 @@ CREATE TABLE "passengers"(
 
 CREATE TABLE "check-ins"(
     "id" INTEGER,
+    "passenger_id" INTEGER,
     "datetime" NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "flight" TEXT,
-    PRIMARY KEY ("id")
+    PRIMARY KEY ("id"),
+    FOREIGN KEY ("passenger_id") REFERENCES "passengers"("id")
 );
 
+CREATE TABLE "airlines"(
+    "id" INTEGER,
+    "name" TEXT,
+    "concourses" TEXT,
+    PRIMARY KEY ("id")
+);
