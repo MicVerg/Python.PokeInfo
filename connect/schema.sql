@@ -23,3 +23,10 @@ CREATE TABLE "companies"(
     "location" TEXT,
     PRIMARY KEY ("id")
 );
+
+CREATE TABLE "connections"(
+    "id" INTEGER,
+    "user1" TEXT,
+    "user2" TEXT,
+    
+)
